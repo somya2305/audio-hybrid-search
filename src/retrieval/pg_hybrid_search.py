@@ -28,10 +28,27 @@ MIN_SEMANTIC_WORDS = 4
 # a single first-place rank from outweighing agreement between both lists.
 RRF_K = 60
 
-# Shared by both retrievers so their results have the same shape.
+# Any single query word (stemmed, OR-ed), even for a quoted phrase search:
+# used to mark matches in the snippet and to find the first matching word.
+WORD_QUERY_SQL = "replace(plainto_tsquery('english', %(query)s)::text, '&', '|')::tsquery"
+
+# Turns are at most ~80 words, so show the whole turn with matches marked
+# instead of a clipped fragment.
+HEADLINE_OPTIONS = "StartSel=**, StopSel=**, HighlightAll=true"
+
+# Shared by both retrievers so their results have the same shape. Needs
+# wq.word_query in the FROM clause.
 RESULT_COLUMNS = """
     c.id, c.chunk_id, c.conversation_id, c.chunk_index, c.speaker,
-    c.start_time, c.end_time, c.text
+    c.start_time, c.end_time, c.text,
+    ts_headline('english', c.text, wq.word_query, %(headline_options)s) AS snippet,
+    (
+        SELECT (w->>'start')::real
+        FROM jsonb_array_elements(c.words) AS w
+        WHERE to_tsvector('english', w->>'word') @@ wq.word_query
+        ORDER BY (w->>'start')::real
+        LIMIT 1
+    ) AS match_time
 """
 
 # Optional filter to one conversation; a NULL %(cid)s matches every row.
@@ -48,7 +65,10 @@ def _row_to_result(row, rank):
         "start_time": row[5],
         "end_time": row[6],
         "text": row[7],
-        "score": float(row[8]),
+        "snippet": row[8],
+        # Start of the first word matching a query term, if any.
+        "match_time": row[9],
+        "score": float(row[10]),
         "rank": rank,
     }
 
@@ -65,13 +85,16 @@ def semantic_search(query, top_k=TOP_K, conversation_id=None):
         f"""
         SELECT {RESULT_COLUMNS},
                1 - (c.embedding <=> %(embedding)s) AS score
-        FROM transcript_chunks c
+        FROM transcript_chunks c,
+             (SELECT {WORD_QUERY_SQL}) AS wq(word_query)
         WHERE {CONVERSATION_FILTER}
           AND c.word_count >= %(min_words)s
         ORDER BY c.embedding <=> %(embedding)s
         LIMIT %(top_k)s
         """,
         {
+            "query": query,
+            "headline_options": HEADLINE_OPTIONS,
             "embedding": Vector(embed_query(query)),
             "min_words": MIN_SEMANTIC_WORDS,
             "cid": conversation_id,
@@ -105,7 +128,8 @@ def keyword_search(query, top_k=TOP_K, conversation_id=None):
         SELECT {RESULT_COLUMNS},
                ts_rank(c.text_search, q.query, %(norm)s) AS score
         FROM transcript_chunks c,
-             (SELECT {_tsquery_sql(query)}) AS q(query)
+             (SELECT {_tsquery_sql(query)}) AS q(query),
+             (SELECT {WORD_QUERY_SQL}) AS wq(word_query)
         WHERE c.text_search @@ q.query
           AND {CONVERSATION_FILTER}
         ORDER BY score DESC, c.id
@@ -113,6 +137,7 @@ def keyword_search(query, top_k=TOP_K, conversation_id=None):
         """,
         {
             "query": query,
+            "headline_options": HEADLINE_OPTIONS,
             "norm": TS_RANK_NORMALIZATION,
             "cid": conversation_id,
             "top_k": top_k,
@@ -124,12 +149,17 @@ def reciprocal_rank_fusion(semantic, keyword, top_k=TOP_K_FINAL, rrf_k=RRF_K):
     """Merge two ranked lists: each chunk scores sum(1 / (rrf_k + rank)).
 
     Only ranks are used, so the retrievers' incomparable scores (cosine
-    similarity vs ts_rank) never need normalising.
+    similarity vs ts_rank) never need normalising. When a chunk is in both
+    lists, the version with a match_time is kept.
     """
     fused = {}
     for results in (semantic, keyword):
         for result in results:
-            entry = fused.setdefault(result["id"], {**result, "rrf_score": 0.0})
+            entry = fused.get(result["id"])
+            if entry is None:
+                entry = fused[result["id"]] = {**result, "rrf_score": 0.0}
+            elif entry.get("match_time") is None and result.get("match_time") is not None:
+                entry = fused[result["id"]] = {**result, "rrf_score": entry["rrf_score"]}
             entry["rrf_score"] += 1.0 / (rrf_k + result["rank"])
 
     ranked = sorted(fused.values(), key=lambda r: r["rrf_score"], reverse=True)[:top_k]
@@ -157,12 +187,15 @@ def format_time(seconds):
 
 
 def format_location(result):
-    """"<file> · <start>–<end> · <speaker>"."""
-    return (
+    """"<file> · <start>–<end> · <speaker>[ · match at <time>]"."""
+    location = (
         f"{result['conversation_id']} · "
         f"{format_time(result['start_time'])}–{format_time(result['end_time'])} · "
         f"{result['speaker']}"
     )
+    if result.get("match_time") is not None:
+        location += f" · match at {format_time(result['match_time'])}"
+    return location
 
 
 def _print_list(title, results, top_k=TOP_K_FINAL, score_key="score"):
@@ -183,7 +216,7 @@ def print_results(query):
         print("  (no results)")
     for result in final:
         print(f"  {result['rank']}. [{result['rrf_score']:.4f}] {format_location(result)}")
-        print(f"     {result['text']}")
+        print(f"     {result['snippet']}")
 
 
 def main():
