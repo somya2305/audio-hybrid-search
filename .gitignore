@@ -21,12 +21,6 @@ id_rsa*
 # Archives
 *.zip
 
-# Audio data (keep the directory)
-data/audio/*.wav
-data/audio/*.opus
-data/audio/*.mp3
-!data/audio/.gitkeep
-
 # Raw downloaded audio (before trimming)
 data/raw/
 
