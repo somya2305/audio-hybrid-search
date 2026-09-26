@@ -1,0 +1,1507 @@
+{
+  "metrics": {
+    "num_queries": 25,
+    "num_positive": 22,
+    "num_negative": 3,
+    "keyword_recall@1": 0.42424242424242425,
+    "keyword_recall@3": 0.5,
+    "keyword_recall@5": 0.5,
+    "keyword_recall@10": 0.5227272727272727,
+    "keyword_mrr": 0.5045454545454545,
+    "semantic_recall@1": 0.26515151515151514,
+    "semantic_recall@3": 0.4621212121212121,
+    "semantic_recall@5": 0.6287878787878788,
+    "semantic_recall@10": 0.8484848484848485,
+    "semantic_mrr": 0.5244227994227995,
+    "hybrid_recall@1": 0.40151515151515155,
+    "hybrid_recall@3": 0.6590909090909091,
+    "hybrid_recall@5": 0.7272727272727273,
+    "hybrid_recall@10": 0.8257575757575758,
+    "hybrid_mrr": 0.6113636363636363,
+    "hybrid_recall@5_by_type": {
+      "keyword": 1.0,
+      "phrase": 1.0,
+      "semantic": 0.5,
+      "speaker": 0.6666666666666666
+    },
+    "speaker_accuracy": 1.0,
+    "speaker_checked": 19,
+    "mean_top_semantic_score_positive": 0.69842356005883,
+    "mean_top_semantic_score_negative": 0.5607585043975232
+  },
+  "queries": [
+    {
+      "id": "q01",
+      "query": "Barbara Wilde",
+      "type": "keyword",
+      "relevant": [
+        {
+          "file": "business_01.wav",
+          "start": 100.9,
+          "end": 102.4,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.5938093792540956,
+      "top_hybrid": [
+        {
+          "file": "business_01.wav",
+          "start": 81.08,
+          "end": 102.44,
+          "speaker": "SPEAKER_01",
+          "text": "If you can activate these muscles in your profile picture, you don't have to walk around like that, but if you can act, "
+        },
+        {
+          "file": "business_01.wav",
+          "start": 66.21,
+          "end": 80.44,
+          "speaker": "SPEAKER_01",
+          "text": "Well, you can smile without your teeth as long as it hits your upper cheek muscle. So just try this for me. Put your han"
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 367.1,
+          "end": 387.83,
+          "speaker": "SPEAKER_00",
+          "text": "I was so excited by that part. I wanted that so bad. I was after Jill, Jillian Armstrong, the director, for so many year"
+        }
+      ],
+      "keyword": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.3333333333333333
+      },
+      "hybrid": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q02",
+      "query": "believing others are upset with you when their face is just blank",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "business_01.wav",
+          "start": 471.4,
+          "end": 498.1,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.7677349586644807,
+      "top_hybrid": [
+        {
+          "file": "business_01.wav",
+          "start": 234.07,
+          "end": 239.14,
+          "speaker": "SPEAKER_00",
+          "text": "Has anyone ever done any really compelling studies on this idea of resting bitch face or resting bothered face as you ca"
+        },
+        {
+          "file": "business_01.wav",
+          "start": 1.29,
+          "end": 20.46,
+          "speaker": "SPEAKER_01",
+          "text": "Doesn't make you kind of feel like, mm, better. Don't do it for too long. So if you do it at home, there's a facial feed"
+        },
+        {
+          "file": "business_01.wav",
+          "start": 239.22,
+          "end": 257.61,
+          "speaker": "SPEAKER_01",
+          "text": "There is research on resting bothered face and there are certain people who when people see pictures of their face at re"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 1.0,
+        "rr": 0.14285714285714285
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "hybrid_hit_rank": null
+    },
+    {
+      "id": "q03",
+      "query": "what did the host say about people who look grumpy even when they're happy",
+      "type": "speaker",
+      "relevant": [
+        {
+          "file": "business_01.wav",
+          "start": 139.7,
+          "end": 165.8,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.7177298069000244,
+      "top_hybrid": [
+        {
+          "file": "business_01.wav",
+          "start": 239.22,
+          "end": 257.61,
+          "speaker": "SPEAKER_01",
+          "text": "There is research on resting bothered face and there are certain people who when people see pictures of their face at re"
+        },
+        {
+          "file": "business_01.wav",
+          "start": 139.7,
+          "end": 158.56,
+          "speaker": "SPEAKER_00",
+          "text": "It sounds like it might be quite exhausting for some people, because I think some people, although they're happy, they f"
+        },
+        {
+          "file": "business_01.wav",
+          "start": 124.62,
+          "end": 138.47,
+          "speaker": "SPEAKER_01",
+          "text": "They caught the happiness from the photo. People who looked at the fake smile had no mood change. This means I would rat"
+        }
+      ],
+      "keyword": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 1.0,
+        "rr": 0.16666666666666666
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.5
+      },
+      "hybrid_hit_rank": 2,
+      "speaker_correct": true
+    },
+    {
+      "id": "q04",
+      "query": "Getty and Shutterstock",
+      "type": "keyword",
+      "relevant": [
+        {
+          "file": "business_02.wav",
+          "start": 205.4,
+          "end": 214.9,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.5917681984694205,
+      "top_hybrid": [
+        {
+          "file": "business_02.wav",
+          "start": 205.4,
+          "end": 235.1,
+          "speaker": "SPEAKER_00",
+          "text": "Instead of scraping the internet, we partnered with Getty and Shutterstock to create commercially fair way of applying a"
+        },
+        {
+          "file": "business_01.wav",
+          "start": 102.98,
+          "end": 123.9,
+          "speaker": "SPEAKER_01",
+          "text": "She took pictures of people thinking of something they were authentically happy about, took a picture of them smiling, t"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 356.92,
+          "end": 371.07,
+          "speaker": "SPEAKER_00",
+          "text": "It's tough. I think they kind of know but they don't fully know and they don't know how to fully integrate it into the r"
+        }
+      ],
+      "keyword": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q05",
+      "query": "\"infinite ambition\"",
+      "type": "phrase",
+      "relevant": [
+        {
+          "file": "business_02.wav",
+          "start": 512.4,
+          "end": 515.9,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.6862305776798037,
+      "top_hybrid": [
+        {
+          "file": "business_02.wav",
+          "start": 496.79,
+          "end": 520.12,
+          "speaker": "SPEAKER_00",
+          "text": "gave you exactly the same example that, in fact, productivity doesn't result in us doing less. Productivity usually resu"
+        },
+        {
+          "file": "business_02.wav",
+          "start": 521.3,
+          "end": 539.88,
+          "speaker": "SPEAKER_01",
+          "text": "That's true. Technology is a lever. And the place where the idea kind of falls down is that we would be satisfied. Human"
+        },
+        {
+          "file": "business_02.wav",
+          "start": 492.69,
+          "end": 496.75,
+          "speaker": "SPEAKER_01",
+          "text": "And AI, your argument is basically, AI will do the same thing. Exactly. I just"
+        }
+      ],
+      "keyword": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q06",
+      "query": "will smarter computers leave lots of people unemployed",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "business_02.wav",
+          "start": 283.7,
+          "end": 307.5,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "file": "business_02.wav",
+          "start": 380.5,
+          "end": 420.4,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.7275165210634743,
+      "top_hybrid": [
+        {
+          "file": "business_02.wav",
+          "start": 301.57,
+          "end": 321.05,
+          "speaker": "SPEAKER_00",
+          "text": "and prosperity when the companies get more successful, they hire more people because they want to expand into more areas"
+        },
+        {
+          "file": "business_02.wav",
+          "start": 120.35,
+          "end": 131.07,
+          "speaker": "SPEAKER_01",
+          "text": "Well, as we start to drift toward the end here, we spent a lot of time on the past. I want to think about the future a l"
+        },
+        {
+          "file": "business_02.wav",
+          "start": 400.57,
+          "end": 423.5,
+          "speaker": "SPEAKER_00",
+          "text": "And so I think the first thing that everybody should do is learn how to use AI so that they can augment their own produc"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.5,
+        "recall@3": 0.5,
+        "recall@5": 0.5,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid": {
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q07",
+      "query": "Jillian Armstrong",
+      "type": "keyword",
+      "relevant": [
+        {
+          "file": "culture_01.wav",
+          "start": 369.4,
+          "end": 373.1,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.6397926807403564,
+      "top_hybrid": [
+        {
+          "file": "culture_01.wav",
+          "start": 367.1,
+          "end": 387.83,
+          "speaker": "SPEAKER_00",
+          "text": "I was so excited by that part. I wanted that so bad. I was after Jill, Jillian Armstrong, the director, for so many year"
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 387.87,
+          "end": 410.07,
+          "speaker": "SPEAKER_00",
+          "text": "And plus it was the first time in my life where I started watching the director. I was looking at what she was doing bec"
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 355.0,
+          "end": 366.82,
+          "speaker": "SPEAKER_01",
+          "text": "Well, I like your performance a lot in Mrs. Soful, where you play the wife of a prison guard who ends up falling in love"
+        }
+      ],
+      "keyword": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.5
+      },
+      "hybrid": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q08",
+      "query": "feeling isolated among male co-stars in a mob film",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "culture_01.wav",
+          "start": 101.9,
+          "end": 109.7,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 146.7,
+          "end": 208.1,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.7401525091943134,
+      "top_hybrid": [
+        {
+          "file": "culture_01.wav",
+          "start": 137.09,
+          "end": 145.23,
+          "speaker": "SPEAKER_01",
+          "text": "That was a lucky break. So in what ways did you feel maybe kind of left out or the outsider on the Godfather sets?"
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 98.37,
+          "end": 115.56,
+          "speaker": "SPEAKER_00",
+          "text": "you're going to be shut out of a lot of his life. Oh, it's a world I know nothing about. You know, when we were making i"
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 146.67,
+          "end": 172.21,
+          "speaker": "SPEAKER_00",
+          "text": "i think in every way i felt the outsider there was that there was nobody that really became my friend on those movies i "
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.5,
+        "rr": 0.1
+      },
+      "semantic": {
+        "recall@1": 0.5,
+        "recall@3": 0.5,
+        "recall@5": 0.5,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.5
+      },
+      "hybrid_hit_rank": 2,
+      "speaker_correct": true
+    },
+    {
+      "id": "q09",
+      "query": "being timid about bossing performers around behind the camera",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "culture_01.wav",
+          "start": 425.0,
+          "end": 451.1,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.6674384474754333,
+      "top_hybrid": [
+        {
+          "file": "business_01.wav",
+          "start": 81.08,
+          "end": 102.44,
+          "speaker": "SPEAKER_01",
+          "text": "If you can activate these muscles in your profile picture, you don't have to walk around like that, but if you can act, "
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 424.95,
+          "end": 451.06,
+          "speaker": "SPEAKER_00",
+          "text": "Oh, yeah. Oh, that's so obvious, yes. Yeah, no question about it. I mean, it's not my way, but it's the desire to do it "
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 355.0,
+          "end": 366.82,
+          "speaker": "SPEAKER_01",
+          "text": "Well, I like your performance a lot in Mrs. Soful, where you play the wife of a prison guard who ends up falling in love"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.5
+      },
+      "hybrid_hit_rank": 2,
+      "speaker_correct": true
+    },
+    {
+      "id": "q10",
+      "query": "Barry Marshall",
+      "type": "keyword",
+      "relevant": [
+        {
+          "file": "health_01.wav",
+          "start": 387.5,
+          "end": 393.2,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.5109662857363755,
+      "top_hybrid": [
+        {
+          "file": "health_01.wav",
+          "start": 383.47,
+          "end": 401.5,
+          "speaker": "SPEAKER_01",
+          "text": "stress can play a role, it is certainly complicated. So Barry Marshall was phenomenal in Australia and he found H. Pylor"
+        },
+        {
+          "file": "business_02.wav",
+          "start": 456.72,
+          "end": 460.14,
+          "speaker": "SPEAKER_00",
+          "text": "Sequoia was the first investor in our company. Yeah, of course. Yeah."
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 539.0,
+          "end": 539.98,
+          "speaker": "SPEAKER_01",
+          "text": "about the success of FIRST."
+        }
+      ],
+      "keyword": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 1.0,
+        "rr": 0.1111111111111111
+      },
+      "hybrid": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q11",
+      "query": "what do gut microbes make that nourishes the lining of the large intestine",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "health_01.wav",
+          "start": 215.1,
+          "end": 258.8,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.7646712064743042,
+      "top_hybrid": [
+        {
+          "file": "health_01.wav",
+          "start": 470.76,
+          "end": 489.7,
+          "speaker": "SPEAKER_01",
+          "text": "So you have the pouch, which, you know, we can get into the anatomy here, but if the pouch of the gastric bypass is too "
+        },
+        {
+          "file": "health_01.wav",
+          "start": 264.38,
+          "end": 290.9,
+          "speaker": "SPEAKER_01",
+          "text": "So it has a lot of different, a lot of different roles that it's playing. Additionally, it keeps your bowel acidic, righ"
+        },
+        {
+          "file": "health_02.wav",
+          "start": 437.79,
+          "end": 467.62,
+          "speaker": "SPEAKER_01",
+          "text": "Because we don't want the insulin in the periphery over-insulinizing the periphery, because it would make the muscle tis"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.5
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.25
+      },
+      "hybrid_hit_rank": 4,
+      "speaker_correct": true
+    },
+    {
+      "id": "q12",
+      "query": "what did the host say about stress and stomach ulcers",
+      "type": "speaker",
+      "relevant": [
+        {
+          "file": "health_01.wav",
+          "start": 352.9,
+          "end": 383.0,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.7699868083000183,
+      "top_hybrid": [
+        {
+          "file": "health_01.wav",
+          "start": 343.01,
+          "end": 367.18,
+          "speaker": "SPEAKER_00",
+          "text": "It's at least for the sciences, right? It's often surprising who doesn't but let's leave aside that component. But that "
+        },
+        {
+          "file": "health_01.wav",
+          "start": 383.47,
+          "end": 401.5,
+          "speaker": "SPEAKER_01",
+          "text": "stress can play a role, it is certainly complicated. So Barry Marshall was phenomenal in Australia and he found H. Pylor"
+        },
+        {
+          "file": "health_01.wav",
+          "start": 373.41,
+          "end": 382.97,
+          "speaker": "SPEAKER_00",
+          "text": "And that's the problem with these, you know, the way the media covers these findings, like it's not all that you ingeste"
+        }
+      ],
+      "keyword": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q13",
+      "query": "\"euglycemic clamp\"",
+      "type": "phrase",
+      "relevant": [
+        {
+          "file": "health_02.wav",
+          "start": 306.2,
+          "end": 311.9,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.782425714586634,
+      "top_hybrid": [
+        {
+          "file": "health_02.wav",
+          "start": 297.06,
+          "end": 319.86,
+          "speaker": "SPEAKER_00",
+          "text": "the clinical research center where we can monitor and keep the glucose perfectly constant. We're not letting the glucose"
+        },
+        {
+          "file": "health_02.wav",
+          "start": 274.62,
+          "end": 296.8,
+          "speaker": "SPEAKER_00",
+          "text": "You have to explain that to me again, Ralph. That is mind-boggling to me. I would never have predicted that. So let me s"
+        },
+        {
+          "file": "health_02.wav",
+          "start": 320.54,
+          "end": 352.95,
+          "speaker": "SPEAKER_00",
+          "text": "And you've obviously had to bring glucose. You had to infuse glucose to maintain euglycemia. Correct. Did you say that i"
+        }
+      ],
+      "keyword": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.25
+      },
+      "hybrid": {
+        "recall@1": 1.0,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q14",
+      "query": "a short experiment that made fit young adults metabolically sick within days",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "health_02.wav",
+          "start": 196.5,
+          "end": 240.2,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "file": "health_02.wav",
+          "start": 284.2,
+          "end": 332.6,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.7650138419850115,
+      "top_hybrid": [
+        {
+          "file": "health_02.wav",
+          "start": 369.13,
+          "end": 374.97,
+          "speaker": "SPEAKER_01",
+          "text": "down regulating the insulin signaling system and probably other distal metabolic within the"
+        },
+        {
+          "file": "health_01.wav",
+          "start": 0.09,
+          "end": 16.27,
+          "speaker": "SPEAKER_00",
+          "text": "raises some interesting questions about intermittent fasting. I think very few people are doing long-term fasts of more "
+        },
+        {
+          "file": "health_02.wav",
+          "start": 320.54,
+          "end": 352.95,
+          "speaker": "SPEAKER_00",
+          "text": "And you've obviously had to bring glucose. You had to infuse glucose to maintain euglycemia. Correct. Did you say that i"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.5,
+        "recall@5": 0.5,
+        "recall@10": 0.5,
+        "rr": 0.5
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.5,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.3333333333333333
+      },
+      "hybrid_hit_rank": 3,
+      "speaker_correct": true
+    },
+    {
+      "id": "q15",
+      "query": "why shots given under the skin don't mimic the body's own delivery route",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "health_02.wav",
+          "start": 409.7,
+          "end": 467.6,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.6490624965354804,
+      "top_hybrid": [
+        {
+          "file": "business_01.wav",
+          "start": 234.07,
+          "end": 239.14,
+          "speaker": "SPEAKER_00",
+          "text": "Has anyone ever done any really compelling studies on this idea of resting bitch face or resting bothered face as you ca"
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 387.87,
+          "end": 410.07,
+          "speaker": "SPEAKER_00",
+          "text": "And plus it was the first time in my life where I started watching the director. I was looking at what she was doing bec"
+        },
+        {
+          "file": "health_02.wav",
+          "start": 468.35,
+          "end": 494.28,
+          "speaker": "SPEAKER_01",
+          "text": "And in a certain way, if you're a diabetic and you are insulin resistant or an obese person and you are insulin resistan"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "hybrid_hit_rank": null
+    },
+    {
+      "id": "q16",
+      "query": "NanoChat",
+      "type": "keyword",
+      "relevant": [
+        {
+          "file": "tech_ai_01.wav",
+          "start": 85.3,
+          "end": 89.9,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 339.4,
+          "end": 341.4,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.703142660668931,
+      "top_hybrid": [
+        {
+          "file": "tech_ai_01.wav",
+          "start": 334.77,
+          "end": 355.08,
+          "speaker": "SPEAKER_01",
+          "text": "Very naive question, but the architectural tweaks that you're adding. to NanoChat. They're in a paper somewhere, right? "
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 77.63,
+          "end": 95.81,
+          "speaker": "SPEAKER_00",
+          "text": "because there's lots of examples of it in the training sets of these models. So there's like features of things where th"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 356.92,
+          "end": 371.07,
+          "speaker": "SPEAKER_00",
+          "text": "It's tough. I think they kind of know but they don't fully know and they don't know how to fully integrate it into the r"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.5,
+        "recall@10": 1.0,
+        "rr": 0.25
+      },
+      "hybrid": {
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q17",
+      "query": "why automated programming helpers struggled with his unusual project",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "tech_ai_01.wav",
+          "start": 85.3,
+          "end": 122.8,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 165.2,
+          "end": 189.5,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.7601058483123834,
+      "top_hybrid": [
+        {
+          "file": "tech_ai_01.wav",
+          "start": 527.67,
+          "end": 544.23,
+          "speaker": "SPEAKER_00",
+          "text": "Like compilers will take my highlight language and see and write the assembly code. So we're abstracting ourselves very "
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 428.09,
+          "end": 454.08,
+          "speaker": "SPEAKER_01",
+          "text": "Yeah. Actually, this is also, here's another reason why this is really interesting. Through the history of programming, "
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 496.25,
+          "end": 510.65,
+          "speaker": "SPEAKER_00",
+          "text": "Like, I don't know, like ranking is kind of AI, right? At some point, Google was like, even early on, they were thinking"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "hybrid_hit_rank": null
+    },
+    {
+      "id": "q18",
+      "query": "has software been gradually taking over coders' grunt work for decades",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "tech_ai_01.wav",
+          "start": 439.2,
+          "end": 460.4,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 472.2,
+          "end": 481.9,
+          "speaker": "SPEAKER_00"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 519.6,
+          "end": 544.2,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.7360873818397574,
+      "top_hybrid": [
+        {
+          "file": "business_02.wav",
+          "start": 131.9,
+          "end": 148.27,
+          "speaker": "SPEAKER_01",
+          "text": "We're moving into an era where the productivity that software can accomplish when a person is using software can massive"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 496.25,
+          "end": 510.65,
+          "speaker": "SPEAKER_00",
+          "text": "Like, I don't know, like ranking is kind of AI, right? At some point, Google was like, even early on, they were thinking"
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 48.08,
+          "end": 65.05,
+          "speaker": "SPEAKER_00",
+          "text": "it's because it worked because I think that there was this, it was the way we were working. In other words, it's how he "
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.3333333333333333,
+        "recall@5": 0.6666666666666666,
+        "recall@10": 0.6666666666666666,
+        "rr": 0.3333333333333333
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.6666666666666666,
+        "rr": 0.16666666666666666
+      },
+      "hybrid_hit_rank": 6,
+      "speaker_correct": true
+    },
+    {
+      "id": "q19",
+      "query": "oDesk",
+      "type": "keyword",
+      "relevant": [
+        {
+          "file": "tech_product_01.wav",
+          "start": 101.7,
+          "end": 110.8,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 443.9,
+          "end": 445.8,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 458.3,
+          "end": 470.7,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.5879342205563746,
+      "top_hybrid": [
+        {
+          "file": "tech_product_01.wav",
+          "start": 443.87,
+          "end": 457.5,
+          "speaker": "SPEAKER_01",
+          "text": "And in the case of Odesk where I started. that initial thing was that remote work is a weird thing because basically you"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 458.3,
+          "end": 478.57,
+          "speaker": "SPEAKER_01",
+          "text": "And so the initial value proposition of Odesk was to provide tools for workers to verify they were working the hours and"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 91.68,
+          "end": 112.03,
+          "speaker": "SPEAKER_01",
+          "text": "And that if I'm a host, I have a listing. Who is out there who's willing to stay at my place when I have it available? S"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.3333333333333333,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 0.3333333333333333,
+        "recall@3": 0.3333333333333333,
+        "recall@5": 0.6666666666666666,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid": {
+        "recall@1": 0.3333333333333333,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q20",
+      "query": "\"passive data collection\"",
+      "type": "phrase",
+      "relevant": [
+        {
+          "file": "tech_product_01.wav",
+          "start": 142.0,
+          "end": 146.7,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 153.1,
+          "end": 154.4,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.7474891916665838,
+      "top_hybrid": [
+        {
+          "file": "tech_product_01.wav",
+          "start": 149.9,
+          "end": 163.77,
+          "speaker": "SPEAKER_01",
+          "text": "Well, maybe that's a sign that something can quite work out the way you want it to work out. So that's passive data coll"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 130.81,
+          "end": 149.86,
+          "speaker": "SPEAKER_01",
+          "text": "I mean, if you stay somewhere in Airbnb, you learn something about the host. You learn something about the listing. The "
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 164.27,
+          "end": 191.27,
+          "speaker": "SPEAKER_01",
+          "text": "Every single thing I just said, finding potential matches, making matches, and then learning about those matches, and th"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "semantic": {
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid": {
+        "recall@1": 0.5,
+        "recall@3": 1.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 1.0
+      },
+      "hybrid_hit_rank": 1,
+      "speaker_correct": true
+    },
+    {
+      "id": "q21",
+      "query": "what did the host say about cleaning services as a business",
+      "type": "speaker",
+      "relevant": [
+        {
+          "file": "tech_product_01.wav",
+          "start": 192.1,
+          "end": 216.3,
+          "speaker": "SPEAKER_00"
+        }
+      ],
+      "top_semantic_score": 0.6818991899490356,
+      "top_hybrid": [
+        {
+          "file": "tech_product_01.wav",
+          "start": 231.19,
+          "end": 252.49,
+          "speaker": "SPEAKER_01",
+          "text": "That is such a fantastic question. I want to preface what I say with a couple of comments. One of them is that I've work"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 274.23,
+          "end": 294.06,
+          "speaker": "SPEAKER_01",
+          "text": "That, in my view, is the biggest failure mode. You mentioned specific things, cleaners. I wonder about that, right? Is i"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 130.81,
+          "end": 149.86,
+          "speaker": "SPEAKER_01",
+          "text": "I mean, if you stay somewhere in Airbnb, you learn something about the host. You learn something about the listing. The "
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.25
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 1.0,
+        "rr": 0.1
+      },
+      "hybrid_hit_rank": 10,
+      "speaker_correct": true
+    },
+    {
+      "id": "q22",
+      "query": "why do startups that connect buyers and sellers fail early on",
+      "type": "semantic",
+      "relevant": [
+        {
+          "file": "tech_product_01.wav",
+          "start": 264.9,
+          "end": 294.1,
+          "speaker": "SPEAKER_01"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 416.9,
+          "end": 440.7,
+          "speaker": "SPEAKER_01"
+        }
+      ],
+      "top_semantic_score": 0.7743603952419671,
+      "top_hybrid": [
+        {
+          "file": "tech_product_01.wav",
+          "start": 294.07,
+          "end": 306.97,
+          "speaker": "SPEAKER_01",
+          "text": "So I'm going to be one vignette of this that I really like. And that's urban sitter. So an urban sitter is a babysitting"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 192.09,
+          "end": 211.69,
+          "speaker": "SPEAKER_00",
+          "text": "Many founders try to start a marketplace business, think about marketplace opportunities where they don't exist. And the"
+        },
+        {
+          "file": "business_01.wav",
+          "start": 309.76,
+          "end": 333.08,
+          "speaker": "SPEAKER_01",
+          "text": "And I don't know if anyone watching is feeling lonely. I thought it was all my fault. I was like, I miss the memo. I don"
+        }
+      ],
+      "keyword": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
+      },
+      "semantic": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.5,
+        "recall@10": 0.5,
+        "rr": 0.2
+      },
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.5,
+        "rr": 0.1
+      },
+      "hybrid_hit_rank": 10,
+      "speaker_correct": true
+    },
+    {
+      "id": "q23",
+      "query": "recipe for baking sourdough bread",
+      "type": "negative",
+      "relevant": [],
+      "top_semantic_score": 0.5891333994011106,
+      "top_hybrid": [
+        {
+          "file": "business_01.wav",
+          "start": 198.32,
+          "end": 220.24,
+          "speaker": "SPEAKER_01",
+          "text": "You don't have to do all the cues. If smiling is not your thing, smiling is not essential for being charismatic. When we"
+        },
+        {
+          "file": "health_01.wav",
+          "start": 295.11,
+          "end": 300.23,
+          "speaker": "SPEAKER_00",
+          "text": "in addition to fiber. Do you make it a point to consume them? I do. Yeah, I like kefir"
+        },
+        {
+          "file": "business_01.wav",
+          "start": 180.29,
+          "end": 198.0,
+          "speaker": "SPEAKER_01",
+          "text": "Is it also a little exhausting to make sure that in my first impression, I'm being a little bit more up with my face, op"
+        }
+      ]
+    },
+    {
+      "id": "q24",
+      "query": "rising sea levels from climate change",
+      "type": "negative",
+      "relevant": [],
+      "top_semantic_score": 0.547067403793335,
+      "top_hybrid": [
+        {
+          "file": "business_01.wav",
+          "start": 239.22,
+          "end": 257.61,
+          "speaker": "SPEAKER_01",
+          "text": "There is research on resting bothered face and there are certain people who when people see pictures of their face at re"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 292.36,
+          "end": 307.49,
+          "speaker": "SPEAKER_01",
+          "text": "And so they'll look at the fact that you can have cloud code and make entire application, crowd applications from scratc"
+        },
+        {
+          "file": "health_01.wav",
+          "start": 373.41,
+          "end": 382.97,
+          "speaker": "SPEAKER_00",
+          "text": "And that's the problem with these, you know, the way the media covers these findings, like it's not all that you ingeste"
+        }
+      ]
+    },
+    {
+      "id": "q25",
+      "query": "tips for house training a puppy",
+      "type": "negative",
+      "relevant": [],
+      "top_semantic_score": 0.546074709998124,
+      "top_hybrid": [
+        {
+          "file": "tech_ai_01.wav",
+          "start": 544.84,
+          "end": 559.27,
+          "speaker": "SPEAKER_01",
+          "text": "One of the big problems with RL is that it's incredibly information sparse. Labelbox can help you with this by increasin"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 77.63,
+          "end": 95.81,
+          "speaker": "SPEAKER_00",
+          "text": "because there's lots of examples of it in the training sets of these models. So there's like features of things where th"
+        },
+        {
+          "file": "tech_ai_01.wav",
+          "start": 25.29,
+          "end": 40.81,
+          "speaker": "SPEAKER_00",
+          "text": "The intermediate part, which is where I am, is you still write a lot of things from scratch, but you use the autocomplet"
+        }
+      ]
+    }
+  ]
+}
