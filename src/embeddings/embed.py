@@ -1,22 +1,18 @@
-"""Local sentence embeddings for chunks and queries."""
+"""Local sentence embeddings (BAAI/bge-small-en-v1.5, 384-dim) for chunks and queries."""
 
 import os
 from functools import lru_cache
 
 from sentence_transformers import SentenceTransformer
 
-MODEL_NAME = "BAAI/bge-small-en-v1.5"  # 384-dim
+MODEL_NAME = "BAAI/bge-small-en-v1.5"
 BATCH_SIZE = 32
 
 
 @lru_cache(maxsize=1)
 def get_embedding_model(model_name=MODEL_NAME):
-    print(f"Loading embedding model: {model_name}")
-    # The model is public; don't send HF_TOKEN (set for pyannote), since a
-    # token without access (or an expired one) makes the Hub reject even
-    # public models. token=False alone isn't enough: sentence-transformers 5.x
-    # still reads HF_TOKEN from the environment when loading the processor,
-    # so it is hidden for the duration of the load.
+    # The model is public, but sentence-transformers still sends HF_TOKEN (meant
+    # for pyannote) despite token=False, and an expired token gets it rejected.
     hf_token = os.environ.pop("HF_TOKEN", None)
     try:
         return SentenceTransformer(model_name, token=False)
@@ -26,29 +22,20 @@ def get_embedding_model(model_name=MODEL_NAME):
 
 
 def create_embeddings(chunks, model_name=MODEL_NAME):
-    """Add an "embedding" vector to each chunk and return the chunks."""
+    """Add a normalized "embedding" to each chunk, computed from its embed_text."""
     if not chunks:
         return chunks
-
-    model = get_embedding_model(model_name)
-
-    # Embed the turn with its neighbouring turns for context; the turn's own
-    # text is what gets displayed and keyword-indexed.
-    texts = [chunk.get("embed_text", chunk["text"]) for chunk in chunks]
-
-    embeddings = model.encode(
-        texts,
+    embeddings = get_embedding_model(model_name).encode(
+        [chunk.get("embed_text", chunk["text"]) for chunk in chunks],
         batch_size=BATCH_SIZE,
         normalize_embeddings=True,
         show_progress_bar=False,
     )
-
     for chunk, embedding in zip(chunks, embeddings):
         chunk["embedding"] = embedding.tolist()
-
     return chunks
 
 
 def embed_query(query, model_name=MODEL_NAME):
-    """Return the normalized embedding for a search query."""
+    """Normalized embedding for a search query."""
     return get_embedding_model(model_name).encode(query, normalize_embeddings=True)

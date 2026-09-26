@@ -10,24 +10,18 @@ Usage:
 
 import json
 import sys
-from pathlib import Path
 
-from src.evaluation.validate_queries import QUERIES_PATH, load_transcripts, validate
-
-ROOT_DIR = Path(__file__).resolve().parents[2]
-RESULTS_PATH = ROOT_DIR / "output" / "eval" / "results.json"
+from src.common import EVAL_RESULTS_PATH, QUERIES_PATH, ROOT_DIR
+from src.evaluation.validate_queries import load_transcripts, validate
 
 K_VALUES = (1, 3, 5, 10)
 METHODS = ("keyword", "semantic", "hybrid")
 
-# A result matches a label only if it is from the same file and actually
-# overlaps the labeled range by at least MIN_OVERLAP_S (or half the result's
-# duration, for very short turns). A "within N seconds" tolerance would be
-# wrong here: speaker turns sit back to back, so any tolerance also accepts
-# the adjacent turn, which is usually the other speaker saying something else.
+# A result must overlap the labeled range by this much (or half its duration,
+# for very short turns). No "within N seconds" tolerance: turns sit back to
+# back, so that would accept the adjacent turn, usually the other speaker.
 MIN_OVERLAP_S = 0.5
 
-# Targets for the write-up.
 SUCCESS_CRITERIA = {
     "hybrid_recall@5": 0.80,
     "hybrid_recall@10": 0.90,
@@ -91,6 +85,7 @@ def _summary(result):
 
 def evaluate_query(query, max_k=max(K_VALUES)):
     """Run one query and return its per-method metrics and details."""
+    # Imported here so the pure metric functions (and tests) need no database.
     from src.retrieval.pg_hybrid_search import hybrid_search
 
     semantic, keyword, hybrid = hybrid_search(query["query"], top_k=max_k)
@@ -102,11 +97,10 @@ def evaluate_query(query, max_k=max(K_VALUES)):
         "query": query["query"],
         "type": query["type"],
         "relevant": relevant,
-        # How similar the best chunk looked, even when nothing is relevant.
         "top_semantic_score": semantic[0]["score"] if semantic else None,
         "top_hybrid": [_summary(r) for r in hybrid[:3]],
     }
-    if not relevant:  # negative query: no recall to score
+    if not relevant:  # negative query
         return detail
 
     for method, results in rankings.items():
@@ -143,8 +137,7 @@ def aggregate(details):
     metrics["speaker_accuracy"] = _mean(1.0 if ok else 0.0 for ok in speaker_checks)
     metrics["speaker_checked"] = len(speaker_checks)
 
-    # If negatives score clearly lower, a similarity threshold could reject
-    # off-topic queries instead of always returning the nearest chunks.
+    # A clear gap would let a similarity threshold reject off-topic queries.
     metrics["mean_top_semantic_score_positive"] = _mean(d["top_semantic_score"] for d in positives)
     metrics["mean_top_semantic_score_negative"] = _mean(d["top_semantic_score"] for d in negatives)
     return metrics
@@ -213,7 +206,7 @@ def print_report(evaluation):
         print(f"  {name:<20} {_fmt(value)}  (target {target:.2f})  {status}")
 
 
-def save_results(evaluation, path=RESULTS_PATH):
+def save_results(evaluation, path=EVAL_RESULTS_PATH):
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
         json.dump(evaluation, f, indent=2, ensure_ascii=False)

@@ -1,124 +1,48 @@
--- =========================================================
--- 1. Enable extensions
--- =========================================================
--- vector  : embeddings + HNSW index
--- pg_trgm : trigram similarity for fuzzy keyword matching
+-- Schema for hybrid (keyword + semantic) search over diarized transcripts.
+-- Mounted as a docker init script: runs only when the data volume is empty.
 
-CREATE EXTENSION IF NOT EXISTS vector;
-
-CREATE EXTENSION IF NOT EXISTS pg_trgm;
-
-
--- =========================================================
--- 2. Conversations / audio files
--- =========================================================
+CREATE EXTENSION IF NOT EXISTS vector;   -- embeddings + HNSW index
+CREATE EXTENSION IF NOT EXISTS pg_trgm;  -- trigram index for fuzzy matching
 
 CREATE TABLE IF NOT EXISTS conversations (
-    id BIGSERIAL PRIMARY KEY,
-
-    conversation_id TEXT NOT NULL UNIQUE,
-
-    file_name TEXT NOT NULL,
-
-    file_path TEXT,
-
+    id               BIGSERIAL PRIMARY KEY,
+    conversation_id  TEXT NOT NULL UNIQUE,  -- audio file name, e.g. "health_01.wav"
+    file_name        TEXT NOT NULL,
+    file_path        TEXT,
     duration_seconds REAL,
-
-    speaker_count INTEGER DEFAULT 2,
-
-    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
+    speaker_count    INTEGER DEFAULT 2,
+    created_at       TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP
 );
 
-
--- =========================================================
--- 3. Transcript chunks (one row per speaker turn)
--- =========================================================
--- chunk_id   : "<file>_0001", the ID used by the chunk JSON and eval labels
--- text       : the turn's own words (displayed + keyword-indexed)
--- word_count : words in text; very short turns are left out of semantic search
--- embed_text : the turn plus its neighbouring turns (what is embedded)
--- words      : [{"word", "start", "end"}, ...] for exact match timestamps
--- embedding  : VECTOR(384) matches BAAI/bge-small-en-v1.5
--- =========================================================
-
+-- One row per speaker turn.
 CREATE TABLE IF NOT EXISTS transcript_chunks (
-    id BIGSERIAL PRIMARY KEY,
-
-    chunk_id TEXT NOT NULL UNIQUE,
-
-    conversation_id TEXT NOT NULL
-        REFERENCES conversations(conversation_id)
-        ON DELETE CASCADE,
-
-    chunk_index INTEGER NOT NULL,
-
-    speaker TEXT NOT NULL,
-
-    start_time REAL NOT NULL,
-
-    end_time REAL NOT NULL,
-
-    text TEXT NOT NULL,
-
-    word_count INTEGER NOT NULL DEFAULT 0,
-
-    embed_text TEXT,
-
-    words JSONB NOT NULL DEFAULT '[]'::jsonb,
-
-    embedding VECTOR(384),
-
-    created_at TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
-
+    id              BIGSERIAL PRIMARY KEY,
+    chunk_id        TEXT NOT NULL UNIQUE,  -- "<file>_0001"
+    conversation_id TEXT NOT NULL REFERENCES conversations(conversation_id) ON DELETE CASCADE,
+    chunk_index     INTEGER NOT NULL,
+    speaker         TEXT NOT NULL,
+    start_time      REAL NOT NULL,
+    end_time        REAL NOT NULL,
+    text            TEXT NOT NULL,                     -- the turn itself: displayed + keyword-indexed
+    word_count      INTEGER NOT NULL DEFAULT 0,        -- very short turns skip semantic search
+    embed_text      TEXT,                              -- turn + neighbouring turns: what is embedded
+    words           JSONB NOT NULL DEFAULT '[]'::jsonb, -- [{"word", "start", "end"}] for match timestamps
+    embedding       VECTOR(384),                       -- BAAI/bge-small-en-v1.5
+    created_at      TIMESTAMPTZ DEFAULT CURRENT_TIMESTAMP,
+    text_search     TSVECTOR GENERATED ALWAYS AS (to_tsvector('english', text)) STORED,
     UNIQUE (conversation_id, chunk_index)
 );
 
-
--- =========================================================
--- 4. PostgreSQL Full Text Search
--- =========================================================
-
-ALTER TABLE transcript_chunks
-ADD COLUMN IF NOT EXISTS text_search TSVECTOR
-GENERATED ALWAYS AS (
-    to_tsvector('english', text)
-) STORED;
-
-
--- =========================================================
--- 5. Keyword / Full Text Search Index
--- =========================================================
-
 CREATE INDEX IF NOT EXISTS idx_transcript_chunks_text_search
-ON transcript_chunks
-USING GIN (text_search);
-
-
--- =========================================================
--- 6. Vector Similarity Search Index
--- =========================================================
+    ON transcript_chunks USING GIN (text_search);
 
 CREATE INDEX IF NOT EXISTS idx_transcript_chunks_embedding_hnsw
-ON transcript_chunks
-USING hnsw (embedding vector_cosine_ops);
+    ON transcript_chunks USING hnsw (embedding vector_cosine_ops);
 
-
--- =========================================================
--- 7. Timestamp Index
--- =========================================================
--- Also serves conversation_id lookups, so no separate index is needed.
-
+-- Also serves conversation_id lookups.
 CREATE INDEX IF NOT EXISTS idx_transcript_chunks_timestamp
-ON transcript_chunks (conversation_id, start_time);
+    ON transcript_chunks (conversation_id, start_time);
 
-
--- =========================================================
--- 8. Fuzzy Keyword Index (trigrams)
--- =========================================================
--- Catches names Whisper misspells ("Karpathy" -> "Carpathy"), which
--- full text search misses entirely. Used with word_similarity / <%.
-
+-- Fuzzy name matching (Whisper writes "Karpathy" as "Carpathy"); not used by search yet.
 CREATE INDEX IF NOT EXISTS idx_transcript_chunks_text_trgm
-ON transcript_chunks
-USING GIN (text gin_trgm_ops);
-
+    ON transcript_chunks USING GIN (text gin_trgm_ops);

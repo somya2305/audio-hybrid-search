@@ -10,34 +10,34 @@ import sys
 
 from pgvector import Vector
 
+from src.common import format_time
 from src.database.connection import get_connection
 from src.embeddings.embed import embed_query
 
-# Candidates returned by each retriever before fusion.
-TOP_K = 20
-
-# Results returned after fusion.
-TOP_K_FINAL = 5
+TOP_K = 20  # candidates from each retriever before fusion
+TOP_K_FINAL = 5  # results after fusion
 
 # Turns shorter than this ("Look.", "What?") are left out of semantic search:
-# with almost no content their embeddings sit near the centre of the space and
-# score moderately against any query. They stay keyword-searchable.
+# their near-empty embeddings score moderately against any query.
 MIN_SEMANTIC_WORDS = 4
 
-# RRF damping constant (60 is the value from the original RRF paper): it keeps
-# a single first-place rank from outweighing agreement between both lists.
+# RRF damping constant from the original paper: agreement between both lists
+# outweighs a single first place.
 RRF_K = 60
 
-# Any single query word (stemmed, OR-ed), even for a quoted phrase search:
-# used to mark matches in the snippet and to find the first matching word.
-WORD_QUERY_SQL = "replace(plainto_tsquery('english', %(query)s)::text, '&', '|')::tsquery"
+# ts_rank length normalization: none. Turns are capped at ~80 words, and
+# normalizing by length pushed one-word turns to the top.
+TS_RANK_NORMALIZATION = 0
 
-# Turns are at most ~80 words, so show the whole turn with matches marked
-# instead of a clipped fragment.
+# Turns are short, so the snippet is the whole turn with matched words marked.
 HEADLINE_OPTIONS = "StartSel=**, StopSel=**, HighlightAll=true"
 
-# Shared by both retrievers so their results have the same shape. Needs
-# wq.word_query in the FROM clause.
+# Any query word (stemmed, stopwords dropped). Ranking matches on any word
+# rather than all of them keeps natural-language queries from missing.
+ANY_WORD_TSQUERY = "replace(plainto_tsquery('english', %(query)s)::text, '&', '|')::tsquery"
+
+# Both retrievers return these columns; wq.word_query marks matches in the
+# snippet and finds the first matching word's timestamp.
 RESULT_COLUMNS = """
     c.id, c.chunk_id, c.conversation_id, c.chunk_index, c.speaker,
     c.start_time, c.end_time, c.text,
@@ -51,7 +51,7 @@ RESULT_COLUMNS = """
     ) AS match_time
 """
 
-# Optional filter to one conversation; a NULL %(cid)s matches every row.
+# A NULL %(cid)s matches every conversation.
 CONVERSATION_FILTER = "(%(cid)s::text IS NULL OR c.conversation_id = %(cid)s)"
 
 
@@ -66,8 +66,7 @@ def _row_to_result(row, rank):
         "end_time": row[6],
         "text": row[7],
         "snippet": row[8],
-        # Start of the first word matching a query term, if any.
-        "match_time": row[9],
+        "match_time": row[9],  # start of the first word matching the query, if any
         "score": float(row[10]),
         "rank": rank,
     }
@@ -86,7 +85,7 @@ def semantic_search(query, top_k=TOP_K, conversation_id=None):
         SELECT {RESULT_COLUMNS},
                1 - (c.embedding <=> %(embedding)s) AS score
         FROM transcript_chunks c,
-             (SELECT {WORD_QUERY_SQL}) AS wq(word_query)
+             (SELECT {ANY_WORD_TSQUERY}) AS wq(word_query)
         WHERE {CONVERSATION_FILTER}
           AND c.word_count >= %(min_words)s
         ORDER BY c.embedding <=> %(embedding)s
@@ -103,33 +102,18 @@ def semantic_search(query, top_k=TOP_K, conversation_id=None):
     )
 
 
-def _tsquery_sql(query):
-    """SQL for the query's tsquery (words stemmed, stopwords dropped).
-
-    Quoted input ("resistant starch") is an exact phrase via websearch syntax.
-    Otherwise the words are OR-ed, so a chunk needn't contain every word;
-    ts_rank still ranks chunks matching more of them higher.
-    """
-    if '"' in query:
-        return "websearch_to_tsquery('english', %(query)s)"
-    return "replace(plainto_tsquery('english', %(query)s)::text, '&', '|')::tsquery"
-
-
-# ts_rank length normalization. 0 = none: turns are capped at ~80 words, so
-# long turns have little advantage, while normalization 1 (divide by
-# 1 + log(length)) pushed one-word turns like "Look." to the top.
-TS_RANK_NORMALIZATION = 0
-
-
 def keyword_search(query, top_k=TOP_K, conversation_id=None):
-    """Rank chunks matching any query word (or a quoted phrase) by ts_rank."""
+    """Rank chunks matching any query word by ts_rank; "quoted text" must match as a phrase."""
+    match_query = (
+        "websearch_to_tsquery('english', %(query)s)" if '"' in query else ANY_WORD_TSQUERY
+    )
     return _run(
         f"""
         SELECT {RESULT_COLUMNS},
                ts_rank(c.text_search, q.query, %(norm)s) AS score
         FROM transcript_chunks c,
-             (SELECT {_tsquery_sql(query)}) AS q(query),
-             (SELECT {WORD_QUERY_SQL}) AS wq(word_query)
+             (SELECT {match_query}) AS q(query),
+             (SELECT {ANY_WORD_TSQUERY}) AS wq(word_query)
         WHERE c.text_search @@ q.query
           AND {CONVERSATION_FILTER}
         ORDER BY score DESC, c.id
@@ -148,9 +132,8 @@ def keyword_search(query, top_k=TOP_K, conversation_id=None):
 def reciprocal_rank_fusion(semantic, keyword, top_k=TOP_K_FINAL, rrf_k=RRF_K):
     """Merge two ranked lists: each chunk scores sum(1 / (rrf_k + rank)).
 
-    Only ranks are used, so the retrievers' incomparable scores (cosine
-    similarity vs ts_rank) never need normalising. When a chunk is in both
-    lists, the version with a match_time is kept.
+    Only ranks are used, so cosine similarity and ts_rank never need to be
+    made comparable. A chunk in both lists keeps the version with a match_time.
     """
     fused = {}
     for results in (semantic, keyword):
@@ -175,17 +158,6 @@ def hybrid_search(query, conversation_id=None, top_k=TOP_K_FINAL):
     return semantic, keyword, reciprocal_rank_fusion(semantic, keyword, top_k=top_k)
 
 
-# ============================================================
-# Output
-# ============================================================
-
-def format_time(seconds):
-    """83.46 -> "01:23.5"."""
-    # Round first so 59.96 becomes "01:00.0", not "00:60.0".
-    minutes, secs = divmod(round(float(seconds), 1), 60)
-    return f"{int(minutes):02d}:{secs:04.1f}"
-
-
 def format_location(result):
     """"<file> · <start>–<end> · <speaker>[ · match at <time>]"."""
     location = (
@@ -198,25 +170,19 @@ def format_location(result):
     return location
 
 
-def _print_list(title, results, top_k=TOP_K_FINAL, score_key="score"):
-    print(f"\n{title}")
-    if not results:
-        print("  (no results)")
-    for result in results[:top_k]:
-        print(f"  {result['rank']}. [{result[score_key]:.4f}] {format_location(result)}")
-
-
 def print_results(query):
     semantic, keyword, final = hybrid_search(query)
     print(f'\n=== "{query}" ===')
-    _print_list("Semantic", semantic)
-    _print_list("Keyword", keyword)
-    print("\nHybrid (RRF)")
-    if not final:
-        print("  (no results)")
-    for result in final:
-        print(f"  {result['rank']}. [{result['rrf_score']:.4f}] {format_location(result)}")
-        print(f"     {result['snippet']}")
+    for title, results, score_key in (
+        ("Semantic", semantic, "score"), ("Keyword", keyword, "score"), ("Hybrid (RRF)", final, "rrf_score")
+    ):
+        print(f"\n{title}")
+        if not results:
+            print("  (no results)")
+        for result in results[:TOP_K_FINAL]:
+            print(f"  {result['rank']}. [{result[score_key]:.4f}] {format_location(result)}")
+            if title.startswith("Hybrid"):
+                print(f"     {result['snippet']}")
 
 
 def main():

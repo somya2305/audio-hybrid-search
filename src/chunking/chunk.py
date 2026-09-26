@@ -1,7 +1,7 @@
 """Group a diarized transcript into speaker-turn chunks.
 
 Usage:
-    python -m src.chunking.chunk [transcription.json]
+    python -m src.chunking.chunk [transcription.json ...]
 
 With no path, every *_transcription.json in output/transcription/ is chunked.
 """
@@ -12,21 +12,18 @@ import re
 import sys
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parents[2]
-TRANSCRIPTION_DIR = ROOT_DIR / "output" / "transcription"
-OUTPUT_DIR = ROOT_DIR / "output" / "chunks"
+from src.common import CHUNKS_DIR, ROOT_DIR, transcription_paths
 
 # A chunk is one speaker turn: consecutive segments by the same speaker.
 # Long turns are split at segment (sentence) boundaries once they pass this.
 MAX_TURN_WORDS = 80
 
-# Each chunk is embedded together with this many neighbouring turns on each
-# side, so a reply ("Yes, that's why we moved") carries what it's replying to.
+# Each chunk is embedded with this many neighbouring turns on each side, so a
+# reply ("Yes, that's why we moved") carries what it's replying to.
 CONTEXT_TURNS = 1
 
-# Turns shorter than this ("Oh, really?") embed only their own text. With
-# neighbour context they would borrow the neighbours' meaning and crowd
-# semantic results; they stay keyword-searchable either way.
+# Turns shorter than this ("Oh, really?") embed only their own text, so they
+# don't borrow their neighbours' meaning.
 SHORT_TURN_WORDS = 8
 
 
@@ -37,8 +34,7 @@ def word_count(text):
 def group_turns(segments):
     """Group consecutive same-speaker segments into turns of <= MAX_TURN_WORDS.
 
-    A single segment longer than MAX_TURN_WORDS stays whole, since turns are
-    only split at segment boundaries.
+    Turns only split at segment boundaries, so one longer segment stays whole.
     """
     turns = []
 
@@ -99,16 +95,13 @@ def create_chunk(turns, index, conversation_id):
 def create_chunks(transcript):
     """Turn a diarized transcript dict into a list of speaker-turn chunks."""
     turns = group_turns(transcript.get("segments", []))
-    return [
-        create_chunk(turns, index, transcript["file"])
-        for index in range(len(turns))
-    ]
+    return [create_chunk(turns, index, transcript["file"]) for index in range(len(turns))]
 
 
 def save_chunks(transcript, chunks, input_path):
     """Write chunks to output/chunks/<stem>_chunks.json and return that path."""
     stem = Path(input_path).stem.removesuffix("_transcription")
-    output_path = OUTPUT_DIR / f"{stem}_chunks.json"
+    output_path = CHUNKS_DIR / f"{stem}_chunks.json"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(
@@ -118,59 +111,23 @@ def save_chunks(transcript, chunks, input_path):
     return output_path
 
 
-def chunk_file(input_path, verbose=True):
-    """Chunk one transcription JSON, write <stem>_chunks.json and return the chunks."""
-    input_path = Path(input_path)
-    with open(input_path, encoding="utf-8") as f:
-        transcript = json.load(f)
-
-    chunks = create_chunks(transcript)
-    output_path = save_chunks(transcript, chunks, input_path)
-
-    if verbose:
-        print(f"Conversation : {transcript['file']}")
-        print(f"Segments     : {len(transcript.get('segments', []))}")
-        print(f"Chunks       : {len(chunks)}")
-        for chunk in chunks:
-            print(
-                f"{chunk['chunk_id']} | "
-                f"{chunk['start']}s - {chunk['end']}s | "
-                f"{chunk['word_count']} words | "
-                f"speaker={chunk['speaker']}"
-            )
-        print(f"Wrote {output_path}")
-    else:
-        print(
-            f"{transcript['file']:<22} {len(transcript.get('segments', [])):>4} segments -> "
-            f"{len(chunks):>4} chunks  ({output_path.relative_to(ROOT_DIR)})"
-        )
-
-    return chunks
-
-
 def main():
     parser = argparse.ArgumentParser(description="Chunk diarized transcripts into speaker turns.")
     parser.add_argument(
-        "transcription", nargs="?",
-        help="Path to a <stem>_transcription.json file "
-             "(default: every *_transcription.json in output/transcription/)",
+        "transcriptions", nargs="*",
+        help="Transcript JSON files (default: every file in output/transcription/)",
     )
-    args = parser.parse_args()
+    paths = transcription_paths(parser.parse_args().transcriptions)
+    missing = [str(p) for p in paths if not p.is_file()]
+    if missing or not paths:
+        sys.exit(f"Transcript(s) not found: {', '.join(missing) or 'output/transcription/ is empty'}")
 
-    if args.transcription:
-        input_path = Path(args.transcription)
-        if not input_path.is_file():
-            sys.exit(f"Transcription file not found: {input_path}")
-        chunk_file(input_path)
-        return
-
-    input_paths = sorted(TRANSCRIPTION_DIR.glob("*_transcription.json"))
-    if not input_paths:
-        sys.exit(f"No *_transcription.json files found in {TRANSCRIPTION_DIR}")
-
-    print(f"Chunking {len(input_paths)} transcript(s) from {TRANSCRIPTION_DIR.relative_to(ROOT_DIR)}/")
-    for input_path in input_paths:
-        chunk_file(input_path, verbose=False)
+    for path in paths:
+        with open(path, encoding="utf-8") as f:
+            transcript = json.load(f)
+        chunks = create_chunks(transcript)
+        output_path = save_chunks(transcript, chunks, path)
+        print(f"{transcript['file']:<22} {len(chunks):>4} chunks -> {output_path.relative_to(ROOT_DIR)}")
 
 
 if __name__ == "__main__":

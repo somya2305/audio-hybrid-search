@@ -13,9 +13,7 @@ import sys
 from collections import Counter
 from pathlib import Path
 
-ROOT_DIR = Path(__file__).resolve().parents[2]
-QUERIES_PATH = ROOT_DIR / "data" / "queries.json"
-TRANSCRIPTION_DIR = ROOT_DIR / "output" / "transcription"
+from src.common import QUERIES_PATH, format_time, transcription_paths
 
 QUERY_TYPES = ("keyword", "phrase", "semantic", "speaker", "negative")
 
@@ -33,10 +31,10 @@ STOPWORDS = set(
 )
 
 
-def load_transcripts(transcription_dir=TRANSCRIPTION_DIR):
-    """Return {file: {"duration", "speakers", "segments"}} for every transcript."""
+def load_transcripts():
+    """{file: {"duration", "speakers", "segments"}} for every transcript."""
     transcripts = {}
-    for path in sorted(Path(transcription_dir).glob("*_transcription.json")):
+    for path in transcription_paths():
         with open(path, encoding="utf-8") as f:
             data = json.load(f)
         segments = data.get("segments", [])
@@ -99,11 +97,8 @@ def _content_words(text):
 
 
 def semantic_overlap_warnings(queries, transcripts):
-    """Semantic queries that share content words with their labelled spans.
-
-    Those words let keyword search find the answer, so the query no longer
-    tests embeddings. Warnings only: some overlap (e.g. a topic word) is fine.
-    """
+    """Semantic queries sharing content words with their spans (these would
+    let keyword search find the answer, so they no longer test embeddings)."""
     warnings = []
     for q in queries:
         if q.get("type") != "semantic":
@@ -118,11 +113,6 @@ def semantic_overlap_warnings(queries, transcripts):
         if shared:
             warnings.append(f"{q['id']}: shares {', '.join(shared)} with its spans")
     return warnings
-
-
-def format_time(seconds):
-    minutes, secs = divmod(round(float(seconds), 1), 60)
-    return f"{int(minutes):02d}:{secs:04.1f}"
 
 
 def print_table(queries):
