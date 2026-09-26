@@ -148,7 +148,8 @@ python -m src.retrieval.pg_hybrid_search                               # interac
 python -m src.evaluation.validate_queries   # check the labeled queries
 python -m src.evaluation.evaluate           # recall@1/3/5/10 and MRR per method -> output/eval/results.json
 python -m src.evaluation.report output/eval/results.json --compare output/eval/baseline.json
-pytest                                      # unit tests (no database needed)
+pytest -s                                   # recall@k tests on the live index (asserts the success criteria)
+                                            # + unit tests; -s prints the report
 
 # Individual stages
 python -m src.diarization.diarize [audio]            # transcribe + diarize (needs HF_TOKEN)

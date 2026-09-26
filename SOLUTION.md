@@ -179,7 +179,7 @@ python -m src.evaluation.report output/eval/<run>.json --compare output/eval/bas
 | Hybrid ≥ keyword-only and ≥ semantic-only (recall@5) | Holds | Fusion must justify itself over either method alone |
 | Every result shows file, time range and speaker | Always | Required by the brief |
 
-The first four are computed by `evaluate.py` and reported by `report.py`. The fifth was checked over the top 10 results of all 25 queries (250 of 250 have file, time range and speaker). The matching and metric code has unit tests in [tests/test_metrics.py](tests/test_metrics.py); the criteria are not yet enforced as a pytest gate against the live index.
+The first four are computed by `evaluate.py` and reported by `report.py`. The fifth was checked over the top 10 results of all 25 queries (250 of 250 have file, time range and speaker). These are also automated tests: [tests/test_retrieval.py](tests/test_retrieval.py) runs the labeled queries against the live index and asserts each criterion, and [tests/test_metrics.py](tests/test_metrics.py) unit-tests the matching and metric code. `pytest` runs both (24 tests); the live-index tests are skipped if the database is not running.
 
 ## 7. Results
 
@@ -335,7 +335,7 @@ The brief asks which metrics matter if this system went to production, and how t
 | Real usage | How often users play a result, or rephrase their query instead | Shows success on real questions, not just the labeled ones |
 
 **How to evaluate it:**
-- **Before each release:** run the labeled queries automatically and block the change if recall drops. The comparison already exists (`report.py --compare`); it only needs wiring into CI.
+- **Before each release:** run the labeled queries automatically and block the change if recall drops. `pytest` already does this against the success criteria (`tests/test_retrieval.py`); it only needs wiring into CI.
 - **After release:** log which results people play; periodically have a person judge a sample of real queries and add them to the labeled set, so it keeps up with what users actually ask.
 - **Separately for each stage:** measure transcription and speaker labels on their own, so a drop in search quality can be traced to its cause.
 
@@ -360,7 +360,7 @@ python scripts/build_dataset.py               # (optional) rebuild data/audio/ f
 python -m src.retrieval.pg_hybrid_search "insulin resistance in lean people"
 python -m src.evaluation.evaluate             # recall@k report -> output/eval/results.json
 python -m src.evaluation.report output/eval/results.json --compare output/eval/baseline.json
-pytest                                        # unit tests
+pytest                                        # recall@k tests on the live index + unit tests
 
 uvicorn src.api.app:app                       # web UI + API (section 11.2)
 ```

@@ -13,7 +13,7 @@ Always run modules with `python -m` from the repo root (`.venv/bin/python`).
 - `python -m src.retrieval.pg_hybrid_search "query"`: search CLI
 - `uvicorn src.api.app:app`: web UI at http://localhost:8000 and REST API (docs at /docs)
 - `python -m src.evaluation.evaluate --out output/eval/<name>.json`, then `python -m src.evaluation.report <that file> --compare output/eval/baseline.json`
-- `pytest`: unit tests, no database needed
+- `pytest`: recall@k tests against the live index (tests/test_retrieval.py, skipped without a database) + unit tests
 
 ## Conventions
 
