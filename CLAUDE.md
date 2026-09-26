@@ -11,6 +11,7 @@ Always run modules with `python -m` from the repo root (`.venv/bin/python`).
 - `python -m src.index_chunks`: re-chunk, embed and index saved transcripts (~12 s, no HF_TOKEN)
 - `python -m src.pipeline`: transcribe (only files without a transcript) and index; `--force` re-transcribes (~12 min per clip on CPU)
 - `python -m src.retrieval.pg_hybrid_search "query"`: search CLI
+- `uvicorn src.api.app:app`: web UI at http://localhost:8000 and REST API (docs at /docs)
 - `python -m src.evaluation.evaluate --out output/eval/<name>.json`, then `python -m src.evaluation.report <that file> --compare output/eval/baseline.json`
 - `pytest`: unit tests, no database needed
 

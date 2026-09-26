@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Audio RAG Explorer</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%232f6fde'/%3E%3Cpath d='M4 10V6M6.7 12V4M9.3 11V5M12 9V7' stroke='white' stroke-width='1.6' stroke-linecap='round'/%3E%3C/svg%3E">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1d2330; --muted: #5d6677; --border: #dde1e8;
+    --accent: #2f6fde; --accent-soft: #e6eefc; --hit: #1f8a4c; --hit-soft: #e3f4ea;
+    --miss: #c0392b; --miss-soft: #fbe9e7; --mark: #fff0a8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14171d; --panel: #1c2029; --text: #e5e8ee; --muted: #9aa3b2; --border: #2e3440;
+      --accent: #6d9bf1; --accent-soft: #23304a; --hit: #4cc27f; --hit-soft: #183426;
+      --miss: #f07166; --miss-soft: #3a1f1d; --mark: #6b5a14;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font: 14px/1.5 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); padding-bottom: 90px; }
+  header { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px; padding: 14px 20px; background: var(--panel); border-bottom: 1px solid var(--border); }
+  header h1 { font-size: 18px; margin: 0; }
+  header .status { color: var(--muted); font-size: 13px; }
+  header a { color: var(--accent); font-size: 13px; }
+  nav { display: flex; gap: 4px; margin-left: auto; }
+  nav button { background: none; border: 1px solid transparent; color: var(--muted); padding: 6px 12px; border-radius: 6px; cursor: pointer; font: inherit; }
+  nav button.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+  main { max-width: 1280px; margin: 0 auto; padding: 16px; }
+  section { display: none; } section.active { display: block; }
+  .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 14px; margin-bottom: 14px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  input, select, button.btn { font: inherit; padding: 7px 10px; border: 1px solid var(--border); border-radius: 6px; background: var(--panel); color: var(--text); }
+  input[type=text] { flex: 1 1 260px; min-width: 0; }
+  button.btn { background: var(--accent); color: #fff; border-color: var(--accent); cursor: pointer; }
+  button.btn.secondary { background: var(--panel); color: var(--accent); }
+  button.btn:disabled { opacity: .6; cursor: wait; }
+  .hint { color: var(--muted); font-size: 12.5px; }
+  .result { border: 1px solid var(--border); border-radius: 6px; padding: 9px 11px; margin: 8px 0; }
+  .result.hit { border-color: var(--hit); background: var(--hit-soft); }
+  .result .loc { font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .result .text { margin-top: 4px; }
+  mark { background: var(--mark); color: inherit; padding: 0 1px; border-radius: 2px; }
+  .play { border: 1px solid var(--accent); color: var(--accent); background: none; border-radius: 12px; padding: 1px 9px; cursor: pointer; font-size: 12px; }
+  .badge { font-size: 11.5px; padding: 1px 7px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); }
+  .badge.hit { background: var(--hit-soft); color: var(--hit); } .badge.miss { background: var(--miss-soft); color: var(--miss); }
+  .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+  .cols h3, .panel h3 { margin: 0 0 6px; font-size: 14.5px; }
+  .compact .result { padding: 6px 9px; font-size: 13px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { border-bottom: 1px solid var(--border); padding: 5px 7px; text-align: left; }
+  th { color: var(--muted); font-weight: 600; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.click { cursor: pointer; } tr.click:hover, tr.selected { background: var(--accent-soft); }
+  .split { display: grid; grid-template-columns: minmax(280px, 380px) 1fr; gap: 14px; }
+  @media (max-width: 800px) { .split { grid-template-columns: 1fr; } }
+  .scroll { max-height: 70vh; overflow: auto; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
+  .card { border: 1px solid var(--border); border-radius: 8px; padding: 10px; }
+  .card .v { font-size: 22px; font-weight: 600; } .card.pass { border-color: var(--hit); } .card.fail { border-color: var(--miss); }
+  .chart { position: relative; height: 260px; }
+  .player { position: fixed; bottom: 0; left: 0; right: 0; background: var(--panel); border-top: 1px solid var(--border); padding: 8px 16px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+  .player audio { flex: 1 1 320px; min-width: 0; }
+  .error { color: var(--miss); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Audio RAG Explorer</h1>
+  <span class="status" id="status">connecting…</span>
+  <a href="/docs" target="_blank">API docs</a>
+  <nav>
+    <button data-tab="search" class="active">Search</button>
+    <button data-tab="queries">Labeled queries</button>
+    <button data-tab="evaluation">Evaluation</button>
+  </nav>
+</header>
+
+<main>
+  <!-- ============ Search ============ -->
+  <section id="search" class="active">
+    <div class="panel">
+      <form class="row" id="search-form">
+        <input type="text" id="q" placeholder='Search, e.g. insulin resistance in lean people, or "passive data collection"' required>
+        <select id="k"><option>5</option><option>10</option></select>
+        <select id="file"><option value="">All files</option></select>
+        <button class="btn">Search</button>
+      </form>
+      <p class="hint">Hybrid = semantic (pgvector) + keyword (Postgres full-text) merged with weighted RRF. Put text in "double quotes" for an exact phrase. ▶ plays from the matched word.</p>
+    </div>
+    <div id="search-out"></div>
+  </section>
+
+  <!-- ============ Labeled queries ============ -->
+  <section id="queries">
+    <div class="panel hint" style="margin-bottom:14px">
+      <b>Check retrieval against a known answer.</b> Each labeled query has a moment where the answer is actually said.
+      Pick one to see whether keyword, semantic and hybrid search found that moment, and at what rank (the correct result is
+      highlighted green), plus its recall@k. This is the drill-down behind the Evaluation tab. To just ask a question, use Search.
+    </div>
+    <div class="split">
+      <div class="panel">
+        <div class="row" style="margin-bottom:8px">
+          <h3 style="margin:0">Labeled queries</h3>
+          <select id="type-filter" style="margin-left:auto"><option value="">All types</option></select>
+        </div>
+        <div class="scroll"><table id="query-table"></table></div>
+      </div>
+      <div>
+        <div id="query-detail" class="panel"><p class="hint">Select a labeled query on the left, or check your own below.</p></div>
+        <div class="panel">
+          <h3>Check your own query</h3>
+          <form id="custom-form">
+            <div class="row"><input type="text" id="cq" placeholder="Your query" required><button class="btn">Check</button></div>
+            <div class="row" style="margin-top:8px">
+              <span class="hint">Answer is in (optional):</span>
+              <select id="cfile" title="File where the answer is said"></select>
+              <input id="cstart" type="number" step="0.1" min="0" placeholder="start (s)" style="width:110px" title="Answer start, seconds">
+              <input id="cend" type="number" step="0.1" min="0" placeholder="end (s)" style="width:110px" title="Answer end, seconds">
+              <span class="hint">type</span><select id="ctype"></select>
+            </div>
+            <p class="hint">Without an answer, you just see each method's results. With one (a file and a time range where you know it is said),
+              the correct result is highlighted and recall@k is computed. Tip: find the moment in Search first and copy its times.</p>
+            <p class="error" id="custom-error"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Evaluation ============ -->
+  <section id="evaluation">
+    <div class="panel row">
+      <button class="btn" id="run-eval">Run evaluation on queries.json</button>
+      <span class="hint">or view a saved run:</span>
+      <select id="saved-run"><option value="">—</option></select>
+      <span class="hint">compare with:</span>
+      <select id="compare-run"><option value="">—</option></select>
+      <span class="hint" id="eval-info"></span>
+    </div>
+    <div id="eval-out"><div class="panel hint">Run the evaluation, or pick a saved run (baseline, exp1_…).</div></div>
+  </section>
+</main>
+
+<div class="player">
+  <span id="now-playing" class="hint">Nothing playing</span>
+  <audio id="audio" controls preload="none"></audio>
+</div>
+
+<script>
+const $ = (sel, el = document) => el.querySelector(sel);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"}[c]));
+const marked = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<mark>$1</mark>");
+const fmt = (v, d = 3) => v == null ? "–" : Number(v).toFixed(d);
+const mmss = t => { t = Math.round(t * 10) / 10; const m = Math.floor(t / 60); return `${String(m).padStart(2, "0")}:${(t - m * 60).toFixed(1).padStart(4, "0")}`; };
+const METHODS = ["keyword", "semantic", "hybrid"], KS = [1, 3, 5, 10];
+const COLORS = { keyword: "#e0913a", semantic: "#8a63d2", hybrid: "#2f6fde" };
+let queries = [], charts = [], meta = {};
+
+async function api(path, opts = {}) {
+  const res = await fetch(path, { headers: { "content-type": "application/json" }, ...opts });
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(Array.isArray(body.detail) ? body.detail.map(d => d.msg || d).join("; ") : body.detail || res.statusText);
+  return body;
+}
+
+// ---------- tabs ----------
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => {
+  document.querySelectorAll("nav button, section").forEach(x => x.classList.remove("active"));
+  b.classList.add("active"); $("#" + b.dataset.tab).classList.add("active");
+});
+
+// ---------- audio ----------
+function play(file, t) {
+  const audio = $("#audio"), src = `/audio/${encodeURIComponent(file)}`;
+  const seek = () => { audio.currentTime = t; audio.play(); };
+  $("#now-playing").textContent = `${file} from ${mmss(t)}`;
+  if (audio.dataset.file !== file) {
+    audio.dataset.file = file; audio.src = src;
+    audio.addEventListener("loadedmetadata", seek, { once: true }); audio.load();
+  } else seek();
+}
+document.addEventListener("click", e => {
+  const b = e.target.closest(".play"); if (b) play(b.dataset.file, parseFloat(b.dataset.t));
+});
+
+function resultHTML(r, { snippet = true } = {}) {
+  const t = r.match_time ?? r.start;
+  return `<div class="result ${r.hit ? "hit" : ""}">
+    <div class="loc"><b>#${r.rank}</b> ${esc(r.location)}
+      <button class="play" data-file="${esc(r.file)}" data-t="${t}" title="Play from ${mmss(t)}">▶ ${mmss(t)}</button>
+      ${r.hit ? '<span class="badge hit">labeled answer</span>' : ""}
+      <span class="hint" style="margin-left:auto">score ${fmt(r.score, 4)}</span></div>
+    ${snippet ? `<div class="text">${marked(r.snippet)}</div>` : ""}
+  </div>`;
+}
+
+// ---------- init ----------
+(async function init() {
+  try {
+    const [health, m, qs, runs] = await Promise.all([api("/health"), api("/meta"), api("/queries"), api("/results")]);
+    meta = m; queries = qs;
+    $("#status").textContent = `${health.files.length} files · ${health.total_chunks} chunks indexed`;
+    const opts = health.files.map(f => `<option value="${esc(f.file)}">${esc(f.file)}</option>`).join("");
+    $("#file").insertAdjacentHTML("beforeend", opts); $("#cfile").innerHTML = opts;
+    $("#type-filter").insertAdjacentHTML("beforeend", m.query_types.map(t => `<option>${t}</option>`).join(""));
+    $("#ctype").innerHTML = m.query_types.map(t => `<option ${t === "semantic" ? "selected" : ""}>${t}</option>`).join("");
+    const runOpts = runs.map(r => `<option>${esc(r)}</option>`).join("");
+    $("#saved-run").insertAdjacentHTML("beforeend", runOpts); $("#compare-run").insertAdjacentHTML("beforeend", runOpts);
+    renderQueryTable();
+  } catch (e) { $("#status").innerHTML = `<span class="error">API error: ${esc(e.message)}</span>`; }
+})();
+
+// ---------- search ----------
+$("#search-form").onsubmit = async e => {
+  e.preventDefault();
+  const out = $("#search-out"); out.innerHTML = '<div class="panel hint">Searching…</div>';
+  const params = new URLSearchParams({ q: $("#q").value, k: $("#k").value });
+  if ($("#file").value) params.set("file", $("#file").value);
+  try {
+    const d = await api(`/search?${params}`);
+    const list = rs => rs.length ? rs.map(r => resultHTML(r)).join("") : '<p class="hint">No results.</p>';
+    out.innerHTML = `<div class="panel"><h3>Hybrid results <span class="hint">(${d.elapsed_ms} ms)</span></h3>${list(d.hybrid)}</div>
+      <div class="cols compact">
+        <div class="panel"><h3>Keyword only</h3>${d.keyword.length ? d.keyword.map(r => resultHTML(r, { snippet: false })).join("") : '<p class="hint">No keyword matches.</p>'}</div>
+        <div class="panel"><h3>Semantic only</h3>${d.semantic.map(r => resultHTML(r, { snippet: false })).join("")}</div>
+      </div>`;
+  } catch (err) { out.innerHTML = `<div class="panel error">${esc(err.message)}</div>`; }
+};
+
+// ---------- labeled queries ----------
+function renderQueryTable() {
+  const type = $("#type-filter").value;
+  $("#query-table").innerHTML = "<tr><th>id</th><th>type</th><th>query</th></tr>" + queries
+    .filter(q => !type || q.type === type)
+    .map(q => `<tr class="click" data-id="${q.id}"><td>${q.id}</td><td>${q.type}</td><td>${esc(q.query)}</td></tr>`).join("");
+}
+$("#type-filter").onchange = renderQueryTable;
+$("#query-table").onclick = e => { const tr = e.target.closest("tr[data-id]"); if (tr) showQuery(tr.dataset.id); };
+
+async function showQuery(id) {
+  document.querySelectorAll("#query-table tr").forEach(tr => tr.classList.toggle("selected", tr.dataset.id === id));
+  $("#query-detail").innerHTML = '<p class="hint">Evaluating…</p>';
+  try { renderDetail(await api(`/evaluate/query/${encodeURIComponent(id)}`)); }
+  catch (e) { $("#query-detail").innerHTML = `<p class="error">${esc(e.message)}</p>`; }
+}
+
+function renderDetail(d) {
+  const spans = d.relevant.length ? d.relevant.map(s => `<li>${esc(s.file)} · ${mmss(s.start)}–${mmss(s.end)}${s.speaker ? " · " + esc(s.speaker) : ""}
+      <button class="play" data-file="${esc(s.file)}" data-t="${s.start}">▶ play answer</button></li>`).join("")
+    : d.type === "negative" ? "<li>None: this is a negative query (no file covers it).</li>"
+    : "<li>None given, so results are shown without scoring.</li>";
+  const rows = METHODS.map(m => { const x = d.methods[m];
+    return `<tr><td>${m}</td>${KS.map(k => `<td class="num">${fmt(x.recall?.["@" + k], 2)}</td>`).join("")}
+      <td class="num">${fmt(x.reciprocal_rank, 2)}</td>
+      <td>${x.first_hit_rank ? `<span class="badge hit">rank ${x.first_hit_rank}</span>` : d.relevant.length ? '<span class="badge miss">not in top 10</span>' : "–"}</td></tr>`; }).join("");
+  $("#query-detail").innerHTML = `<h3>${esc(d.id)} · ${esc(d.type)} <span class="hint">(${d.elapsed_ms} ms)</span></h3>
+    <p style="margin:4px 0"><b>${esc(d.query)}</b></p>${d.note ? `<p class="hint">${esc(d.note)}</p>` : ""}
+    <p style="margin:8px 0 2px">Labeled answer:</p><ul style="margin:0 0 10px">${spans}</ul>
+    ${d.relevant.length ? `<table><tr><th>method</th>${KS.map(k => `<th class="num">R@${k}</th>`).join("")}<th class="num">RR</th><th>first hit</th></tr>${rows}</table>` : ""}
+    ${listHTML(d, "hybrid", true)}
+    <div class="cols compact">${["keyword", "semantic"].map(m => listHTML(d, m, false)).join("")}</div>`;
+}
+function listHTML(d, m, snippet) {
+  const rs = d.methods[m].results;
+  return `<div style="margin-top:12px"><h3>${m} top 10</h3>${
+    rs.length ? rs.map(r => resultHTML(r, { snippet })).join("") : '<p class="hint">No results.</p>'}</div>`;
+}
+
+$("#custom-form").onsubmit = async e => {
+  e.preventDefault();
+  const start = $("#cstart").value, end = $("#cend").value;
+  $("#custom-error").textContent = "";
+  if ((start === "") !== (end === "")) { $("#custom-error").textContent = "Fill in both start and end, or leave both empty."; return; }
+  const body = { query: $("#cq").value, type: $("#ctype").value,
+    relevant: start !== "" && end !== "" ? [{ file: $("#cfile").value, start: +start, end: +end }] : [] };
+  $("#query-detail").innerHTML = '<p class="hint">Evaluating…</p>';
+  try { renderDetail({ note: null, ...await api("/evaluate/query", { method: "POST", body: JSON.stringify(body) }) }); }
+  catch (err) { $("#query-detail").innerHTML = `<p class="error">${esc(err.message)}</p>`; }
+};
+
+// ---------- evaluation ----------
+$("#run-eval").onclick = async () => {
+  const b = $("#run-eval"); b.disabled = true; $("#eval-info").textContent = "running all queries…";
+  try { const d = await api("/evaluate", { method: "POST" }); $("#saved-run").value = "";
+        $("#eval-info").textContent = `live run, ${d.elapsed_ms} ms`; await renderEval(d, "live run"); }
+  catch (e) { $("#eval-out").innerHTML = `<div class="panel error">${esc(e.message)}</div>`; }
+  finally { b.disabled = false; }
+};
+$("#saved-run").onchange = async () => { const n = $("#saved-run").value; if (!n) return;
+  $("#eval-info").textContent = ""; await renderEval(await api(`/results/${n}`), n); };
+$("#compare-run").onchange = () => lastEval && renderEval(lastEval.run, lastEval.label);
+
+let lastEval = null;
+function byType(run, method) {
+  const types = meta.query_types.filter(t => t !== "negative");
+  return types.map(t => { const qs = run.queries.filter(q => q.type === t && q.relevant.length);
+    return qs.length ? qs.reduce((a, q) => a + q[method]["recall@5"], 0) / qs.length : null; });
+}
+
+async function renderEval(run, label) {
+  lastEval = { run, label };
+  charts.forEach(c => c.destroy()); charts = [];
+  const m = run.metrics, cmpName = $("#compare-run").value;
+  const cmp = cmpName ? await api(`/results/${cmpName}`) : null;
+  const cards = run.criteria.map(c => `<div class="card ${c.passed ? "pass" : "fail"}"><div class="hint">${esc(c.name.replace(/_/g, " "))}</div>
+      <div class="v">${fmt(c.value)}</div><span class="badge ${c.passed ? "hit" : "miss"}">${c.passed ? "PASS" : "FAIL"}</span>
+      <span class="hint"> target ${fmt(c.target, 2)}</span></div>`).join("");
+  const table = `<table><tr><th>method</th>${KS.map(k => `<th class="num">R@${k}</th>`).join("")}<th class="num">MRR</th></tr>${
+    METHODS.map(me => `<tr><td>${me}</td>${KS.map(k => `<td class="num">${fmt(m[`${me}_recall@${k}`])}${cmp ? delta(m[`${me}_recall@${k}`], cmp.metrics[`${me}_recall@${k}`]) : ""}</td>`).join("")}
+      <td class="num">${fmt(m[`${me}_mrr`])}${cmp ? delta(m[`${me}_mrr`], cmp.metrics[`${me}_mrr`]) : ""}</td></tr>`).join("")}</table>`;
+  const qrows = run.queries.filter(q => q.relevant.length).map(q => {
+    const r = q.hybrid_hit_rank, miss = !r || r > 5;
+    return `<tr class="click" data-id="${q.id}"><td>${q.id}</td><td>${q.type}</td><td>${esc(q.query)}</td>
+      ${METHODS.map(me => `<td class="num">${fmt(q[me]["recall@5"], 2)}</td>`).join("")}
+      <td><span class="badge ${miss ? "miss" : "hit"}">${r ? "rank " + r : "not in top 10"}</span></td></tr>`; }).join("");
+  $("#eval-out").innerHTML = `
+    <div class="panel"><h3>Success criteria: ${esc(label)}${cmp ? ` <span class="hint">(changes vs ${esc(cmpName)})</span>` : ""}</h3><div class="cards">${cards}</div></div>
+    <div class="cols">
+      <div class="panel"><h3>Recall@k by method</h3><div class="chart"><canvas id="c-recall"></canvas></div></div>
+      <div class="panel"><h3>Recall@5 by query type</h3><div class="chart"><canvas id="c-type"></canvas></div></div>
+    </div>
+    <div class="panel"><h3>Metrics (22 labeled queries; negatives have nothing to recall)</h3>${table}
+      <p class="hint">Mean top semantic score: real queries ${fmt(m.mean_top_semantic_score_positive)}, negatives ${fmt(m.mean_top_semantic_score_negative)}.</p></div>
+    <div class="panel"><h3>Per query <span class="hint">(click a row to inspect it)</span></h3>
+      <div class="scroll"><table id="eval-queries"><tr><th>id</th><th>type</th><th>query</th>${METHODS.map(me => `<th class="num">${me.slice(0, 3)} R@5</th>`).join("")}<th>hybrid hit</th></tr>${qrows}</table></div></div>`;
+  $("#eval-queries").onclick = e => { const tr = e.target.closest("tr[data-id]"); if (!tr) return;
+    document.querySelector('nav button[data-tab="queries"]').click(); showQuery(tr.dataset.id); };
+
+  const grid = getComputedStyle(document.body).getPropertyValue("--border"), ink = getComputedStyle(document.body).getPropertyValue("--muted");
+  const opts = { responsive: true, maintainAspectRatio: false, scales: { y: { min: 0, max: 1, grid: { color: grid }, ticks: { color: ink } }, x: { grid: { display: false }, ticks: { color: ink } } },
+                 plugins: { legend: { labels: { color: ink } } } };
+  const recallSets = METHODS.map(me => ({ label: me, backgroundColor: COLORS[me], data: KS.map(k => m[`${me}_recall@${k}`]) }));
+  if (cmp) recallSets.push({ label: `hybrid (${cmpName})`, backgroundColor: "#9bb7ec", data: KS.map(k => cmp.metrics[`hybrid_recall@${k}`]) });
+  charts.push(new Chart($("#c-recall"), { type: "bar", data: { labels: KS.map(k => "R@" + k), datasets: recallSets }, options: opts }));
+  const types = meta.query_types.filter(t => t !== "negative");
+  charts.push(new Chart($("#c-type"), { type: "bar", options: opts, data: { labels: types,
+    datasets: METHODS.map(me => ({ label: me, backgroundColor: COLORS[me], data: byType(run, me) })) } }));
+}
+function delta(a, b) { const d = a - b; return Math.abs(d) < 5e-4 ? "" : ` <span class="hint" style="color:${d > 0 ? "var(--hit)" : "var(--miss)"}">(${d > 0 ? "+" : ""}${d.toFixed(3)})</span>`; }
+</script>
+</body>
+</html>

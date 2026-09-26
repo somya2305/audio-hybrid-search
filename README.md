@@ -19,6 +19,7 @@ src/chunking/          speaker-turn chunking
 src/embeddings/        local embeddings
 src/database/          connection and writes
 src/retrieval/         hybrid search + CLI
+src/api/               web UI + REST API (search, evaluation, audio playback)
 src/evaluation/        query validation and recall@k evaluation
 src/index_chunks.py    transcripts -> chunks -> embeddings -> Postgres
 src/pipeline.py        audio -> transcripts -> ... -> Postgres
@@ -45,13 +46,50 @@ If port 5432 is already in use, set another `DB_PORT` in `.env` before `docker c
 
 ## Run
 
+### 1. Index
+
 ```bash
-# Index the included transcripts (no GPU or HF_TOKEN needed, ~15 s)
-python -m src.index_chunks
+python -m src.index_chunks            # index the included transcripts (~12 s; no GPU or HF_TOKEN)
+python -m src.pipeline                # or run everything from the audio (~12 min per clip on CPU;
+                                      # reuses existing transcripts, --force to re-transcribe)
+```
 
-# Or run everything from the audio (~12 min per file on CPU; reuses existing transcripts)
-python -m src.pipeline                # add --force to re-transcribe
+### 2. Web UI and API
 
+```bash
+uvicorn src.api.app:app --reload      # UI: http://localhost:8000   API docs: http://localhost:8000/docs
+```
+
+Needs the database running (`docker compose up -d`) and the index from step 1. The charts load Chart.js from a CDN, so the Evaluation tab needs internet access.
+
+| Tab | What to do |
+|---|---|
+| **Search** | Ask anything. Hybrid results show file · time · speaker with matched words highlighted; ▶ plays the audio from the matched word. The keyword-only and semantic-only lists are shown underneath. `"quoted text"` is an exact phrase. |
+| **Labeled queries** | Pick one of the 25 labeled queries to see whether each method found its known answer and at what rank (correct result in green), with recall@k. **Check your own query** shows each method's results; add the file and time range where you know the answer is said to score it. |
+| **Evaluation** | **Run evaluation on queries.json** (~2 s): success criteria, recall@k by method and query type, a per-query table. **Compare with** overlays a saved run, e.g. `baseline`. |
+
+![Search: hybrid results with highlighted matches and audio playback](docs/images/ui_search.png)
+
+![Labeled query: the known answer is found at rank 3 by semantic and hybrid search](docs/images/ui_query.png)
+
+![Evaluation: success criteria and recall charts, compared with the baseline](docs/images/ui_evaluation.png)
+
+**Endpoints** (try them at `/docs`):
+
+| Endpoint | Returns |
+|---|---|
+| `GET /search?q=&k=&file=` | Hybrid results plus the keyword-only and semantic-only lists |
+| `GET /queries` | The labeled evaluation queries |
+| `GET /evaluate/query/{id}` | One labeled query: each method's top 10, which results hit the answer, recall@k |
+| `POST /evaluate/query` | The same for your own query, with or without an answer span |
+| `POST /evaluate` | Runs all labeled queries: metrics, success criteria, per-query detail |
+| `GET /results`, `GET /results/{run}` | Saved evaluation runs (`baseline`, `exp1_…`) |
+| `GET /audio/{file}` | The audio clip, with seeking |
+| `GET /health`, `GET /meta` | Database status and what is indexed; constants the UI uses |
+
+### 3. Command line
+
+```bash
 # Search
 python -m src.retrieval.pg_hybrid_search "insulin resistance in lean people"
 python -m src.retrieval.pg_hybrid_search '"passive data collection"'   # exact phrase
@@ -59,9 +97,12 @@ python -m src.retrieval.pg_hybrid_search                               # interac
 
 # Evaluate
 python -m src.evaluation.validate_queries   # check the labeled queries
-python -m src.evaluation.evaluate           # recall@1/3/5/10 and MRR per method
+python -m src.evaluation.evaluate           # recall@1/3/5/10 and MRR per method -> output/eval/results.json
 python -m src.evaluation.report output/eval/results.json --compare output/eval/baseline.json
 pytest                                      # unit tests (no database needed)
-```
 
-Individual stages can also be run on their own: `python -m src.diarization.diarize [audio]` and `python -m src.chunking.chunk [transcript ...]`.
+# Individual stages
+python -m src.diarization.diarize [audio]            # transcribe + diarize (needs HF_TOKEN)
+python -m src.chunking.chunk [transcript ...]        # speaker-turn chunks
+python scripts/build_dataset.py                      # rebuild data/audio/ from data/dataset.json
+```

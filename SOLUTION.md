@@ -48,6 +48,7 @@ query ──► keyword search (Postgres full-text, any query word) ───┐
 | Database connection and writes | [src/database/](src/database/) |
 | Schema (applied automatically by Docker) | [db/schema.sql](db/schema.sql) |
 | Hybrid search (CLI) | [src/retrieval/pg_hybrid_search.py](src/retrieval/pg_hybrid_search.py) |
+| Web UI + REST API for evaluators | [src/api/app.py](src/api/app.py) |
 | Re-index without re-transcribing | [src/index_chunks.py](src/index_chunks.py) |
 | Golden dataset builder | [scripts/build_dataset.py](scripts/build_dataset.py), [data/dataset.json](data/dataset.json) |
 | Labeled queries + validator | [data/queries.json](data/queries.json), [src/evaluation/validate_queries.py](src/evaluation/validate_queries.py) |
@@ -202,6 +203,10 @@ Change from the baseline in brackets:
 | Semantic | 0.174 (-0.091) | 0.523 (+0.061) | 0.659 (+0.030) | 0.917 (+0.068) | 0.508 (-0.016) |
 | Hybrid (RRF) | 0.356 (-0.045) | 0.742 (+0.083) | 0.811 (+0.083) | 0.917 (+0.091) | 0.619 (+0.008) |
 
+The same results in the evaluation UI (section 11.2), compared with the baseline:
+
+![Evaluation tab: success criteria and recall@k by method and query type, with the baseline overlaid](docs/images/ui_evaluation.png)
+
 ### 7.2 Baseline (before the retrieval improvements)
 
 Unweighted RRF, no query instruction. Saved as [output/eval/baseline.json](output/eval/baseline.json).
@@ -338,21 +343,52 @@ The brief asks which metrics matter if this system went to production, and how t
 
 ## 11. Running it
 
+### 11.1 Setup and scripts
+
+Requires Python 3.12 or 3.13, Docker, and ffmpeg (only to transcribe). The Hugging Face token is needed only to transcribe/diarize: accept the terms of `pyannote/speaker-diarization-community-1` and set `HF_TOKEN` in `.env`. Everything else works without it because the transcripts are included.
+
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-cp .env.example .env                  # set HF_TOKEN only to transcribe audio
-docker compose up -d                  # Postgres + pgvector; schema from db/schema.sql
+cp .env.example .env
+docker compose up -d                          # Postgres + pgvector; schema from db/schema.sql
 
-python -m src.index_chunks            # index the included transcripts (~15 s, no GPU)
-python -m src.pipeline                # or: transcribe + index from the audio (reuses transcripts)
-python scripts/build_dataset.py       # (optional) rebuild data/audio/ from data/dataset.json
+python -m src.index_chunks                    # index the included transcripts (~12 s, no GPU)
+python -m src.pipeline                        # or: transcribe + index from the audio (reuses transcripts)
+python scripts/build_dataset.py               # (optional) rebuild data/audio/ from data/dataset.json
 
 python -m src.retrieval.pg_hybrid_search "insulin resistance in lean people"
-python -m src.retrieval.pg_hybrid_search                     # interactive
-python -m src.evaluation.evaluate                            # recall@k report
-pytest                                                       # unit tests
+python -m src.evaluation.evaluate             # recall@k report -> output/eval/results.json
+python -m src.evaluation.report output/eval/results.json --compare output/eval/baseline.json
+pytest                                        # unit tests
+
+uvicorn src.api.app:app                       # web UI + API (section 11.2)
 ```
+
+### 11.2 Web UI and API for evaluators
+
+`uvicorn src.api.app:app` serves a web UI at `http://localhost:8000` and a REST API documented at `/docs`, where every endpoint can be tried in the browser. It uses the same search and evaluation code as the scripts, so a live run in the UI reproduces the numbers in section 7.
+
+| Tab | Purpose |
+|---|---|
+| **Search** | Hybrid results with file · time · speaker and matched words highlighted; ▶ plays the audio from the matched word. The keyword-only and semantic-only lists are shown underneath, so the effect of fusion is visible. |
+| **Labeled queries** | Pick one of the 25 labeled queries to see whether each method found its known answer and at what rank (correct result in green), with recall@k. A form checks your own query, scored if you give the file and time range of the answer. |
+| **Evaluation** | Runs all labeled queries (~2 s): success criteria, recall@k by method and query type, a per-query table, and a comparison with any saved run such as the baseline. |
+
+![Search tab: hybrid results with highlighted matches, speaker and timestamp, and audio playback](docs/images/ui_search.png)
+
+![Labeled queries tab: q15's known answer is found at rank 3 by semantic and hybrid search, missed by keyword search](docs/images/ui_query.png)
+
+| Endpoint | Returns |
+|---|---|
+| `GET /search?q=&k=&file=` | Hybrid results plus the keyword-only and semantic-only lists |
+| `GET /queries` | The labeled evaluation queries |
+| `GET /evaluate/query/{id}` | One labeled query: each method's top 10, which results hit the answer, recall@k |
+| `POST /evaluate/query` | The same for a custom query, with or without an answer span |
+| `POST /evaluate` | Runs all labeled queries: metrics, success criteria, per-query detail |
+| `GET /results`, `GET /results/{run}` | Saved evaluation runs (`baseline`, `exp1_…`) |
+| `GET /audio/{file}` | The audio clip, with seeking (used to play from a timestamp) |
+| `GET /health`, `GET /meta` | Database status and what is indexed; constants the UI uses |
 
 ## 12. How I used a coding agent
 
