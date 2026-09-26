@@ -1,0 +1,411 @@
+{
+  "file": "test.opus",
+  "segments": [
+    {
+      "speaker": "SPEAKER_00",
+      "start": 0.231,
+      "end": 1.714,
+      "text": "Welcome to the podcast.",
+      "words": [
+        {
+          "word": "Welcome",
+          "start": 0.231,
+          "end": 0.612
+        },
+        {
+          "word": "to",
+          "start": 0.752,
+          "end": 1.013
+        },
+        {
+          "word": "the",
+          "start": 1.073,
+          "end": 1.133
+        },
+        {
+          "word": "podcast.",
+          "start": 1.173,
+          "end": 1.714
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 2.015,
+      "end": 2.496,
+      "text": "Hi, Peter.",
+      "words": [
+        {
+          "word": "Hi,",
+          "start": 2.015,
+          "end": 2.175
+        },
+        {
+          "word": "Peter.",
+          "start": 2.215,
+          "end": 2.496
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 2.696,
+      "end": 3.097,
+      "text": "Hi, Peter.",
+      "words": [
+        {
+          "word": "Hi,",
+          "start": 2.696,
+          "end": 2.856
+        },
+        {
+          "word": "Peter.",
+          "start": 2.876,
+          "end": 3.097
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 3.117,
+      "end": 4.459,
+      "text": "Hello, John and Jonas.",
+      "words": [
+        {
+          "word": "Hello,",
+          "start": 3.117,
+          "end": 3.357
+        },
+        {
+          "word": "John",
+          "start": 3.397,
+          "end": 3.738
+        },
+        {
+          "word": "and",
+          "start": 3.898,
+          "end": 3.998
+        },
+        {
+          "word": "Jonas.",
+          "start": 4.018,
+          "end": 4.459
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 5.401,
+      "end": 8.166,
+      "text": "Thank you for being the first guest on our podcast.",
+      "words": [
+        {
+          "word": "Thank",
+          "start": 5.401,
+          "end": 5.581
+        },
+        {
+          "word": "you",
+          "start": 5.601,
+          "end": 5.722
+        },
+        {
+          "word": "for",
+          "start": 5.742,
+          "end": 5.842
+        },
+        {
+          "word": "being",
+          "start": 5.882,
+          "end": 6.223
+        },
+        {
+          "word": "the",
+          "start": 6.784,
+          "end": 6.884
+        },
+        {
+          "word": "first",
+          "start": 6.904,
+          "end": 7.144
+        },
+        {
+          "word": "guest",
+          "start": 7.184,
+          "end": 7.405
+        },
+        {
+          "word": "on",
+          "start": 7.465,
+          "end": 7.545
+        },
+        {
+          "word": "our",
+          "start": 7.565,
+          "end": 7.645
+        },
+        {
+          "word": "podcast.",
+          "start": 7.685,
+          "end": 8.166
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 8.507,
+      "end": 10.47,
+      "text": "So far, the most important guest we've had.",
+      "words": [
+        {
+          "word": "So",
+          "start": 8.507,
+          "end": 8.647
+        },
+        {
+          "word": "far,",
+          "start": 8.667,
+          "end": 8.887
+        },
+        {
+          "word": "the",
+          "start": 8.908,
+          "end": 8.968
+        },
+        {
+          "word": "most",
+          "start": 9.308,
+          "end": 9.489
+        },
+        {
+          "word": "important",
+          "start": 9.549,
+          "end": 9.849
+        },
+        {
+          "word": "guest",
+          "start": 9.889,
+          "end": 10.07
+        },
+        {
+          "word": "we've",
+          "start": 10.11,
+          "end": 10.25
+        },
+        {
+          "word": "had.",
+          "start": 10.29,
+          "end": 10.47
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 11.332,
+      "end": 12.574,
+      "text": "That's an amazing honor.",
+      "words": [
+        {
+          "word": "That's",
+          "start": 11.332,
+          "end": 11.593
+        },
+        {
+          "word": "an",
+          "start": 11.633,
+          "end": 11.693
+        },
+        {
+          "word": "amazing",
+          "start": 11.753,
+          "end": 12.214
+        },
+        {
+          "word": "honor.",
+          "start": 12.274,
+          "end": 12.574
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 12.654,
+      "end": 14.237,
+      "text": "Thank you so much for having me.",
+      "words": [
+        {
+          "word": "Thank",
+          "start": 12.654,
+          "end": 12.895
+        },
+        {
+          "word": "you",
+          "start": 12.915,
+          "end": 13.055
+        },
+        {
+          "word": "so",
+          "start": 13.095,
+          "end": 13.276
+        },
+        {
+          "word": "much",
+          "start": 13.336,
+          "end": 13.536
+        },
+        {
+          "word": "for",
+          "start": 13.596,
+          "end": 13.716
+        },
+        {
+          "word": "having",
+          "start": 13.777,
+          "end": 14.037
+        },
+        {
+          "word": "me.",
+          "start": 14.077,
+          "end": 14.237
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 14.839,
+      "end": 16.221,
+      "text": "Well, we're here to talk about Bitcoin.",
+      "words": [
+        {
+          "word": "Well,",
+          "start": 14.839,
+          "end": 15.059
+        },
+        {
+          "word": "we're",
+          "start": 15.179,
+          "end": 15.319
+        },
+        {
+          "word": "here",
+          "start": 15.339,
+          "end": 15.46
+        },
+        {
+          "word": "to",
+          "start": 15.48,
+          "end": 15.52
+        },
+        {
+          "word": "talk",
+          "start": 15.56,
+          "end": 15.68
+        },
+        {
+          "word": "about",
+          "start": 15.7,
+          "end": 15.84
+        },
+        {
+          "word": "Bitcoin.",
+          "start": 15.86,
+          "end": 16.221
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 16.922,
+      "end": 17.163,
+      "text": "We are.",
+      "words": [
+        {
+          "word": "We",
+          "start": 16.922,
+          "end": 17.003
+        },
+        {
+          "word": "are.",
+          "start": 17.043,
+          "end": 17.163
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 17.584,
+      "end": 18.646,
+      "text": "And Bitcoin Core Development.",
+      "words": [
+        {
+          "word": "And",
+          "start": 17.584,
+          "end": 17.724
+        },
+        {
+          "word": "Bitcoin",
+          "start": 17.784,
+          "end": 18.045
+        },
+        {
+          "word": "Core",
+          "start": 18.065,
+          "end": 18.265
+        },
+        {
+          "word": "Development.",
+          "start": 18.285,
+          "end": 18.646
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 19.107,
+      "end": 22.072,
+      "text": "And we have Peter Waller as our guest.",
+      "words": [
+        {
+          "word": "And",
+          "start": 19.107,
+          "end": 19.307
+        },
+        {
+          "word": "we",
+          "start": 19.808,
+          "end": 19.948
+        },
+        {
+          "word": "have",
+          "start": 19.988,
+          "end": 20.189
+        },
+        {
+          "word": "Peter",
+          "start": 20.81,
+          "end": 21.11
+        },
+        {
+          "word": "Waller",
+          "start": 21.13,
+          "end": 21.411
+        },
+        {
+          "word": "as",
+          "start": 21.591,
+          "end": 21.671
+        },
+        {
+          "word": "our",
+          "start": 21.711,
+          "end": 21.812
+        },
+        {
+          "word": "guest.",
+          "start": 21.832,
+          "end": 22.072
+        }
+      ]
+    }
+  ]
+}
