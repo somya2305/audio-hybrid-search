@@ -58,6 +58,40 @@ def find_audio_files(audio_dir=AUDIO_DIR):
     )
 
 
+def _clean_words(segment):
+    """Return the segment's words, each with a start and end time.
+
+    WhisperX's aligner leaves some tokens (e.g. numbers like "2024") without
+    timestamps. A missing start begins where the previous word ended; a
+    missing end runs until the next timed word starts (or the segment ends),
+    with that gap shared evenly by consecutive untimed words.
+    """
+    raw = [w for w in segment.get("words", []) if w.get("word", "").strip()]
+    words = []
+    previous_end = segment["start"]
+
+    for i, w in enumerate(raw):
+        start = w.get("start")
+        end = w.get("end")
+        if start is None:
+            start = previous_end
+        if end is None:
+            # Untimed words from here up to the next timed start share the gap.
+            run = 1
+            next_start = segment["end"]
+            for n in raw[i + 1:]:
+                if n.get("start") is not None:
+                    next_start = n["start"]
+                    break
+                run += 1
+            end = start + max(0.0, next_start - start) / run
+
+        words.append({"word": w["word"].strip(), "start": start, "end": end})
+        previous_end = end
+
+    return words
+
+
 def diarize(audio_path, output_path=None, num_speakers=2):
     """Transcribe and diarize audio_path, write the JSON result and return it."""
     hf_token = os.environ.get("HF_TOKEN")
@@ -106,8 +140,6 @@ def diarize(audio_path, output_path=None, num_speakers=2):
     t = time.perf_counter()
     result = whisperx.assign_word_speakers(diarize_segments, result)
 
-    # Word timestamps/speakers are left as WhisperX returns them; some words
-    # (e.g. numbers) can lack start/end and come out as null.
     output = {
         "file": audio_path.name,
         "segments": [
@@ -116,10 +148,7 @@ def diarize(audio_path, output_path=None, num_speakers=2):
                 "start": segment["start"],
                 "end": segment["end"],
                 "text": segment["text"].strip(),
-                "words": [
-                    {"word": w["word"], "start": w.get("start"), "end": w.get("end")}
-                    for w in segment.get("words", [])
-                ],
+                "words": _clean_words(segment),
             }
             for segment in result["segments"]
         ],
