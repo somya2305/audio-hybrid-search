@@ -59,16 +59,18 @@ def find_audio_files(audio_dir=AUDIO_DIR):
 
 
 def _clean_words(segment):
-    """Return the segment's words, each with a start and end time.
+    """Return the segment's words, each with a start, end and speaker.
 
     WhisperX's aligner leaves some tokens (e.g. numbers like "2024") without
     timestamps. A missing start begins where the previous word ended; a
     missing end runs until the next timed word starts (or the segment ends),
-    with that gap shared evenly by consecutive untimed words.
+    with that gap shared evenly by consecutive untimed words. Words without a
+    speaker inherit the previous word's (or the segment's) speaker.
     """
     raw = [w for w in segment.get("words", []) if w.get("word", "").strip()]
     words = []
     previous_end = segment["start"]
+    previous_speaker = segment.get("speaker", "UNKNOWN")
 
     for i, w in enumerate(raw):
         start = w.get("start")
@@ -86,10 +88,70 @@ def _clean_words(segment):
                 run += 1
             end = start + max(0.0, next_start - start) / run
 
-        words.append({"word": w["word"].strip(), "start": start, "end": end})
+        speaker = w.get("speaker", previous_speaker)
+
+        words.append({"word": w["word"].strip(), "start": start, "end": end, "speaker": speaker})
         previous_end = end
+        previous_speaker = speaker
 
     return words
+
+
+def split_segment_by_speaker(segment):
+    """Split a WhisperX segment wherever the word-level speaker changes.
+
+    A segment's own speaker label is a majority vote over its words, so a
+    segment can contain words from both speakers. Single-word speaker flips
+    are treated as diarization noise and kept with the surrounding run.
+    """
+    segment_speaker = segment.get("speaker", "UNKNOWN")
+    words = _clean_words(segment)
+
+    if not words:
+        return [
+            {
+                "speaker": segment_speaker,
+                "start": segment["start"],
+                "end": segment["end"],
+                "text": segment["text"].strip(),
+                "words": [],
+            }
+        ]
+
+    runs = []
+    for word in words:
+        if runs and runs[-1]["speaker"] == word["speaker"]:
+            runs[-1]["words"].append(word)
+        else:
+            runs.append({"speaker": word["speaker"], "words": [word]})
+
+    smoothed = []
+    for run in runs:
+        if smoothed and len(run["words"]) == 1:
+            smoothed[-1]["words"].extend(run["words"])
+        elif smoothed and smoothed[-1]["speaker"] == run["speaker"]:
+            smoothed[-1]["words"].extend(run["words"])
+        else:
+            smoothed.append(run)
+
+    # A leading single-word run joins the run after it.
+    if len(smoothed) > 1 and len(smoothed[0]["words"]) == 1:
+        smoothed[1]["words"] = smoothed[0]["words"] + smoothed[1]["words"]
+        smoothed.pop(0)
+
+    return [
+        {
+            "speaker": run["speaker"],
+            "start": run["words"][0]["start"],
+            "end": run["words"][-1]["end"],
+            "text": " ".join(w["word"] for w in run["words"]),
+            "words": [
+                {"word": w["word"], "start": w["start"], "end": w["end"]}
+                for w in run["words"]
+            ],
+        }
+        for run in smoothed
+    ]
 
 
 def diarize(audio_path, output_path=None, num_speakers=2):
@@ -143,14 +205,9 @@ def diarize(audio_path, output_path=None, num_speakers=2):
     output = {
         "file": audio_path.name,
         "segments": [
-            {
-                "speaker": segment.get("speaker", "UNKNOWN"),
-                "start": segment["start"],
-                "end": segment["end"],
-                "text": segment["text"].strip(),
-                "words": _clean_words(segment),
-            }
+            split
             for segment in result["segments"]
+            for split in split_segment_by_speaker(segment)
         ],
     }
 
