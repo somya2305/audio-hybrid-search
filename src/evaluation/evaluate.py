@@ -5,11 +5,16 @@ and hybrid (RRF) rankings separately: recall@k, MRR, recall by query type,
 speaker accuracy, and top semantic scores for positive vs negative queries.
 
 Usage:
-    python -m src.evaluation.evaluate
+    python -m src.evaluation.evaluate                                  # -> output/eval/results.json
+    python -m src.evaluation.evaluate --out output/eval/<experiment>.json
 """
 
+import argparse
 import json
+import subprocess
 import sys
+from datetime import datetime, timezone
+from pathlib import Path
 
 from src.common import EVAL_RESULTS_PATH, QUERIES_PATH, ROOT_DIR
 from src.evaluation.validate_queries import load_transcripts, validate
@@ -206,6 +211,32 @@ def print_report(evaluation):
         print(f"  {name:<20} {_fmt(value)}  (target {target:.2f})  {status}")
 
 
+def run_config():
+    """The settings and code version a run used, so saved results stay comparable."""
+    from src.chunking import chunk
+    from src.embeddings import embed
+    from src.retrieval import pg_hybrid_search as search
+
+    def git(*args):
+        return subprocess.run(["git", *args], cwd=ROOT_DIR, capture_output=True, text=True).stdout.strip()
+
+    return {
+        "timestamp": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "git_commit": git("rev-parse", "--short", "HEAD"),
+        "uncommitted_changes": bool(git("status", "--porcelain", "src")),
+        "embedding_model": embed.MODEL_NAME,
+        "query_instruction": embed.QUERY_INSTRUCTION,
+        "max_turn_words": chunk.MAX_TURN_WORDS,
+        "context_turns": chunk.CONTEXT_TURNS,
+        "short_turn_words": chunk.SHORT_TURN_WORDS,
+        "top_k_per_retriever": search.TOP_K,
+        "rrf_k": search.RRF_K,
+        "keyword_weight": search.KEYWORD_WEIGHT,
+        "min_semantic_words": search.MIN_SEMANTIC_WORDS,
+        "ts_rank_normalization": search.TS_RANK_NORMALIZATION,
+    }
+
+
 def save_results(evaluation, path=EVAL_RESULTS_PATH):
     path.parent.mkdir(parents=True, exist_ok=True)
     with open(path, "w", encoding="utf-8") as f:
@@ -214,6 +245,10 @@ def save_results(evaluation, path=EVAL_RESULTS_PATH):
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Evaluate retrieval against data/queries.json.")
+    parser.add_argument("--out", type=Path, default=EVAL_RESULTS_PATH, help="Where to save the results JSON")
+    out = parser.parse_args().out.resolve()
+
     with open(QUERIES_PATH, encoding="utf-8") as f:
         queries = json.load(f)["queries"]
 
@@ -224,9 +259,9 @@ def main():
             print(f"  {error}")
         sys.exit(1)
 
-    evaluation = evaluate(queries)
+    evaluation = {"config": run_config(), **evaluate(queries)}
     print_report(evaluation)
-    print(f"\nPer-query details saved to {save_results(evaluation).relative_to(ROOT_DIR)}")
+    print(f"\nPer-query details saved to {save_results(evaluation, out).relative_to(ROOT_DIR)}")
 
 
 if __name__ == "__main__":

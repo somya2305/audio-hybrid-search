@@ -7,10 +7,11 @@ Submission for the G2 AI Hiring Hackathon, Problem Statement 1 ("Effective retri
 ```
 data/audio/            golden dataset (7 WAV clips); data/dataset.json lists their sources
 data/queries.json      25 labeled evaluation queries
+docs/evaluation.md     evaluation results, experiment log and known failure modes
 db/schema.sql          tables and indexes (applied automatically by docker compose)
 output/transcription/  diarized transcripts (included, so indexing needs no GPU)
 output/chunks/         speaker-turn chunks
-output/eval/           evaluation results
+output/eval/           evaluation runs (baseline.json is the frozen baseline)
 src/diarization/       WhisperX transcription + diarization
 src/chunking/          speaker-turn chunking
 src/embeddings/        local embeddings
@@ -53,6 +54,7 @@ python -m src.retrieval.pg_hybrid_search                               # interac
 # Evaluate
 python -m src.evaluation.validate_queries   # check the labeled queries
 python -m src.evaluation.evaluate           # recall@1/3/5/10 and MRR per method
+python -m src.evaluation.report output/eval/results.json --compare output/eval/baseline.json
 pytest                                      # unit tests (no database needed)
 ```
 

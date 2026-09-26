@@ -8,6 +8,10 @@ from sentence_transformers import SentenceTransformer
 MODEL_NAME = "BAAI/bge-small-en-v1.5"
 BATCH_SIZE = 32
 
+# BGE's recommended instruction for short queries searching longer passages.
+# Only queries get it; chunks are embedded as-is.
+QUERY_INSTRUCTION = "Represent this sentence for searching relevant passages: "
+
 
 @lru_cache(maxsize=1)
 def get_embedding_model(model_name=MODEL_NAME):
@@ -37,5 +41,5 @@ def create_embeddings(chunks, model_name=MODEL_NAME):
 
 
 def embed_query(query, model_name=MODEL_NAME):
-    """Normalized embedding for a search query."""
-    return get_embedding_model(model_name).encode(query, normalize_embeddings=True)
+    """Normalized embedding for a search query (with BGE's query instruction)."""
+    return get_embedding_model(model_name).encode(QUERY_INSTRUCTION + query, normalize_embeddings=True)

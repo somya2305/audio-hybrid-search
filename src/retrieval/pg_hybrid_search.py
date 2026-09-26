@@ -25,6 +25,11 @@ MIN_SEMANTIC_WORDS = 4
 # outweighs a single first place.
 RRF_K = 60
 
+# Keyword ranks count half as much as semantic ones in fusion: matching any
+# query word lets chunks sharing only common words ("face", "other") into the
+# keyword list, and at full weight they pushed real answers out of the top 5.
+KEYWORD_WEIGHT = 0.5
+
 # ts_rank length normalization: none. Turns are capped at ~80 words, and
 # normalizing by length pushed one-word turns to the top.
 TS_RANK_NORMALIZATION = 0
@@ -129,21 +134,22 @@ def keyword_search(query, top_k=TOP_K, conversation_id=None):
     )
 
 
-def reciprocal_rank_fusion(semantic, keyword, top_k=TOP_K_FINAL, rrf_k=RRF_K):
-    """Merge two ranked lists: each chunk scores sum(1 / (rrf_k + rank)).
+def reciprocal_rank_fusion(semantic, keyword, top_k=TOP_K_FINAL, rrf_k=RRF_K,
+                           keyword_weight=KEYWORD_WEIGHT):
+    """Merge two ranked lists: each chunk scores sum(weight / (rrf_k + rank)).
 
     Only ranks are used, so cosine similarity and ts_rank never need to be
     made comparable. A chunk in both lists keeps the version with a match_time.
     """
     fused = {}
-    for results in (semantic, keyword):
+    for results, weight in ((semantic, 1.0), (keyword, keyword_weight)):
         for result in results:
             entry = fused.get(result["id"])
             if entry is None:
                 entry = fused[result["id"]] = {**result, "rrf_score": 0.0}
             elif entry.get("match_time") is None and result.get("match_time") is not None:
                 entry = fused[result["id"]] = {**result, "rrf_score": entry["rrf_score"]}
-            entry["rrf_score"] += 1.0 / (rrf_k + result["rank"])
+            entry["rrf_score"] += weight / (rrf_k + result["rank"])
 
     ranked = sorted(fused.values(), key=lambda r: r["rrf_score"], reverse=True)[:top_k]
     for rank, result in enumerate(ranked, start=1):

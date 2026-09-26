@@ -1,16 +1,14 @@
 {
   "config": {
-    "timestamp": "2026-09-26T09:41:13+00:00",
+    "timestamp": "2026-09-26T09:26:37+00:00",
     "git_commit": "1065d45",
     "uncommitted_changes": true,
     "embedding_model": "BAAI/bge-small-en-v1.5",
-    "query_instruction": "Represent this sentence for searching relevant passages: ",
     "max_turn_words": 80,
     "context_turns": 1,
     "short_turn_words": 8,
     "top_k_per_retriever": 20,
     "rrf_k": 60,
-    "keyword_weight": 0.5,
     "min_semantic_words": 4,
     "ts_rank_normalization": 0
   },
@@ -23,26 +21,26 @@
     "keyword_recall@5": 0.5,
     "keyword_recall@10": 0.5227272727272727,
     "keyword_mrr": 0.5045454545454545,
-    "semantic_recall@1": 0.17424242424242425,
-    "semantic_recall@3": 0.5227272727272727,
-    "semantic_recall@5": 0.6590909090909091,
-    "semantic_recall@10": 0.9166666666666667,
-    "semantic_mrr": 0.508008658008658,
-    "hybrid_recall@1": 0.356060606060606,
-    "hybrid_recall@3": 0.7424242424242423,
-    "hybrid_recall@5": 0.8106060606060606,
-    "hybrid_recall@10": 0.9166666666666667,
-    "hybrid_mrr": 0.618939393939394,
+    "semantic_recall@1": 0.26515151515151514,
+    "semantic_recall@3": 0.4621212121212121,
+    "semantic_recall@5": 0.6287878787878788,
+    "semantic_recall@10": 0.8484848484848485,
+    "semantic_mrr": 0.5244227994227995,
+    "hybrid_recall@1": 0.40151515151515155,
+    "hybrid_recall@3": 0.6590909090909091,
+    "hybrid_recall@5": 0.7272727272727273,
+    "hybrid_recall@10": 0.8257575757575758,
+    "hybrid_mrr": 0.6113636363636363,
     "hybrid_recall@5_by_type": {
       "keyword": 1.0,
       "phrase": 1.0,
-      "semantic": 0.6833333333333333,
+      "semantic": 0.5,
       "speaker": 0.6666666666666666
     },
     "speaker_accuracy": 1.0,
-    "speaker_checked": 21,
-    "mean_top_semantic_score_positive": 0.6648195748657599,
-    "mean_top_semantic_score_negative": 0.5557894197247166
+    "speaker_checked": 19,
+    "mean_top_semantic_score_positive": 0.69842356005883,
+    "mean_top_semantic_score_negative": 0.5607585043975232
   },
   "queries": [
     {
@@ -57,7 +55,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.5541487767056017,
+      "top_semantic_score": 0.5938093792540956,
       "top_hybrid": [
         {
           "file": "business_01.wav",
@@ -75,10 +73,10 @@
         },
         {
           "file": "culture_01.wav",
-          "start": 210.11,
-          "end": 211.27,
-          "speaker": "SPEAKER_01",
-          "text": "What did you have to do for the audition?"
+          "start": 367.1,
+          "end": 387.83,
+          "speaker": "SPEAKER_00",
+          "text": "I was so excited by that part. I wanted that so bad. I was after Jill, Jillian Armstrong, the director, for so many year"
         }
       ],
       "keyword": {
@@ -90,10 +88,10 @@
       },
       "semantic": {
         "recall@1": 0.0,
-        "recall@3": 0.0,
+        "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.2
+        "rr": 0.3333333333333333
       },
       "hybrid": {
         "recall@1": 1.0,
@@ -117,7 +115,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.7288506788700427,
+      "top_semantic_score": 0.7677349586644807,
       "top_hybrid": [
         {
           "file": "business_01.wav",
@@ -153,17 +151,16 @@
         "recall@3": 0.0,
         "recall@5": 0.0,
         "recall@10": 1.0,
-        "rr": 0.16666666666666666
+        "rr": 0.14285714285714285
       },
       "hybrid": {
         "recall@1": 0.0,
         "recall@3": 0.0,
         "recall@5": 0.0,
-        "recall@10": 1.0,
-        "rr": 0.1
+        "recall@10": 0.0,
+        "rr": 0.0
       },
-      "hybrid_hit_rank": 10,
-      "speaker_correct": true
+      "hybrid_hit_rank": null
     },
     {
       "id": "q03",
@@ -177,7 +174,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.6653786700512612,
+      "top_semantic_score": 0.7177298069000244,
       "top_hybrid": [
         {
           "file": "business_01.wav",
@@ -188,17 +185,17 @@
         },
         {
           "file": "business_01.wav",
-          "start": 124.62,
-          "end": 138.47,
-          "speaker": "SPEAKER_01",
-          "text": "They caught the happiness from the photo. People who looked at the fake smile had no mood change. This means I would rat"
-        },
-        {
-          "file": "business_01.wav",
           "start": 139.7,
           "end": 158.56,
           "speaker": "SPEAKER_00",
           "text": "It sounds like it might be quite exhausting for some people, because I think some people, although they're happy, they f"
+        },
+        {
+          "file": "business_01.wav",
+          "start": 124.62,
+          "end": 138.47,
+          "speaker": "SPEAKER_01",
+          "text": "They caught the happiness from the photo. People who looked at the fake smile had no mood change. This means I would rat"
         }
       ],
       "keyword": {
@@ -220,9 +217,9 @@
         "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.3333333333333333
+        "rr": 0.5
       },
-      "hybrid_hit_rank": 3,
+      "hybrid_hit_rank": 2,
       "speaker_correct": true
     },
     {
@@ -237,7 +234,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.5588154100312681,
+      "top_semantic_score": 0.5917681984694205,
       "top_hybrid": [
         {
           "file": "business_02.wav",
@@ -247,18 +244,18 @@
           "text": "Instead of scraping the internet, we partnered with Getty and Shutterstock to create commercially fair way of applying a"
         },
         {
-          "file": "tech_product_01.wav",
-          "start": 478.6,
-          "end": 503.67,
+          "file": "business_01.wav",
+          "start": 102.98,
+          "end": 123.9,
           "speaker": "SPEAKER_01",
-          "text": "And the employers could say, oh, I actually see that you worked what you said. And so I feel comfortable that I got what"
+          "text": "She took pictures of people thinking of something they were authentically happy about, took a picture of them smiling, t"
         },
         {
-          "file": "tech_product_01.wav",
-          "start": 29.95,
-          "end": 49.4,
-          "speaker": "SPEAKER_01",
-          "text": "The example I always love to give are the ancient agoras in Greece or like Trajan's Market in Rome. You know, we look at"
+          "file": "tech_ai_01.wav",
+          "start": 356.92,
+          "end": 371.07,
+          "speaker": "SPEAKER_00",
+          "text": "It's tough. I think they kind of know but they don't fully know and they don't know how to fully integrate it into the r"
         }
       ],
       "keyword": {
@@ -297,7 +294,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.595058798789978,
+      "top_semantic_score": 0.6862305776798037,
       "top_hybrid": [
         {
           "file": "business_02.wav",
@@ -329,11 +326,11 @@
         "rr": 1.0
       },
       "semantic": {
-        "recall@1": 0.0,
+        "recall@1": 1.0,
         "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.5
+        "rr": 1.0
       },
       "hybrid": {
         "recall@1": 1.0,
@@ -363,7 +360,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.7047641385163931,
+      "top_semantic_score": 0.7275165210634743,
       "top_hybrid": [
         {
           "file": "business_02.wav",
@@ -423,7 +420,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.61326003074646,
+      "top_semantic_score": 0.6397926807403564,
       "top_hybrid": [
         {
           "file": "culture_01.wav",
@@ -489,7 +486,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.723052935418313,
+      "top_semantic_score": 0.7401525091943134,
       "top_hybrid": [
         {
           "file": "culture_01.wav",
@@ -506,11 +503,11 @@
           "text": "you're going to be shut out of a lot of his life. Oh, it's a world I know nothing about. You know, when we were making i"
         },
         {
-          "file": "business_01.wav",
-          "start": 309.76,
-          "end": 333.08,
-          "speaker": "SPEAKER_01",
-          "text": "And I don't know if anyone watching is feeling lonely. I thought it was all my fault. I was like, I miss the memo. I don"
+          "file": "culture_01.wav",
+          "start": 146.67,
+          "end": 172.21,
+          "speaker": "SPEAKER_00",
+          "text": "i think in every way i felt the outsider there was that there was nobody that really became my friend on those movies i "
         }
       ],
       "keyword": {
@@ -529,7 +526,7 @@
       },
       "hybrid": {
         "recall@1": 0.0,
-        "recall@3": 0.5,
+        "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
         "rr": 0.5
@@ -549,7 +546,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.6412390898181093,
+      "top_semantic_score": 0.6674384474754333,
       "top_hybrid": [
         {
           "file": "business_01.wav",
@@ -559,18 +556,18 @@
           "text": "If you can activate these muscles in your profile picture, you don't have to walk around like that, but if you can act, "
         },
         {
-          "file": "business_01.wav",
-          "start": 220.66,
-          "end": 232.01,
-          "speaker": "SPEAKER_01",
-          "text": "Those look different. And so I think it's less exhausting to find your recipe and to use those cues a lot. If there's ce"
-        },
-        {
           "file": "culture_01.wav",
           "start": 424.95,
           "end": 451.06,
           "speaker": "SPEAKER_00",
           "text": "Oh, yeah. Oh, that's so obvious, yes. Yeah, no question about it. I mean, it's not my way, but it's the desire to do it "
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 355.0,
+          "end": 366.82,
+          "speaker": "SPEAKER_01",
+          "text": "Well, I like your performance a lot in Mrs. Soful, where you play the wife of a prison guard who ends up falling in love"
         }
       ],
       "keyword": {
@@ -581,20 +578,20 @@
         "rr": 0.0
       },
       "semantic": {
-        "recall@1": 0.0,
+        "recall@1": 1.0,
         "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.5
+        "rr": 1.0
       },
       "hybrid": {
         "recall@1": 0.0,
         "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.3333333333333333
+        "rr": 0.5
       },
-      "hybrid_hit_rank": 3,
+      "hybrid_hit_rank": 2,
       "speaker_correct": true
     },
     {
@@ -609,7 +606,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.49244320437650746,
+      "top_semantic_score": 0.5109662857363755,
       "top_hybrid": [
         {
           "file": "health_01.wav",
@@ -619,18 +616,18 @@
           "text": "stress can play a role, it is certainly complicated. So Barry Marshall was phenomenal in Australia and he found H. Pylor"
         },
         {
-          "file": "culture_01.wav",
-          "start": 31.46,
-          "end": 36.31,
-          "speaker": "SPEAKER_00",
-          "text": "No, I think I spoke in that character at that point in my life. I think that's the way I talked."
-        },
-        {
           "file": "business_02.wav",
           "start": 456.72,
           "end": 460.14,
           "speaker": "SPEAKER_00",
           "text": "Sequoia was the first investor in our company. Yeah, of course. Yeah."
+        },
+        {
+          "file": "culture_01.wav",
+          "start": 539.0,
+          "end": 539.98,
+          "speaker": "SPEAKER_01",
+          "text": "about the success of FIRST."
         }
       ],
       "keyword": {
@@ -643,9 +640,9 @@
       "semantic": {
         "recall@1": 0.0,
         "recall@3": 0.0,
-        "recall@5": 1.0,
+        "recall@5": 0.0,
         "recall@10": 1.0,
-        "rr": 0.2
+        "rr": 0.1111111111111111
       },
       "hybrid": {
         "recall@1": 1.0,
@@ -669,7 +666,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.7367409906829007,
+      "top_semantic_score": 0.7646712064743042,
       "top_hybrid": [
         {
           "file": "health_01.wav",
@@ -680,17 +677,17 @@
         },
         {
           "file": "health_01.wav",
-          "start": 222.89,
-          "end": 243.21,
-          "speaker": "SPEAKER_01",
-          "text": "You can't just take butyrate and then it's not going to make it to the colon, right? It needs to be in the colon to have"
-        },
-        {
-          "file": "health_01.wav",
           "start": 264.38,
           "end": 290.9,
           "speaker": "SPEAKER_01",
           "text": "So it has a lot of different, a lot of different roles that it's playing. Additionally, it keeps your bowel acidic, righ"
+        },
+        {
+          "file": "health_02.wav",
+          "start": 437.79,
+          "end": 467.62,
+          "speaker": "SPEAKER_01",
+          "text": "Because we don't want the insulin in the periphery over-insulinizing the periphery, because it would make the muscle tis"
         }
       ],
       "keyword": {
@@ -701,20 +698,20 @@
         "rr": 0.0
       },
       "semantic": {
-        "recall@1": 1.0,
-        "recall@3": 1.0,
-        "recall@5": 1.0,
-        "recall@10": 1.0,
-        "rr": 1.0
-      },
-      "hybrid": {
         "recall@1": 0.0,
         "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
         "rr": 0.5
       },
-      "hybrid_hit_rank": 2,
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 1.0,
+        "recall@10": 1.0,
+        "rr": 0.25
+      },
+      "hybrid_hit_rank": 4,
       "speaker_correct": true
     },
     {
@@ -729,21 +726,21 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.749161787456024,
+      "top_semantic_score": 0.7699868083000183,
       "top_hybrid": [
-        {
-          "file": "health_01.wav",
-          "start": 383.47,
-          "end": 401.5,
-          "speaker": "SPEAKER_01",
-          "text": "stress can play a role, it is certainly complicated. So Barry Marshall was phenomenal in Australia and he found H. Pylor"
-        },
         {
           "file": "health_01.wav",
           "start": 343.01,
           "end": 367.18,
           "speaker": "SPEAKER_00",
           "text": "It's at least for the sciences, right? It's often surprising who doesn't but let's leave aside that component. But that "
+        },
+        {
+          "file": "health_01.wav",
+          "start": 383.47,
+          "end": 401.5,
+          "speaker": "SPEAKER_01",
+          "text": "stress can play a role, it is certainly complicated. So Barry Marshall was phenomenal in Australia and he found H. Pylor"
         },
         {
           "file": "health_01.wav",
@@ -761,20 +758,20 @@
         "rr": 1.0
       },
       "semantic": {
-        "recall@1": 0.0,
+        "recall@1": 1.0,
         "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.5
+        "rr": 1.0
       },
       "hybrid": {
-        "recall@1": 0.0,
+        "recall@1": 1.0,
         "recall@3": 1.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.5
+        "rr": 1.0
       },
-      "hybrid_hit_rank": 2,
+      "hybrid_hit_rank": 1,
       "speaker_correct": true
     },
     {
@@ -789,7 +786,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.717142479590031,
+      "top_semantic_score": 0.782425714586634,
       "top_hybrid": [
         {
           "file": "health_02.wav",
@@ -825,7 +822,7 @@
         "recall@3": 0.0,
         "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.2
+        "rr": 0.25
       },
       "hybrid": {
         "recall@1": 1.0,
@@ -855,7 +852,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.7187036015148689,
+      "top_semantic_score": 0.7650138419850115,
       "top_hybrid": [
         {
           "file": "health_02.wav",
@@ -873,10 +870,10 @@
         },
         {
           "file": "health_02.wav",
-          "start": 196.49,
-          "end": 219.86,
-          "speaker": "SPEAKER_01",
-          "text": "The other thing we showed in this study, Dr. Del Prado, who's past president of the European Diabetes Association, we to"
+          "start": 320.54,
+          "end": 352.95,
+          "speaker": "SPEAKER_00",
+          "text": "And you've obviously had to bring glucose. You had to infuse glucose to maintain euglycemia. Correct. Did you say that i"
         }
       ],
       "keyword": {
@@ -915,7 +912,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.6173420776520933,
+      "top_semantic_score": 0.6490624965354804,
       "top_hybrid": [
         {
           "file": "business_01.wav",
@@ -925,18 +922,18 @@
           "text": "Has anyone ever done any really compelling studies on this idea of resting bitch face or resting bothered face as you ca"
         },
         {
+          "file": "culture_01.wav",
+          "start": 387.87,
+          "end": 410.07,
+          "speaker": "SPEAKER_00",
+          "text": "And plus it was the first time in my life where I started watching the director. I was looking at what she was doing bec"
+        },
+        {
           "file": "health_02.wav",
           "start": 468.35,
           "end": 494.28,
           "speaker": "SPEAKER_01",
           "text": "And in a certain way, if you're a diabetic and you are insulin resistant or an obese person and you are insulin resistan"
-        },
-        {
-          "file": "health_02.wav",
-          "start": 416.17,
-          "end": 437.46,
-          "speaker": "SPEAKER_01",
-          "text": "And you or I, when you ingest the meal, where does the insulin go? It goes into the portal vein. So the liver is seeing "
         }
       ],
       "keyword": {
@@ -948,20 +945,19 @@
       },
       "semantic": {
         "recall@1": 0.0,
-        "recall@3": 1.0,
-        "recall@5": 1.0,
-        "recall@10": 1.0,
-        "rr": 0.3333333333333333
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
       },
       "hybrid": {
         "recall@1": 0.0,
-        "recall@3": 1.0,
-        "recall@5": 1.0,
-        "recall@10": 1.0,
-        "rr": 0.3333333333333333
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.0,
+        "rr": 0.0
       },
-      "hybrid_hit_rank": 3,
-      "speaker_correct": true
+      "hybrid_hit_rank": null
     },
     {
       "id": "q16",
@@ -981,7 +977,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.7096337426145384,
+      "top_semantic_score": 0.703142660668931,
       "top_hybrid": [
         {
           "file": "tech_ai_01.wav",
@@ -1014,10 +1010,10 @@
       },
       "semantic": {
         "recall@1": 0.0,
-        "recall@3": 0.5,
+        "recall@3": 0.0,
         "recall@5": 0.5,
         "recall@10": 1.0,
-        "rr": 0.3333333333333333
+        "rr": 0.25
       },
       "hybrid": {
         "recall@1": 0.5,
@@ -1047,7 +1043,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.7207172845939058,
+      "top_semantic_score": 0.7601058483123834,
       "top_hybrid": [
         {
           "file": "tech_ai_01.wav",
@@ -1082,8 +1078,8 @@
         "recall@1": 0.0,
         "recall@3": 0.0,
         "recall@5": 0.0,
-        "recall@10": 0.5,
-        "rr": 0.1
+        "recall@10": 0.0,
+        "rr": 0.0
       },
       "hybrid": {
         "recall@1": 0.0,
@@ -1118,7 +1114,7 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.6996503651350532,
+      "top_semantic_score": 0.7360873818397574,
       "top_hybrid": [
         {
           "file": "business_02.wav",
@@ -1135,11 +1131,11 @@
           "text": "Like, I don't know, like ranking is kind of AI, right? At some point, Google was like, even early on, they were thinking"
         },
         {
-          "file": "tech_ai_01.wav",
-          "start": 527.67,
-          "end": 544.23,
+          "file": "culture_01.wav",
+          "start": 48.08,
+          "end": 65.05,
           "speaker": "SPEAKER_00",
-          "text": "Like compilers will take my highlight language and see and write the assembly code. So we're abstracting ourselves very "
+          "text": "it's because it worked because I think that there was this, it was the way we were working. In other words, it's how he "
         }
       ],
       "keyword": {
@@ -1152,18 +1148,18 @@
       "semantic": {
         "recall@1": 0.0,
         "recall@3": 0.3333333333333333,
-        "recall@5": 0.3333333333333333,
-        "recall@10": 0.6666666666666666,
-        "rr": 0.5
-      },
-      "hybrid": {
-        "recall@1": 0.0,
-        "recall@3": 0.3333333333333333,
-        "recall@5": 0.3333333333333333,
+        "recall@5": 0.6666666666666666,
         "recall@10": 0.6666666666666666,
         "rr": 0.3333333333333333
       },
-      "hybrid_hit_rank": 3,
+      "hybrid": {
+        "recall@1": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0,
+        "recall@10": 0.6666666666666666,
+        "rr": 0.16666666666666666
+      },
+      "hybrid_hit_rank": 6,
       "speaker_correct": true
     },
     {
@@ -1190,7 +1186,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.5955709701095897,
+      "top_semantic_score": 0.5879342205563746,
       "top_hybrid": [
         {
           "file": "tech_product_01.wav",
@@ -1223,7 +1219,7 @@
       },
       "semantic": {
         "recall@1": 0.3333333333333333,
-        "recall@3": 0.6666666666666666,
+        "recall@3": 0.3333333333333333,
         "recall@5": 0.6666666666666666,
         "recall@10": 1.0,
         "rr": 1.0
@@ -1256,7 +1252,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.6907298011892679,
+      "top_semantic_score": 0.7474891916665838,
       "top_hybrid": [
         {
           "file": "tech_product_01.wav",
@@ -1316,15 +1312,8 @@
           "speaker": "SPEAKER_00"
         }
       ],
-      "top_semantic_score": 0.6585233604027856,
+      "top_semantic_score": 0.6818991899490356,
       "top_hybrid": [
-        {
-          "file": "tech_product_01.wav",
-          "start": 274.23,
-          "end": 294.06,
-          "speaker": "SPEAKER_01",
-          "text": "That, in my view, is the biggest failure mode. You mentioned specific things, cleaners. I wonder about that, right? Is i"
-        },
         {
           "file": "tech_product_01.wav",
           "start": 231.19,
@@ -1334,10 +1323,17 @@
         },
         {
           "file": "tech_product_01.wav",
-          "start": 401.65,
-          "end": 421.7,
+          "start": 274.23,
+          "end": 294.06,
           "speaker": "SPEAKER_01",
-          "text": "They had kind of a two-part plan for that, one with like a pay-as-you-go menu, one with a more of like a subscription op"
+          "text": "That, in my view, is the biggest failure mode. You mentioned specific things, cleaners. I wonder about that, right? Is i"
+        },
+        {
+          "file": "tech_product_01.wav",
+          "start": 130.81,
+          "end": 149.86,
+          "speaker": "SPEAKER_01",
+          "text": "I mean, if you stay somewhere in Airbnb, you learn something about the host. You learn something about the listing. The "
         }
       ],
       "keyword": {
@@ -1350,9 +1346,9 @@
       "semantic": {
         "recall@1": 0.0,
         "recall@3": 0.0,
-        "recall@5": 0.0,
+        "recall@5": 1.0,
         "recall@10": 1.0,
-        "rr": 0.14285714285714285
+        "rr": 0.25
       },
       "hybrid": {
         "recall@1": 0.0,
@@ -1382,7 +1378,7 @@
           "speaker": "SPEAKER_01"
         }
       ],
-      "top_semantic_score": 0.7351024527817263,
+      "top_semantic_score": 0.7743603952419671,
       "top_hybrid": [
         {
           "file": "tech_product_01.wav",
@@ -1399,11 +1395,11 @@
           "text": "Many founders try to start a marketplace business, think about marketplace opportunities where they don't exist. And the"
         },
         {
-          "file": "tech_product_01.wav",
-          "start": 164.27,
-          "end": 191.27,
+          "file": "business_01.wav",
+          "start": 309.76,
+          "end": 333.08,
           "speaker": "SPEAKER_01",
-          "text": "Every single thing I just said, finding potential matches, making matches, and then learning about those matches, and th"
+          "text": "And I don't know if anyone watching is feeling lonely. I thought it was all my fault. I was like, I miss the memo. I don"
         }
       ],
       "keyword": {
@@ -1415,19 +1411,19 @@
       },
       "semantic": {
         "recall@1": 0.0,
-        "recall@3": 0.5,
+        "recall@3": 0.0,
         "recall@5": 0.5,
         "recall@10": 0.5,
-        "rr": 0.3333333333333333
+        "rr": 0.2
       },
       "hybrid": {
         "recall@1": 0.0,
         "recall@3": 0.0,
-        "recall@5": 0.5,
+        "recall@5": 0.0,
         "recall@10": 0.5,
-        "rr": 0.25
+        "rr": 0.1
       },
-      "hybrid_hit_rank": 4,
+      "hybrid_hit_rank": 10,
       "speaker_correct": true
     },
     {
@@ -1435,7 +1431,7 @@
       "query": "recipe for baking sourdough bread",
       "type": "negative",
       "relevant": [],
-      "top_semantic_score": 0.5612090826034546,
+      "top_semantic_score": 0.5891333994011106,
       "top_hybrid": [
         {
           "file": "business_01.wav",
@@ -1452,11 +1448,11 @@
           "text": "in addition to fiber. Do you make it a point to consume them? I do. Yeah, I like kefir"
         },
         {
-          "file": "health_01.wav",
-          "start": 140.99,
-          "end": 161.24,
+          "file": "business_01.wav",
+          "start": 180.29,
+          "end": 198.0,
           "speaker": "SPEAKER_01",
-          "text": "I think they're important and they're missing in the Western diet, which is an issue. And I think the study you referred"
+          "text": "Is it also a little exhausting to make sure that in my first impression, I'm being a little bit more up with my face, op"
         }
       ]
     },
@@ -1465,7 +1461,7 @@
       "query": "rising sea levels from climate change",
       "type": "negative",
       "relevant": [],
-      "top_semantic_score": 0.5418678522109985,
+      "top_semantic_score": 0.547067403793335,
       "top_hybrid": [
         {
           "file": "business_01.wav",
@@ -1495,8 +1491,15 @@
       "query": "tips for house training a puppy",
       "type": "negative",
       "relevant": [],
-      "top_semantic_score": 0.5642913243596966,
+      "top_semantic_score": 0.546074709998124,
       "top_hybrid": [
+        {
+          "file": "tech_ai_01.wav",
+          "start": 544.84,
+          "end": 559.27,
+          "speaker": "SPEAKER_01",
+          "text": "One of the big problems with RL is that it's incredibly information sparse. Labelbox can help you with this by increasin"
+        },
         {
           "file": "tech_ai_01.wav",
           "start": 77.63,
@@ -1506,17 +1509,10 @@
         },
         {
           "file": "tech_ai_01.wav",
-          "start": 41.39,
-          "end": 59.92,
+          "start": 25.29,
+          "end": 40.81,
           "speaker": "SPEAKER_00",
-          "text": "But you're still very much the architect of what you're writing. Then there's the vibe coding. Hi, please implement this"
-        },
-        {
-          "file": "business_01.wav",
-          "start": 198.32,
-          "end": 220.24,
-          "speaker": "SPEAKER_01",
-          "text": "You don't have to do all the cues. If smiling is not your thing, smiling is not essential for being charismatic. When we"
+          "text": "The intermediate part, which is where I am, is you still write a lot of things from scratch, but you use the autocomplet"
         }
       ]
     }
