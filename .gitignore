@@ -27,5 +27,8 @@ data/audio/*.opus
 data/audio/*.mp3
 !data/audio/.gitkeep
 
+# Raw downloaded audio (before trimming)
+data/raw/
+
 # Pipeline output (temporary)
 output/*.json
