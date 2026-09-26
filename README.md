@@ -4,6 +4,42 @@ Submission for the G2 AI Hiring Hackathon, Problem Statement 1 ("Effective retri
 
 The full write-up (design, rationale, results, limitations, use of a coding agent) is in [SOLUTION.md](SOLUTION.md).
 
+## Setup
+
+Requirements: Python 3.12 or 3.13 (tested on 3.13), Docker, and ffmpeg (`brew install ffmpeg`; needed only to transcribe audio).
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt       # a few minutes: torch + WhisperX
+cp .env.example .env                  # defaults work; HF_TOKEN only needed to transcribe
+docker compose up -d                  # Postgres + pgvector; schema from db/schema.sql
+python -m src.database.connection     # should list both tables, 0 rows
+```
+
+If port 5432 is already in use, set another `DB_PORT` in `.env` before `docker compose up -d`.
+
+**Hugging Face token (only to transcribe/diarize audio).** Indexing, search and evaluation work without it, because the transcripts are included. To transcribe:
+1. Accept the terms of [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) while logged in to Hugging Face.
+2. Create a read token at <https://huggingface.co/settings/tokens> and set `HF_TOKEN=` in `.env`.
+
+## Quick start: backend + UI
+
+After the setup above:
+
+```bash
+python -m src.index_chunks            # 1. index the included transcripts (~12 s)
+uvicorn src.api.app:app --reload      # 2. backend + UI
+```
+
+When the server is up you should see:
+
+```
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
+
+Then open **http://localhost:8000** for the UI and **http://localhost:8000/docs** for the API. `http://localhost:8000/health` should report `"status": "ok"` and `"total_chunks": 240`. Details, the full endpoint list and the command-line scripts are below.
+
 ## Results
 
 Evaluated on 25 labeled queries across all seven clips (22 with a labeled answer, 3 with none). Full analysis in [SOLUTION.md](SOLUTION.md#7-results) and [docs/evaluation.md](docs/evaluation.md).
@@ -34,28 +70,6 @@ Evaluated on 25 labeled queries across all seven clips (22 with a labeled answer
 
 ![Evaluation tab: success criteria and recall@k by method and query type, with the baseline overlaid](docs/images/ui_evaluation.png)
 
-## Quick start: backend + UI
-
-With Python 3.12/3.13 and Docker installed:
-
-```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-docker compose up -d                  # 1. database (schema created automatically)
-python -m src.index_chunks            # 2. index the included transcripts (~12 s)
-uvicorn src.api.app:app --reload      # 3. backend + UI
-```
-
-When the server is up you should see:
-
-```
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-```
-
-Then open **http://localhost:8000** for the UI and **http://localhost:8000/docs** for the API. `http://localhost:8000/health` should report `"status": "ok"` and `"total_chunks": 240`. Details, the full endpoint list and the command-line scripts are below.
-
 ## Layout
 
 ```
@@ -77,24 +91,6 @@ src/index_chunks.py    transcripts -> chunks -> embeddings -> Postgres
 src/pipeline.py        audio -> transcripts -> ... -> Postgres
 tests/                 unit tests for the evaluation maths
 ```
-
-## Setup
-
-Requirements: Python 3.12 or 3.13 (tested on 3.13), Docker, and ffmpeg (`brew install ffmpeg`; needed only to transcribe audio).
-
-```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt       # a few minutes: torch + WhisperX
-cp .env.example .env                  # defaults work; HF_TOKEN only needed to transcribe
-docker compose up -d                  # Postgres + pgvector; schema from db/schema.sql
-python -m src.database.connection     # should list both tables, 0 rows
-```
-
-If port 5432 is already in use, set another `DB_PORT` in `.env` before `docker compose up -d`.
-
-**Hugging Face token (only to transcribe/diarize audio).** Indexing, search and evaluation work without it, because the transcripts are included. To transcribe:
-1. Accept the terms of [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) while logged in to Hugging Face.
-2. Create a read token at <https://huggingface.co/settings/tokens> and set `HF_TOKEN=` in `.env`.
 
 ## Run
 
