@@ -1,0 +1,8924 @@
+{
+  "file": "business_02.wav",
+  "segments": [
+    {
+      "speaker": "SPEAKER_00",
+      "start": 0.111,
+      "end": 12.924,
+      "text": "was that although general purpose computing is a fabulous thing and is going to enable software and IT and everything, we felt that there were applications that wouldn't be possible or would be costly if it wasn't accelerated.",
+      "words": [
+        {
+          "word": "was",
+          "start": 0.111,
+          "end": 0.231
+        },
+        {
+          "word": "that",
+          "start": 0.271,
+          "end": 0.431
+        },
+        {
+          "word": "although",
+          "start": 0.552,
+          "end": 0.952
+        },
+        {
+          "word": "general",
+          "start": 1.392,
+          "end": 1.613
+        },
+        {
+          "word": "purpose",
+          "start": 1.633,
+          "end": 1.853
+        },
+        {
+          "word": "computing",
+          "start": 1.873,
+          "end": 2.333
+        },
+        {
+          "word": "is",
+          "start": 2.353,
+          "end": 2.574
+        },
+        {
+          "word": "a",
+          "start": 2.614,
+          "end": 2.634
+        },
+        {
+          "word": "fabulous",
+          "start": 2.674,
+          "end": 3.134
+        },
+        {
+          "word": "thing",
+          "start": 3.174,
+          "end": 3.374
+        },
+        {
+          "word": "and",
+          "start": 3.414,
+          "end": 3.475
+        },
+        {
+          "word": "is",
+          "start": 3.495,
+          "end": 3.535
+        },
+        {
+          "word": "going",
+          "start": 3.555,
+          "end": 3.675
+        },
+        {
+          "word": "to",
+          "start": 3.695,
+          "end": 3.755
+        },
+        {
+          "word": "enable",
+          "start": 3.775,
+          "end": 4.095
+        },
+        {
+          "word": "software",
+          "start": 4.155,
+          "end": 4.556
+        },
+        {
+          "word": "and",
+          "start": 4.576,
+          "end": 4.636
+        },
+        {
+          "word": "IT",
+          "start": 4.676,
+          "end": 4.936
+        },
+        {
+          "word": "and",
+          "start": 4.976,
+          "end": 5.056
+        },
+        {
+          "word": "everything,",
+          "start": 5.096,
+          "end": 5.397
+        },
+        {
+          "word": "we",
+          "start": 6.398,
+          "end": 6.538
+        },
+        {
+          "word": "felt",
+          "start": 6.598,
+          "end": 6.758
+        },
+        {
+          "word": "that",
+          "start": 6.798,
+          "end": 6.898
+        },
+        {
+          "word": "there",
+          "start": 6.918,
+          "end": 7.218
+        },
+        {
+          "word": "were",
+          "start": 7.719,
+          "end": 7.839
+        },
+        {
+          "word": "applications",
+          "start": 7.919,
+          "end": 8.56
+        },
+        {
+          "word": "that",
+          "start": 8.64,
+          "end": 8.82
+        },
+        {
+          "word": "wouldn't",
+          "start": 9.02,
+          "end": 9.24
+        },
+        {
+          "word": "be",
+          "start": 9.26,
+          "end": 9.361
+        },
+        {
+          "word": "possible",
+          "start": 9.441,
+          "end": 9.961
+        },
+        {
+          "word": "or",
+          "start": 10.682,
+          "end": 10.782
+        },
+        {
+          "word": "would",
+          "start": 10.842,
+          "end": 10.982
+        },
+        {
+          "word": "be",
+          "start": 11.002,
+          "end": 11.082
+        },
+        {
+          "word": "costly",
+          "start": 11.243,
+          "end": 11.743
+        },
+        {
+          "word": "if",
+          "start": 11.923,
+          "end": 12.003
+        },
+        {
+          "word": "it",
+          "start": 12.063,
+          "end": 12.123
+        },
+        {
+          "word": "wasn't",
+          "start": 12.163,
+          "end": 12.384
+        },
+        {
+          "word": "accelerated.",
+          "start": 12.424,
+          "end": 12.924
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 12.944,
+      "end": 13.825,
+      "text": "It should be accelerated.",
+      "words": [
+        {
+          "word": "It",
+          "start": 12.944,
+          "end": 12.984
+        },
+        {
+          "word": "should",
+          "start": 13.004,
+          "end": 13.165
+        },
+        {
+          "word": "be",
+          "start": 13.185,
+          "end": 13.265
+        },
+        {
+          "word": "accelerated.",
+          "start": 13.305,
+          "end": 13.825
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 14.005,
+      "end": 16.368,
+      "text": "And 3D graphics was one of them, but it wasn't the only one.",
+      "words": [
+        {
+          "word": "And",
+          "start": 14.005,
+          "end": 14.105
+        },
+        {
+          "word": "3D",
+          "start": 14.266,
+          "end": 14.386
+        },
+        {
+          "word": "graphics",
+          "start": 14.466,
+          "end": 14.746
+        },
+        {
+          "word": "was",
+          "start": 14.786,
+          "end": 14.886
+        },
+        {
+          "word": "one",
+          "start": 14.986,
+          "end": 15.086
+        },
+        {
+          "word": "of",
+          "start": 15.106,
+          "end": 15.167
+        },
+        {
+          "word": "them,",
+          "start": 15.207,
+          "end": 15.367
+        },
+        {
+          "word": "but",
+          "start": 15.387,
+          "end": 15.487
+        },
+        {
+          "word": "it",
+          "start": 15.507,
+          "end": 15.547
+        },
+        {
+          "word": "wasn't",
+          "start": 15.587,
+          "end": 15.787
+        },
+        {
+          "word": "the",
+          "start": 15.827,
+          "end": 15.907
+        },
+        {
+          "word": "only",
+          "start": 15.947,
+          "end": 16.108
+        },
+        {
+          "word": "one.",
+          "start": 16.268,
+          "end": 16.368
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 17.205,
+      "end": 19.706,
+      "text": "And it just happens to be the first one and a really great one.",
+      "words": [
+        {
+          "word": "And",
+          "start": 17.205,
+          "end": 17.285
+        },
+        {
+          "word": "it",
+          "start": 17.345,
+          "end": 17.425
+        },
+        {
+          "word": "just",
+          "start": 17.445,
+          "end": 17.545
+        },
+        {
+          "word": "happens",
+          "start": 17.585,
+          "end": 17.845
+        },
+        {
+          "word": "to",
+          "start": 17.885,
+          "end": 17.925
+        },
+        {
+          "word": "be",
+          "start": 17.965,
+          "end": 18.045
+        },
+        {
+          "word": "the",
+          "start": 18.065,
+          "end": 18.146
+        },
+        {
+          "word": "first",
+          "start": 18.186,
+          "end": 18.386
+        },
+        {
+          "word": "one",
+          "start": 18.506,
+          "end": 18.626
+        },
+        {
+          "word": "and",
+          "start": 18.726,
+          "end": 18.826
+        },
+        {
+          "word": "a",
+          "start": 18.866,
+          "end": 18.906
+        },
+        {
+          "word": "really",
+          "start": 18.986,
+          "end": 19.226
+        },
+        {
+          "word": "great",
+          "start": 19.266,
+          "end": 19.466
+        },
+        {
+          "word": "one.",
+          "start": 19.586,
+          "end": 19.706
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 20.807,
+      "end": 27.531,
+      "text": "And I still remember the first time we met John, he was quite emphatic about using CPUs and the software render was really good.",
+      "words": [
+        {
+          "word": "And",
+          "start": 20.807,
+          "end": 20.887
+        },
+        {
+          "word": "I",
+          "start": 21.007,
+          "end": 21.067
+        },
+        {
+          "word": "still",
+          "start": 21.087,
+          "end": 21.227
+        },
+        {
+          "word": "remember",
+          "start": 21.247,
+          "end": 21.487
+        },
+        {
+          "word": "the",
+          "start": 21.507,
+          "end": 21.607
+        },
+        {
+          "word": "first",
+          "start": 21.647,
+          "end": 21.807
+        },
+        {
+          "word": "time",
+          "start": 21.827,
+          "end": 22.028
+        },
+        {
+          "word": "we",
+          "start": 22.068,
+          "end": 22.188
+        },
+        {
+          "word": "met",
+          "start": 22.388,
+          "end": 22.528
+        },
+        {
+          "word": "John,",
+          "start": 22.548,
+          "end": 22.888
+        },
+        {
+          "word": "he",
+          "start": 23.028,
+          "end": 23.228
+        },
+        {
+          "word": "was",
+          "start": 23.408,
+          "end": 23.568
+        },
+        {
+          "word": "quite",
+          "start": 23.849,
+          "end": 24.009
+        },
+        {
+          "word": "emphatic",
+          "start": 24.069,
+          "end": 24.469
+        },
+        {
+          "word": "about",
+          "start": 24.509,
+          "end": 24.669
+        },
+        {
+          "word": "using",
+          "start": 24.749,
+          "end": 24.929
+        },
+        {
+          "word": "CPUs",
+          "start": 24.989,
+          "end": 25.509
+        },
+        {
+          "word": "and",
+          "start": 25.569,
+          "end": 25.67
+        },
+        {
+          "word": "the",
+          "start": 26.07,
+          "end": 26.21
+        },
+        {
+          "word": "software",
+          "start": 26.25,
+          "end": 26.61
+        },
+        {
+          "word": "render",
+          "start": 26.63,
+          "end": 26.93
+        },
+        {
+          "word": "was",
+          "start": 26.95,
+          "end": 27.05
+        },
+        {
+          "word": "really",
+          "start": 27.09,
+          "end": 27.31
+        },
+        {
+          "word": "good.",
+          "start": 27.33,
+          "end": 27.531
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 27.771,
+      "end": 34.854,
+      "text": "I mean, quite frankly, if you look at Doom, the performance of Doom was really hard to achieve, even with accelerators at the time.",
+      "words": [
+        {
+          "word": "I",
+          "start": 27.771,
+          "end": 27.831
+        },
+        {
+          "word": "mean,",
+          "start": 27.851,
+          "end": 28.011
+        },
+        {
+          "word": "quite",
+          "start": 28.031,
+          "end": 28.191
+        },
+        {
+          "word": "frankly,",
+          "start": 28.211,
+          "end": 28.511
+        },
+        {
+          "word": "if",
+          "start": 28.531,
+          "end": 28.571
+        },
+        {
+          "word": "you",
+          "start": 28.591,
+          "end": 28.671
+        },
+        {
+          "word": "look",
+          "start": 28.711,
+          "end": 28.871
+        },
+        {
+          "word": "at",
+          "start": 28.911,
+          "end": 28.991
+        },
+        {
+          "word": "Doom,",
+          "start": 29.492,
+          "end": 30.492
+        },
+        {
+          "word": "the",
+          "start": 30.512,
+          "end": 30.592
+        },
+        {
+          "word": "performance",
+          "start": 30.632,
+          "end": 31.032
+        },
+        {
+          "word": "of",
+          "start": 31.072,
+          "end": 31.112
+        },
+        {
+          "word": "Doom",
+          "start": 31.152,
+          "end": 31.353
+        },
+        {
+          "word": "was",
+          "start": 31.393,
+          "end": 31.513
+        },
+        {
+          "word": "really",
+          "start": 31.693,
+          "end": 32.053
+        },
+        {
+          "word": "hard",
+          "start": 32.113,
+          "end": 32.313
+        },
+        {
+          "word": "to",
+          "start": 32.373,
+          "end": 32.473
+        },
+        {
+          "word": "achieve,",
+          "start": 32.553,
+          "end": 33.013
+        },
+        {
+          "word": "even",
+          "start": 33.234,
+          "end": 33.434
+        },
+        {
+          "word": "with",
+          "start": 33.514,
+          "end": 33.694
+        },
+        {
+          "word": "accelerators",
+          "start": 33.754,
+          "end": 34.354
+        },
+        {
+          "word": "at",
+          "start": 34.374,
+          "end": 34.434
+        },
+        {
+          "word": "the",
+          "start": 34.454,
+          "end": 34.534
+        },
+        {
+          "word": "time.",
+          "start": 34.574,
+          "end": 34.854
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 35.935,
+      "end": 41.098,
+      "text": "If you didn't filter, if you didn't have to do binary filtering, it did a pretty good job.",
+      "words": [
+        {
+          "word": "If",
+          "start": 35.935,
+          "end": 35.995
+        },
+        {
+          "word": "you",
+          "start": 36.015,
+          "end": 36.115
+        },
+        {
+          "word": "didn't",
+          "start": 36.135,
+          "end": 36.315
+        },
+        {
+          "word": "filter,",
+          "start": 36.455,
+          "end": 36.895
+        },
+        {
+          "word": "if",
+          "start": 36.976,
+          "end": 37.016
+        },
+        {
+          "word": "you",
+          "start": 37.056,
+          "end": 37.136
+        },
+        {
+          "word": "didn't",
+          "start": 37.156,
+          "end": 37.276
+        },
+        {
+          "word": "have",
+          "start": 37.296,
+          "end": 37.396
+        },
+        {
+          "word": "to",
+          "start": 37.416,
+          "end": 37.456
+        },
+        {
+          "word": "do",
+          "start": 37.496,
+          "end": 37.576
+        },
+        {
+          "word": "binary",
+          "start": 37.616,
+          "end": 37.996
+        },
+        {
+          "word": "filtering,",
+          "start": 38.016,
+          "end": 38.516
+        },
+        {
+          "word": "it",
+          "start": 39.977,
+          "end": 40.057
+        },
+        {
+          "word": "did",
+          "start": 40.097,
+          "end": 40.257
+        },
+        {
+          "word": "a",
+          "start": 40.277,
+          "end": 40.317
+        },
+        {
+          "word": "pretty",
+          "start": 40.377,
+          "end": 40.597
+        },
+        {
+          "word": "good",
+          "start": 40.637,
+          "end": 40.758
+        },
+        {
+          "word": "job.",
+          "start": 40.798,
+          "end": 41.098
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 41.778,
+      "end": 44.478,
+      "text": "The problem with Doom, though, was you needed Carmack to program it.",
+      "words": [
+        {
+          "word": "The",
+          "start": 41.778,
+          "end": 41.858
+        },
+        {
+          "word": "problem",
+          "start": 41.878,
+          "end": 42.078
+        },
+        {
+          "word": "with",
+          "start": 42.098,
+          "end": 42.178
+        },
+        {
+          "word": "Doom,",
+          "start": 42.198,
+          "end": 42.458
+        },
+        {
+          "word": "though,",
+          "start": 42.478,
+          "end": 42.658
+        },
+        {
+          "word": "was",
+          "start": 42.678,
+          "end": 42.858
+        },
+        {
+          "word": "you",
+          "start": 43.078,
+          "end": 43.178
+        },
+        {
+          "word": "needed",
+          "start": 43.198,
+          "end": 43.418
+        },
+        {
+          "word": "Carmack",
+          "start": 43.458,
+          "end": 43.858
+        },
+        {
+          "word": "to",
+          "start": 43.878,
+          "end": 43.958
+        },
+        {
+          "word": "program",
+          "start": 43.978,
+          "end": 44.358
+        },
+        {
+          "word": "it.",
+          "start": 44.398,
+          "end": 44.478
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 44.619,
+      "end": 45.939,
+      "text": "Yeah, you needed Carmack to program it.",
+      "words": [
+        {
+          "word": "Yeah,",
+          "start": 44.619,
+          "end": 44.799
+        },
+        {
+          "word": "you",
+          "start": 44.819,
+          "end": 44.879
+        },
+        {
+          "word": "needed",
+          "start": 44.919,
+          "end": 45.079
+        },
+        {
+          "word": "Carmack",
+          "start": 45.119,
+          "end": 45.399
+        },
+        {
+          "word": "to",
+          "start": 45.419,
+          "end": 45.479
+        },
+        {
+          "word": "program",
+          "start": 45.519,
+          "end": 45.839
+        },
+        {
+          "word": "it.",
+          "start": 45.859,
+          "end": 45.939
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 46.059,
+      "end": 46.479,
+      "text": "Exactly.",
+      "words": [
+        {
+          "word": "Exactly.",
+          "start": 46.059,
+          "end": 46.479
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 46.499,
+      "end": 48.179,
+      "text": "It was a genius piece of code.",
+      "words": [
+        {
+          "word": "It",
+          "start": 46.499,
+          "end": 46.719
+        },
+        {
+          "word": "was",
+          "start": 46.899,
+          "end": 46.999
+        },
+        {
+          "word": "a",
+          "start": 47.039,
+          "end": 47.059
+        },
+        {
+          "word": "genius",
+          "start": 47.119,
+          "end": 47.479
+        },
+        {
+          "word": "piece",
+          "start": 47.519,
+          "end": 47.679
+        },
+        {
+          "word": "of",
+          "start": 47.699,
+          "end": 47.739
+        },
+        {
+          "word": "code.",
+          "start": 47.779,
+          "end": 48.179
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 49.159,
+      "end": 51.78,
+      "text": "But nonetheless, Software Renders did a really good job.",
+      "words": [
+        {
+          "word": "But",
+          "start": 49.159,
+          "end": 49.279
+        },
+        {
+          "word": "nonetheless,",
+          "start": 49.319,
+          "end": 49.799
+        },
+        {
+          "word": "Software",
+          "start": 49.819,
+          "end": 50.139
+        },
+        {
+          "word": "Renders",
+          "start": 50.179,
+          "end": 50.5
+        },
+        {
+          "word": "did",
+          "start": 50.52,
+          "end": 50.66
+        },
+        {
+          "word": "a",
+          "start": 50.68,
+          "end": 50.7
+        },
+        {
+          "word": "really",
+          "start": 50.74,
+          "end": 50.92
+        },
+        {
+          "word": "good",
+          "start": 50.96,
+          "end": 51.04
+        },
+        {
+          "word": "job.",
+          "start": 51.06,
+          "end": 51.78
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 52.14,
+      "end": 60.661,
+      "text": "And if he hadn't decided to go to OpenGL and accelerate for Quake, frankly, what would be the killer app that put us here?",
+      "words": [
+        {
+          "word": "And",
+          "start": 52.14,
+          "end": 52.2
+        },
+        {
+          "word": "if",
+          "start": 52.24,
+          "end": 52.32
+        },
+        {
+          "word": "he",
+          "start": 52.38,
+          "end": 52.54
+        },
+        {
+          "word": "hadn't",
+          "start": 52.58,
+          "end": 52.84
+        },
+        {
+          "word": "decided",
+          "start": 53.2,
+          "end": 53.7
+        },
+        {
+          "word": "to",
+          "start": 53.74,
+          "end": 53.8
+        },
+        {
+          "word": "go",
+          "start": 53.84,
+          "end": 53.94
+        },
+        {
+          "word": "to",
+          "start": 53.96,
+          "end": 54.0
+        },
+        {
+          "word": "OpenGL",
+          "start": 54.06,
+          "end": 54.68
+        },
+        {
+          "word": "and",
+          "start": 55.2,
+          "end": 55.28
+        },
+        {
+          "word": "accelerate",
+          "start": 55.32,
+          "end": 55.86
+        },
+        {
+          "word": "for",
+          "start": 56.841,
+          "end": 56.941
+        },
+        {
+          "word": "Quake,",
+          "start": 57.041,
+          "end": 58.041
+        },
+        {
+          "word": "frankly,",
+          "start": 58.101,
+          "end": 58.501
+        },
+        {
+          "word": "what",
+          "start": 58.941,
+          "end": 59.041
+        },
+        {
+          "word": "would",
+          "start": 59.081,
+          "end": 59.221
+        },
+        {
+          "word": "be",
+          "start": 59.241,
+          "end": 59.321
+        },
+        {
+          "word": "the",
+          "start": 59.361,
+          "end": 59.421
+        },
+        {
+          "word": "killer",
+          "start": 59.461,
+          "end": 59.741
+        },
+        {
+          "word": "app",
+          "start": 59.801,
+          "end": 59.961
+        },
+        {
+          "word": "that",
+          "start": 59.981,
+          "end": 60.121
+        },
+        {
+          "word": "put",
+          "start": 60.161,
+          "end": 60.321
+        },
+        {
+          "word": "us",
+          "start": 60.361,
+          "end": 60.421
+        },
+        {
+          "word": "here?",
+          "start": 60.461,
+          "end": 60.661
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 61.021,
+      "end": 61.241,
+      "text": "Right.",
+      "words": [
+        {
+          "word": "Right.",
+          "start": 61.021,
+          "end": 61.241
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 61.621,
+      "end": 69.623,
+      "text": "And so Carmack and Sweeney, both between Unreal and Quake, created the first two killer applications for Consumer 3D.",
+      "words": [
+        {
+          "word": "And",
+          "start": 61.621,
+          "end": 61.721
+        },
+        {
+          "word": "so",
+          "start": 61.801,
+          "end": 62.041
+        },
+        {
+          "word": "Carmack",
+          "start": 62.562,
+          "end": 63.042
+        },
+        {
+          "word": "and",
+          "start": 63.122,
+          "end": 63.222
+        },
+        {
+          "word": "Sweeney,",
+          "start": 63.302,
+          "end": 63.782
+        },
+        {
+          "word": "both",
+          "start": 63.922,
+          "end": 64.182
+        },
+        {
+          "word": "between",
+          "start": 64.262,
+          "end": 64.642
+        },
+        {
+          "word": "Unreal",
+          "start": 64.982,
+          "end": 65.402
+        },
+        {
+          "word": "and",
+          "start": 65.482,
+          "end": 65.582
+        },
+        {
+          "word": "Quake,",
+          "start": 65.702,
+          "end": 66.002
+        },
+        {
+          "word": "created",
+          "start": 66.582,
+          "end": 66.882
+        },
+        {
+          "word": "the",
+          "start": 66.922,
+          "end": 67.002
+        },
+        {
+          "word": "first",
+          "start": 67.022,
+          "end": 67.222
+        },
+        {
+          "word": "two",
+          "start": 67.282,
+          "end": 67.522
+        },
+        {
+          "word": "killer",
+          "start": 68.063,
+          "end": 68.363
+        },
+        {
+          "word": "applications",
+          "start": 68.403,
+          "end": 68.903
+        },
+        {
+          "word": "for",
+          "start": 68.943,
+          "end": 69.123
+        },
+        {
+          "word": "Consumer",
+          "start": 69.143,
+          "end": 69.483
+        },
+        {
+          "word": "3D.",
+          "start": 69.503,
+          "end": 69.623
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 71.023,
+      "end": 74.044,
+      "text": "Yeah, and so I owe them a great deal.",
+      "words": [
+        {
+          "word": "Yeah,",
+          "start": 71.023,
+          "end": 71.223
+        },
+        {
+          "word": "and",
+          "start": 71.403,
+          "end": 71.463
+        },
+        {
+          "word": "so",
+          "start": 71.503,
+          "end": 72.584
+        },
+        {
+          "word": "I",
+          "start": 72.724,
+          "end": 72.784
+        },
+        {
+          "word": "owe",
+          "start": 72.884,
+          "end": 73.404
+        },
+        {
+          "word": "them",
+          "start": 73.424,
+          "end": 73.544
+        },
+        {
+          "word": "a",
+          "start": 73.584,
+          "end": 73.604
+        },
+        {
+          "word": "great",
+          "start": 73.644,
+          "end": 73.824
+        },
+        {
+          "word": "deal.",
+          "start": 73.844,
+          "end": 74.044
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 75.225,
+      "end": 76.225,
+      "text": "I want to come back real quick too.",
+      "words": [
+        {
+          "word": "I",
+          "start": 75.225,
+          "end": 75.265
+        },
+        {
+          "word": "want",
+          "start": 75.285,
+          "end": 75.365
+        },
+        {
+          "word": "to",
+          "start": 75.405,
+          "end": 75.445
+        },
+        {
+          "word": "come",
+          "start": 75.465,
+          "end": 75.545
+        },
+        {
+          "word": "back",
+          "start": 75.585,
+          "end": 75.685
+        },
+        {
+          "word": "real",
+          "start": 75.725,
+          "end": 75.865
+        },
+        {
+          "word": "quick",
+          "start": 75.885,
+          "end": 76.045
+        },
+        {
+          "word": "too.",
+          "start": 76.065,
+          "end": 76.225
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 76.726,
+      "end": 80.407,
+      "text": "You know, you said, you told these stories and you're like, well, I don't know what founders can take from that.",
+      "words": [
+        {
+          "word": "You",
+          "start": 76.726,
+          "end": 76.786
+        },
+        {
+          "word": "know,",
+          "start": 76.806,
+          "end": 76.906
+        },
+        {
+          "word": "you",
+          "start": 76.926,
+          "end": 76.986
+        },
+        {
+          "word": "said,",
+          "start": 77.006,
+          "end": 77.186
+        },
+        {
+          "word": "you",
+          "start": 77.706,
+          "end": 77.806
+        },
+        {
+          "word": "told",
+          "start": 77.826,
+          "end": 77.946
+        },
+        {
+          "word": "these",
+          "start": 77.966,
+          "end": 78.066
+        },
+        {
+          "word": "stories",
+          "start": 78.086,
+          "end": 78.346
+        },
+        {
+          "word": "and",
+          "start": 78.366,
+          "end": 78.426
+        },
+        {
+          "word": "you're",
+          "start": 78.446,
+          "end": 78.566
+        },
+        {
+          "word": "like,",
+          "start": 78.586,
+          "end": 78.686
+        },
+        {
+          "word": "well,",
+          "start": 78.866,
+          "end": 79.087
+        },
+        {
+          "word": "I",
+          "start": 79.107,
+          "end": 79.127
+        },
+        {
+          "word": "don't",
+          "start": 79.167,
+          "end": 79.267
+        },
+        {
+          "word": "know",
+          "start": 79.287,
+          "end": 79.387
+        },
+        {
+          "word": "what",
+          "start": 79.407,
+          "end": 79.527
+        },
+        {
+          "word": "founders",
+          "start": 79.647,
+          "end": 79.927
+        },
+        {
+          "word": "can",
+          "start": 79.947,
+          "end": 80.047
+        },
+        {
+          "word": "take",
+          "start": 80.067,
+          "end": 80.147
+        },
+        {
+          "word": "from",
+          "start": 80.167,
+          "end": 80.267
+        },
+        {
+          "word": "that.",
+          "start": 80.287,
+          "end": 80.407
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 80.487,
+      "end": 94.893,
+      "text": "I actually do think, you know, if you look at all the big tech companies today, perhaps with the exception of Google, they did all start and understanding this now about you by addressing developers, planning to build a platform and tools for developers.",
+      "words": [
+        {
+          "word": "I",
+          "start": 80.487,
+          "end": 80.567
+        },
+        {
+          "word": "actually",
+          "start": 80.727,
+          "end": 81.027
+        },
+        {
+          "word": "do",
+          "start": 81.388,
+          "end": 81.528
+        },
+        {
+          "word": "think,",
+          "start": 81.568,
+          "end": 81.788
+        },
+        {
+          "word": "you",
+          "start": 81.808,
+          "end": 82.028
+        },
+        {
+          "word": "know,",
+          "start": 82.448,
+          "end": 82.608
+        },
+        {
+          "word": "if",
+          "start": 82.628,
+          "end": 82.668
+        },
+        {
+          "word": "you",
+          "start": 82.688,
+          "end": 82.768
+        },
+        {
+          "word": "look",
+          "start": 82.788,
+          "end": 82.928
+        },
+        {
+          "word": "at",
+          "start": 82.948,
+          "end": 82.988
+        },
+        {
+          "word": "all",
+          "start": 83.028,
+          "end": 83.148
+        },
+        {
+          "word": "the",
+          "start": 83.168,
+          "end": 83.228
+        },
+        {
+          "word": "big",
+          "start": 83.268,
+          "end": 83.388
+        },
+        {
+          "word": "tech",
+          "start": 83.428,
+          "end": 83.588
+        },
+        {
+          "word": "companies",
+          "start": 83.608,
+          "end": 84.009
+        },
+        {
+          "word": "today,",
+          "start": 84.089,
+          "end": 84.409
+        },
+        {
+          "word": "perhaps",
+          "start": 85.109,
+          "end": 85.409
+        },
+        {
+          "word": "with",
+          "start": 85.449,
+          "end": 85.569
+        },
+        {
+          "word": "the",
+          "start": 85.589,
+          "end": 85.669
+        },
+        {
+          "word": "exception",
+          "start": 85.709,
+          "end": 86.05
+        },
+        {
+          "word": "of",
+          "start": 86.07,
+          "end": 86.13
+        },
+        {
+          "word": "Google,",
+          "start": 86.17,
+          "end": 86.61
+        },
+        {
+          "word": "they",
+          "start": 86.79,
+          "end": 86.91
+        },
+        {
+          "word": "did",
+          "start": 86.95,
+          "end": 87.13
+        },
+        {
+          "word": "all",
+          "start": 87.19,
+          "end": 87.33
+        },
+        {
+          "word": "start",
+          "start": 87.37,
+          "end": 87.65
+        },
+        {
+          "word": "and",
+          "start": 87.83,
+          "end": 87.91
+        },
+        {
+          "word": "understanding",
+          "start": 87.93,
+          "end": 88.331
+        },
+        {
+          "word": "this",
+          "start": 88.351,
+          "end": 88.491
+        },
+        {
+          "word": "now",
+          "start": 88.711,
+          "end": 88.831
+        },
+        {
+          "word": "about",
+          "start": 88.851,
+          "end": 88.991
+        },
+        {
+          "word": "you",
+          "start": 89.031,
+          "end": 89.211
+        },
+        {
+          "word": "by",
+          "start": 89.591,
+          "end": 89.911
+        },
+        {
+          "word": "addressing",
+          "start": 90.271,
+          "end": 90.672
+        },
+        {
+          "word": "developers,",
+          "start": 90.712,
+          "end": 91.272
+        },
+        {
+          "word": "planning",
+          "start": 91.712,
+          "end": 91.992
+        },
+        {
+          "word": "to",
+          "start": 92.032,
+          "end": 92.112
+        },
+        {
+          "word": "build",
+          "start": 92.152,
+          "end": 92.392
+        },
+        {
+          "word": "a",
+          "start": 92.452,
+          "end": 92.512
+        },
+        {
+          "word": "platform",
+          "start": 92.572,
+          "end": 93.233
+        },
+        {
+          "word": "and",
+          "start": 93.413,
+          "end": 93.493
+        },
+        {
+          "word": "tools",
+          "start": 93.533,
+          "end": 93.813
+        },
+        {
+          "word": "for",
+          "start": 93.913,
+          "end": 94.193
+        },
+        {
+          "word": "developers.",
+          "start": 94.233,
+          "end": 94.893
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 96.034,
+      "end": 96.774,
+      "text": "You know, all of them.",
+      "words": [
+        {
+          "word": "You",
+          "start": 96.034,
+          "end": 96.114
+        },
+        {
+          "word": "know,",
+          "start": 96.134,
+          "end": 96.254
+        },
+        {
+          "word": "all",
+          "start": 96.394,
+          "end": 96.534
+        },
+        {
+          "word": "of",
+          "start": 96.574,
+          "end": 96.614
+        },
+        {
+          "word": "them.",
+          "start": 96.654,
+          "end": 96.774
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 97.094,
+      "end": 97.394,
+      "text": "Apple.",
+      "words": [
+        {
+          "word": "Apple.",
+          "start": 97.094,
+          "end": 97.394
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 97.695,
+      "end": 98.255,
+      "text": "Not Amazon.",
+      "words": [
+        {
+          "word": "Not",
+          "start": 97.695,
+          "end": 97.835
+        },
+        {
+          "word": "Amazon.",
+          "start": 97.895,
+          "end": 98.255
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 99.436,
+      "end": 100.456,
+      "text": "That's how AWS started.",
+      "words": [
+        {
+          "word": "That's",
+          "start": 99.436,
+          "end": 99.576
+        },
+        {
+          "word": "how",
+          "start": 99.596,
+          "end": 99.676
+        },
+        {
+          "word": "AWS",
+          "start": 99.716,
+          "end": 99.976
+        },
+        {
+          "word": "started.",
+          "start": 99.996,
+          "end": 100.456
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 100.477,
+      "end": 101.778,
+      "text": "That's how AWS started.",
+      "words": [
+        {
+          "word": "That's",
+          "start": 100.477,
+          "end": 100.597
+        },
+        {
+          "word": "how",
+          "start": 100.637,
+          "end": 100.857
+        },
+        {
+          "word": "AWS",
+          "start": 100.997,
+          "end": 101.437
+        },
+        {
+          "word": "started.",
+          "start": 101.457,
+          "end": 101.778
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 102.338,
+      "end": 106.281,
+      "text": "So I think that actually is a lesson to your point of like, that won't guarantee success by any means.",
+      "words": [
+        {
+          "word": "So",
+          "start": 102.338,
+          "end": 102.438
+        },
+        {
+          "word": "I",
+          "start": 102.458,
+          "end": 102.478
+        },
+        {
+          "word": "think",
+          "start": 102.498,
+          "end": 102.618
+        },
+        {
+          "word": "that",
+          "start": 102.638,
+          "end": 102.758
+        },
+        {
+          "word": "actually",
+          "start": 102.778,
+          "end": 103.039
+        },
+        {
+          "word": "is",
+          "start": 103.079,
+          "end": 103.179
+        },
+        {
+          "word": "a",
+          "start": 103.199,
+          "end": 103.239
+        },
+        {
+          "word": "lesson",
+          "start": 103.279,
+          "end": 103.579
+        },
+        {
+          "word": "to",
+          "start": 103.599,
+          "end": 103.639
+        },
+        {
+          "word": "your",
+          "start": 103.659,
+          "end": 103.759
+        },
+        {
+          "word": "point",
+          "start": 103.779,
+          "end": 103.919
+        },
+        {
+          "word": "of",
+          "start": 103.959,
+          "end": 104.019
+        },
+        {
+          "word": "like,",
+          "start": 104.039,
+          "end": 104.139
+        },
+        {
+          "word": "that",
+          "start": 104.28,
+          "end": 104.42
+        },
+        {
+          "word": "won't",
+          "start": 104.48,
+          "end": 104.7
+        },
+        {
+          "word": "guarantee",
+          "start": 104.86,
+          "end": 105.24
+        },
+        {
+          "word": "success",
+          "start": 105.28,
+          "end": 105.621
+        },
+        {
+          "word": "by",
+          "start": 105.661,
+          "end": 105.761
+        },
+        {
+          "word": "any",
+          "start": 105.821,
+          "end": 105.941
+        },
+        {
+          "word": "means.",
+          "start": 105.961,
+          "end": 106.281
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 106.642,
+      "end": 108.923,
+      "text": "But that'll get you hanging around the tree if the Apple falls.",
+      "words": [
+        {
+          "word": "But",
+          "start": 106.642,
+          "end": 106.722
+        },
+        {
+          "word": "that'll",
+          "start": 106.742,
+          "end": 106.962
+        },
+        {
+          "word": "get",
+          "start": 106.982,
+          "end": 107.062
+        },
+        {
+          "word": "you",
+          "start": 107.102,
+          "end": 107.202
+        },
+        {
+          "word": "hanging",
+          "start": 107.222,
+          "end": 107.462
+        },
+        {
+          "word": "around",
+          "start": 107.502,
+          "end": 107.702
+        },
+        {
+          "word": "the",
+          "start": 107.722,
+          "end": 107.802
+        },
+        {
+          "word": "tree",
+          "start": 107.843,
+          "end": 108.063
+        },
+        {
+          "word": "if",
+          "start": 108.123,
+          "end": 108.203
+        },
+        {
+          "word": "the",
+          "start": 108.243,
+          "end": 108.323
+        },
+        {
+          "word": "Apple",
+          "start": 108.383,
+          "end": 108.603
+        },
+        {
+          "word": "falls.",
+          "start": 108.623,
+          "end": 108.923
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 109.084,
+      "end": 109.304,
+      "text": "Yeah.",
+      "words": [
+        {
+          "word": "Yeah.",
+          "start": 109.084,
+          "end": 109.304
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 109.904,
+      "end": 114.008,
+      "text": "As many good ideas as we have, you don't have all the world's good ideas.",
+      "words": [
+        {
+          "word": "As",
+          "start": 109.904,
+          "end": 110.004
+        },
+        {
+          "word": "many",
+          "start": 110.044,
+          "end": 110.184
+        },
+        {
+          "word": "good",
+          "start": 110.224,
+          "end": 110.365
+        },
+        {
+          "word": "ideas",
+          "start": 110.405,
+          "end": 110.665
+        },
+        {
+          "word": "as",
+          "start": 110.725,
+          "end": 110.785
+        },
+        {
+          "word": "we",
+          "start": 110.865,
+          "end": 110.985
+        },
+        {
+          "word": "have,",
+          "start": 111.045,
+          "end": 111.365
+        },
+        {
+          "word": "you",
+          "start": 112.566,
+          "end": 112.686
+        },
+        {
+          "word": "don't",
+          "start": 112.706,
+          "end": 112.847
+        },
+        {
+          "word": "have",
+          "start": 112.867,
+          "end": 112.967
+        },
+        {
+          "word": "all",
+          "start": 113.007,
+          "end": 113.127
+        },
+        {
+          "word": "the",
+          "start": 113.167,
+          "end": 113.227
+        },
+        {
+          "word": "world's",
+          "start": 113.267,
+          "end": 113.487
+        },
+        {
+          "word": "good",
+          "start": 113.507,
+          "end": 113.647
+        },
+        {
+          "word": "ideas.",
+          "start": 113.687,
+          "end": 114.008
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 114.508,
+      "end": 118.111,
+      "text": "And the benefit of having developers is you get to see a lot of good ideas.",
+      "words": [
+        {
+          "word": "And",
+          "start": 114.508,
+          "end": 114.628
+        },
+        {
+          "word": "the",
+          "start": 115.028,
+          "end": 115.088
+        },
+        {
+          "word": "benefit",
+          "start": 115.128,
+          "end": 115.429
+        },
+        {
+          "word": "of",
+          "start": 115.469,
+          "end": 115.529
+        },
+        {
+          "word": "having",
+          "start": 115.569,
+          "end": 115.769
+        },
+        {
+          "word": "developers",
+          "start": 115.809,
+          "end": 116.389
+        },
+        {
+          "word": "is",
+          "start": 116.63,
+          "end": 116.75
+        },
+        {
+          "word": "you",
+          "start": 116.89,
+          "end": 117.01
+        },
+        {
+          "word": "get",
+          "start": 117.03,
+          "end": 117.15
+        },
+        {
+          "word": "to",
+          "start": 117.17,
+          "end": 117.25
+        },
+        {
+          "word": "see",
+          "start": 117.27,
+          "end": 117.41
+        },
+        {
+          "word": "a",
+          "start": 117.43,
+          "end": 117.47
+        },
+        {
+          "word": "lot",
+          "start": 117.51,
+          "end": 117.63
+        },
+        {
+          "word": "of",
+          "start": 117.65,
+          "end": 117.691
+        },
+        {
+          "word": "good",
+          "start": 117.711,
+          "end": 117.811
+        },
+        {
+          "word": "ideas.",
+          "start": 117.851,
+          "end": 118.111
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 118.908,
+      "end": 119.488,
+      "text": "Yeah.",
+      "words": [
+        {
+          "word": "Yeah.",
+          "start": 118.908,
+          "end": 119.488
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 120.349,
+      "end": 125.232,
+      "text": "Well, as we start to drift toward the end here, we spent a lot of time on the past.",
+      "words": [
+        {
+          "word": "Well,",
+          "start": 120.349,
+          "end": 120.489
+        },
+        {
+          "word": "as",
+          "start": 120.529,
+          "end": 120.609
+        },
+        {
+          "word": "we",
+          "start": 120.649,
+          "end": 121.209
+        },
+        {
+          "word": "start",
+          "start": 121.269,
+          "end": 121.49
+        },
+        {
+          "word": "to",
+          "start": 121.53,
+          "end": 121.69
+        },
+        {
+          "word": "drift",
+          "start": 121.97,
+          "end": 122.19
+        },
+        {
+          "word": "toward",
+          "start": 122.21,
+          "end": 122.41
+        },
+        {
+          "word": "the",
+          "start": 122.45,
+          "end": 122.53
+        },
+        {
+          "word": "end",
+          "start": 122.61,
+          "end": 122.75
+        },
+        {
+          "word": "here,",
+          "start": 122.79,
+          "end": 123.031
+        },
+        {
+          "word": "we",
+          "start": 123.651,
+          "end": 123.771
+        },
+        {
+          "word": "spent",
+          "start": 123.791,
+          "end": 123.951
+        },
+        {
+          "word": "a",
+          "start": 123.971,
+          "end": 123.991
+        },
+        {
+          "word": "lot",
+          "start": 124.031,
+          "end": 124.171
+        },
+        {
+          "word": "of",
+          "start": 124.191,
+          "end": 124.231
+        },
+        {
+          "word": "time",
+          "start": 124.271,
+          "end": 124.391
+        },
+        {
+          "word": "on",
+          "start": 124.431,
+          "end": 124.491
+        },
+        {
+          "word": "the",
+          "start": 124.511,
+          "end": 124.591
+        },
+        {
+          "word": "past.",
+          "start": 124.611,
+          "end": 125.232
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 125.252,
+      "end": 127.053,
+      "text": "I want to think about the future a little bit.",
+      "words": [
+        {
+          "word": "I",
+          "start": 125.252,
+          "end": 125.272
+        },
+        {
+          "word": "want",
+          "start": 125.312,
+          "end": 125.432
+        },
+        {
+          "word": "to",
+          "start": 125.472,
+          "end": 125.572
+        },
+        {
+          "word": "think",
+          "start": 125.872,
+          "end": 125.992
+        },
+        {
+          "word": "about",
+          "start": 126.012,
+          "end": 126.152
+        },
+        {
+          "word": "the",
+          "start": 126.192,
+          "end": 126.272
+        },
+        {
+          "word": "future",
+          "start": 126.313,
+          "end": 126.613
+        },
+        {
+          "word": "a",
+          "start": 126.633,
+          "end": 126.653
+        },
+        {
+          "word": "little",
+          "start": 126.693,
+          "end": 126.853
+        },
+        {
+          "word": "bit.",
+          "start": 126.893,
+          "end": 127.053
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 127.073,
+      "end": 131.075,
+      "text": "I'm sure you spend a lot of time on this being on the cutting edge of AI.",
+      "words": [
+        {
+          "word": "I'm",
+          "start": 127.073,
+          "end": 127.173
+        },
+        {
+          "word": "sure",
+          "start": 127.193,
+          "end": 127.313
+        },
+        {
+          "word": "you",
+          "start": 127.333,
+          "end": 127.393
+        },
+        {
+          "word": "spend",
+          "start": 127.413,
+          "end": 127.593
+        },
+        {
+          "word": "a",
+          "start": 127.613,
+          "end": 127.633
+        },
+        {
+          "word": "lot",
+          "start": 127.693,
+          "end": 127.873
+        },
+        {
+          "word": "of",
+          "start": 127.893,
+          "end": 127.953
+        },
+        {
+          "word": "time",
+          "start": 127.974,
+          "end": 128.134
+        },
+        {
+          "word": "on",
+          "start": 128.214,
+          "end": 128.274
+        },
+        {
+          "word": "this",
+          "start": 128.314,
+          "end": 128.474
+        },
+        {
+          "word": "being",
+          "start": 128.554,
+          "end": 128.834
+        },
+        {
+          "word": "on",
+          "start": 128.854,
+          "end": 128.894
+        },
+        {
+          "word": "the",
+          "start": 129.915,
+          "end": 129.975
+        },
+        {
+          "word": "cutting",
+          "start": 130.015,
+          "end": 130.275
+        },
+        {
+          "word": "edge",
+          "start": 130.355,
+          "end": 130.475
+        },
+        {
+          "word": "of",
+          "start": 130.515,
+          "end": 130.575
+        },
+        {
+          "word": "AI.",
+          "start": 130.655,
+          "end": 131.075
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 131.896,
+      "end": 144.183,
+      "text": "We're moving into an era where the productivity that software can accomplish when a person is using software can massively amplify the impact and the value that they're creating, which has to be amazing for humanity in the long run.",
+      "words": [
+        {
+          "word": "We're",
+          "start": 131.896,
+          "end": 132.056
+        },
+        {
+          "word": "moving",
+          "start": 132.096,
+          "end": 132.316
+        },
+        {
+          "word": "into",
+          "start": 132.336,
+          "end": 132.496
+        },
+        {
+          "word": "an",
+          "start": 132.536,
+          "end": 132.576
+        },
+        {
+          "word": "era",
+          "start": 132.676,
+          "end": 132.957
+        },
+        {
+          "word": "where",
+          "start": 133.037,
+          "end": 133.337
+        },
+        {
+          "word": "the",
+          "start": 133.617,
+          "end": 133.697
+        },
+        {
+          "word": "productivity",
+          "start": 133.757,
+          "end": 134.337
+        },
+        {
+          "word": "that",
+          "start": 134.397,
+          "end": 134.557
+        },
+        {
+          "word": "software",
+          "start": 134.638,
+          "end": 135.018
+        },
+        {
+          "word": "can",
+          "start": 135.038,
+          "end": 135.138
+        },
+        {
+          "word": "accomplish",
+          "start": 135.158,
+          "end": 135.698
+        },
+        {
+          "word": "when",
+          "start": 135.758,
+          "end": 135.918
+        },
+        {
+          "word": "a",
+          "start": 135.938,
+          "end": 135.958
+        },
+        {
+          "word": "person",
+          "start": 136.178,
+          "end": 136.519
+        },
+        {
+          "word": "is",
+          "start": 136.579,
+          "end": 136.659
+        },
+        {
+          "word": "using",
+          "start": 136.759,
+          "end": 136.959
+        },
+        {
+          "word": "software",
+          "start": 136.999,
+          "end": 137.339
+        },
+        {
+          "word": "can",
+          "start": 137.359,
+          "end": 137.459
+        },
+        {
+          "word": "massively",
+          "start": 137.679,
+          "end": 138.18
+        },
+        {
+          "word": "amplify",
+          "start": 138.3,
+          "end": 138.84
+        },
+        {
+          "word": "the",
+          "start": 138.86,
+          "end": 139.34
+        },
+        {
+          "word": "impact",
+          "start": 139.4,
+          "end": 139.761
+        },
+        {
+          "word": "and",
+          "start": 139.781,
+          "end": 139.841
+        },
+        {
+          "word": "the",
+          "start": 139.861,
+          "end": 139.921
+        },
+        {
+          "word": "value",
+          "start": 139.961,
+          "end": 140.281
+        },
+        {
+          "word": "that",
+          "start": 140.301,
+          "end": 140.401
+        },
+        {
+          "word": "they're",
+          "start": 140.541,
+          "end": 140.721
+        },
+        {
+          "word": "creating,",
+          "start": 140.741,
+          "end": 141.061
+        },
+        {
+          "word": "which",
+          "start": 141.121,
+          "end": 141.282
+        },
+        {
+          "word": "has",
+          "start": 141.802,
+          "end": 142.042
+        },
+        {
+          "word": "to",
+          "start": 142.082,
+          "end": 142.162
+        },
+        {
+          "word": "be",
+          "start": 142.202,
+          "end": 142.362
+        },
+        {
+          "word": "amazing",
+          "start": 142.522,
+          "end": 142.923
+        },
+        {
+          "word": "for",
+          "start": 142.983,
+          "end": 143.103
+        },
+        {
+          "word": "humanity",
+          "start": 143.143,
+          "end": 143.523
+        },
+        {
+          "word": "in",
+          "start": 143.543,
+          "end": 143.603
+        },
+        {
+          "word": "the",
+          "start": 143.623,
+          "end": 143.703
+        },
+        {
+          "word": "long",
+          "start": 143.723,
+          "end": 143.963
+        },
+        {
+          "word": "run.",
+          "start": 144.003,
+          "end": 144.183
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 144.584,
+      "end": 148.266,
+      "text": "In the short term, it's going to be inevitably bumpy as we figure out what that means.",
+      "words": [
+        {
+          "word": "In",
+          "start": 144.584,
+          "end": 144.664
+        },
+        {
+          "word": "the",
+          "start": 144.684,
+          "end": 144.744
+        },
+        {
+          "word": "short",
+          "start": 144.784,
+          "end": 145.004
+        },
+        {
+          "word": "term,",
+          "start": 145.044,
+          "end": 145.244
+        },
+        {
+          "word": "it's",
+          "start": 145.284,
+          "end": 145.384
+        },
+        {
+          "word": "going",
+          "start": 145.424,
+          "end": 145.524
+        },
+        {
+          "word": "to",
+          "start": 145.544,
+          "end": 145.584
+        },
+        {
+          "word": "be",
+          "start": 145.624,
+          "end": 145.684
+        },
+        {
+          "word": "inevitably",
+          "start": 145.724,
+          "end": 146.164
+        },
+        {
+          "word": "bumpy",
+          "start": 146.205,
+          "end": 146.565
+        },
+        {
+          "word": "as",
+          "start": 146.665,
+          "end": 146.745
+        },
+        {
+          "word": "we",
+          "start": 146.765,
+          "end": 147.105
+        },
+        {
+          "word": "figure",
+          "start": 147.165,
+          "end": 147.385
+        },
+        {
+          "word": "out",
+          "start": 147.425,
+          "end": 147.505
+        },
+        {
+          "word": "what",
+          "start": 147.545,
+          "end": 147.685
+        },
+        {
+          "word": "that",
+          "start": 147.725,
+          "end": 147.886
+        },
+        {
+          "word": "means.",
+          "start": 147.946,
+          "end": 148.266
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 148.826,
+      "end": 159.809,
+      "text": "What do you think some of the solutions are as AI gets more and more powerful and better at accelerating productivity for all the displaced jobs that are gonna come from it?",
+      "words": [
+        {
+          "word": "What",
+          "start": 148.826,
+          "end": 148.947
+        },
+        {
+          "word": "do",
+          "start": 148.967,
+          "end": 149.027
+        },
+        {
+          "word": "you",
+          "start": 149.047,
+          "end": 149.167
+        },
+        {
+          "word": "think",
+          "start": 149.187,
+          "end": 149.347
+        },
+        {
+          "word": "some",
+          "start": 149.387,
+          "end": 149.548
+        },
+        {
+          "word": "of",
+          "start": 149.568,
+          "end": 149.648
+        },
+        {
+          "word": "the",
+          "start": 149.688,
+          "end": 149.888
+        },
+        {
+          "word": "solutions",
+          "start": 150.109,
+          "end": 150.65
+        },
+        {
+          "word": "are",
+          "start": 150.81,
+          "end": 150.931
+        },
+        {
+          "word": "as",
+          "start": 151.532,
+          "end": 151.712
+        },
+        {
+          "word": "AI",
+          "start": 152.053,
+          "end": 152.353
+        },
+        {
+          "word": "gets",
+          "start": 152.414,
+          "end": 152.614
+        },
+        {
+          "word": "more",
+          "start": 152.855,
+          "end": 153.095
+        },
+        {
+          "word": "and",
+          "start": 153.135,
+          "end": 153.195
+        },
+        {
+          "word": "more",
+          "start": 153.235,
+          "end": 153.396
+        },
+        {
+          "word": "powerful",
+          "start": 153.436,
+          "end": 153.937
+        },
+        {
+          "word": "and",
+          "start": 153.997,
+          "end": 154.077
+        },
+        {
+          "word": "better",
+          "start": 154.217,
+          "end": 154.498
+        },
+        {
+          "word": "at",
+          "start": 154.518,
+          "end": 154.578
+        },
+        {
+          "word": "accelerating",
+          "start": 154.618,
+          "end": 155.099
+        },
+        {
+          "word": "productivity",
+          "start": 155.139,
+          "end": 155.7
+        },
+        {
+          "word": "for",
+          "start": 156.903,
+          "end": 157.243
+        },
+        {
+          "word": "all",
+          "start": 157.404,
+          "end": 157.564
+        },
+        {
+          "word": "the",
+          "start": 157.604,
+          "end": 157.704
+        },
+        {
+          "word": "displaced",
+          "start": 157.785,
+          "end": 158.426
+        },
+        {
+          "word": "jobs",
+          "start": 158.606,
+          "end": 158.987
+        },
+        {
+          "word": "that",
+          "start": 159.027,
+          "end": 159.107
+        },
+        {
+          "word": "are",
+          "start": 159.127,
+          "end": 159.187
+        },
+        {
+          "word": "gonna",
+          "start": 159.207,
+          "end": 159.368
+        },
+        {
+          "word": "come",
+          "start": 159.388,
+          "end": 159.528
+        },
+        {
+          "word": "from",
+          "start": 159.548,
+          "end": 159.688
+        },
+        {
+          "word": "it?",
+          "start": 159.749,
+          "end": 159.809
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 160.698,
+      "end": 162.139,
+      "text": "Well, first of all, we have to keep AI safe.",
+      "words": [
+        {
+          "word": "Well,",
+          "start": 160.698,
+          "end": 160.818
+        },
+        {
+          "word": "first",
+          "start": 160.838,
+          "end": 160.978
+        },
+        {
+          "word": "of",
+          "start": 160.998,
+          "end": 161.038
+        },
+        {
+          "word": "all,",
+          "start": 161.058,
+          "end": 161.158
+        },
+        {
+          "word": "we",
+          "start": 161.178,
+          "end": 161.238
+        },
+        {
+          "word": "have",
+          "start": 161.258,
+          "end": 161.358
+        },
+        {
+          "word": "to",
+          "start": 161.378,
+          "end": 161.418
+        },
+        {
+          "word": "keep",
+          "start": 161.458,
+          "end": 161.598
+        },
+        {
+          "word": "AI",
+          "start": 161.659,
+          "end": 161.879
+        },
+        {
+          "word": "safe.",
+          "start": 161.919,
+          "end": 162.139
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 162.719,
+      "end": 167.702,
+      "text": "And there's a couple of different areas of AI safety that's really important.",
+      "words": [
+        {
+          "word": "And",
+          "start": 162.719,
+          "end": 162.859
+        },
+        {
+          "word": "there's",
+          "start": 163.079,
+          "end": 163.379
+        },
+        {
+          "word": "a",
+          "start": 163.44,
+          "end": 163.5
+        },
+        {
+          "word": "couple",
+          "start": 163.66,
+          "end": 163.88
+        },
+        {
+          "word": "of",
+          "start": 163.9,
+          "end": 163.94
+        },
+        {
+          "word": "different",
+          "start": 163.96,
+          "end": 164.22
+        },
+        {
+          "word": "areas",
+          "start": 164.48,
+          "end": 164.82
+        },
+        {
+          "word": "of",
+          "start": 164.88,
+          "end": 164.94
+        },
+        {
+          "word": "AI",
+          "start": 165.2,
+          "end": 165.441
+        },
+        {
+          "word": "safety",
+          "start": 165.481,
+          "end": 165.861
+        },
+        {
+          "word": "that's",
+          "start": 166.921,
+          "end": 167.082
+        },
+        {
+          "word": "really",
+          "start": 167.122,
+          "end": 167.302
+        },
+        {
+          "word": "important.",
+          "start": 167.342,
+          "end": 167.702
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 167.942,
+      "end": 173.745,
+      "text": "Obviously, in robotics and self-driving car, there's a whole field of AI safety.",
+      "words": [
+        {
+          "word": "Obviously,",
+          "start": 167.942,
+          "end": 168.362
+        },
+        {
+          "word": "in",
+          "start": 169.223,
+          "end": 169.963
+        },
+        {
+          "word": "robotics",
+          "start": 170.043,
+          "end": 170.523
+        },
+        {
+          "word": "and",
+          "start": 170.603,
+          "end": 170.724
+        },
+        {
+          "word": "self-driving",
+          "start": 170.864,
+          "end": 171.264
+        },
+        {
+          "word": "car,",
+          "start": 171.304,
+          "end": 171.564
+        },
+        {
+          "word": "there's",
+          "start": 172.044,
+          "end": 172.264
+        },
+        {
+          "word": "a",
+          "start": 172.304,
+          "end": 172.344
+        },
+        {
+          "word": "whole",
+          "start": 172.404,
+          "end": 172.625
+        },
+        {
+          "word": "field",
+          "start": 172.725,
+          "end": 172.965
+        },
+        {
+          "word": "of",
+          "start": 173.025,
+          "end": 173.065
+        },
+        {
+          "word": "AI",
+          "start": 173.125,
+          "end": 173.345
+        },
+        {
+          "word": "safety.",
+          "start": 173.385,
+          "end": 173.745
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 173.785,
+      "end": 178.888,
+      "text": "And we've dedicated ourselves to functional safety and active safety and all kinds of different areas of safety.",
+      "words": [
+        {
+          "word": "And",
+          "start": 173.785,
+          "end": 173.865
+        },
+        {
+          "word": "we've",
+          "start": 173.905,
+          "end": 174.085
+        },
+        {
+          "word": "dedicated",
+          "start": 174.125,
+          "end": 174.606
+        },
+        {
+          "word": "ourselves",
+          "start": 174.646,
+          "end": 175.006
+        },
+        {
+          "word": "to",
+          "start": 175.046,
+          "end": 175.126
+        },
+        {
+          "word": "functional",
+          "start": 175.166,
+          "end": 175.546
+        },
+        {
+          "word": "safety",
+          "start": 175.586,
+          "end": 175.906
+        },
+        {
+          "word": "and",
+          "start": 175.946,
+          "end": 176.006
+        },
+        {
+          "word": "active",
+          "start": 176.086,
+          "end": 176.327
+        },
+        {
+          "word": "safety",
+          "start": 176.367,
+          "end": 176.707
+        },
+        {
+          "word": "and",
+          "start": 176.747,
+          "end": 176.867
+        },
+        {
+          "word": "all",
+          "start": 176.927,
+          "end": 177.047
+        },
+        {
+          "word": "kinds",
+          "start": 177.087,
+          "end": 177.247
+        },
+        {
+          "word": "of",
+          "start": 177.287,
+          "end": 177.327
+        },
+        {
+          "word": "different",
+          "start": 177.367,
+          "end": 178.108
+        },
+        {
+          "word": "areas",
+          "start": 178.168,
+          "end": 178.408
+        },
+        {
+          "word": "of",
+          "start": 178.448,
+          "end": 178.508
+        },
+        {
+          "word": "safety.",
+          "start": 178.548,
+          "end": 178.888
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 179.809,
+      "end": 181.309,
+      "text": "When to apply human and loop?",
+      "words": [
+        {
+          "word": "When",
+          "start": 179.809,
+          "end": 180.029
+        },
+        {
+          "word": "to",
+          "start": 180.069,
+          "end": 180.169
+        },
+        {
+          "word": "apply",
+          "start": 180.209,
+          "end": 180.489
+        },
+        {
+          "word": "human",
+          "start": 180.529,
+          "end": 180.769
+        },
+        {
+          "word": "and",
+          "start": 180.789,
+          "end": 180.849
+        },
+        {
+          "word": "loop?",
+          "start": 181.009,
+          "end": 181.309
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 181.349,
+      "end": 183.15,
+      "text": "When is it OK for a human not to be in the loop?",
+      "words": [
+        {
+          "word": "When",
+          "start": 181.349,
+          "end": 181.469
+        },
+        {
+          "word": "is",
+          "start": 181.509,
+          "end": 181.569
+        },
+        {
+          "word": "it",
+          "start": 181.61,
+          "end": 181.65
+        },
+        {
+          "word": "OK",
+          "start": 181.71,
+          "end": 181.97
+        },
+        {
+          "word": "for",
+          "start": 181.99,
+          "end": 182.07
+        },
+        {
+          "word": "a",
+          "start": 182.09,
+          "end": 182.11
+        },
+        {
+          "word": "human",
+          "start": 182.13,
+          "end": 182.35
+        },
+        {
+          "word": "not",
+          "start": 182.39,
+          "end": 182.51
+        },
+        {
+          "word": "to",
+          "start": 182.53,
+          "end": 182.57
+        },
+        {
+          "word": "be",
+          "start": 182.61,
+          "end": 182.69
+        },
+        {
+          "word": "in",
+          "start": 182.71,
+          "end": 182.75
+        },
+        {
+          "word": "the",
+          "start": 182.79,
+          "end": 182.85
+        },
+        {
+          "word": "loop?",
+          "start": 182.91,
+          "end": 183.15
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 183.17,
+      "end": 185.552,
+      "text": "How do you get to a point where",
+      "words": [
+        {
+          "word": "How",
+          "start": 183.17,
+          "end": 183.23
+        },
+        {
+          "word": "do",
+          "start": 184.591,
+          "end": 184.651
+        },
+        {
+          "word": "you",
+          "start": 184.671,
+          "end": 184.791
+        },
+        {
+          "word": "get",
+          "start": 184.831,
+          "end": 184.931
+        },
+        {
+          "word": "to",
+          "start": 184.971,
+          "end": 185.051
+        },
+        {
+          "word": "a",
+          "start": 185.091,
+          "end": 185.111
+        },
+        {
+          "word": "point",
+          "start": 185.171,
+          "end": 185.372
+        },
+        {
+          "word": "where",
+          "start": 185.412,
+          "end": 185.552
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 186.272,
+      "end": 191.074,
+      "text": "where increasingly human doesn't have to be in the loop, but human largely in the loop.",
+      "words": [
+        {
+          "word": "where",
+          "start": 186.272,
+          "end": 187.212
+        },
+        {
+          "word": "increasingly",
+          "start": 187.332,
+          "end": 187.993
+        },
+        {
+          "word": "human",
+          "start": 188.053,
+          "end": 188.273
+        },
+        {
+          "word": "doesn't",
+          "start": 188.293,
+          "end": 188.513
+        },
+        {
+          "word": "have",
+          "start": 188.553,
+          "end": 188.653
+        },
+        {
+          "word": "to",
+          "start": 188.673,
+          "end": 188.713
+        },
+        {
+          "word": "be",
+          "start": 188.753,
+          "end": 188.813
+        },
+        {
+          "word": "in",
+          "start": 188.853,
+          "end": 188.893
+        },
+        {
+          "word": "the",
+          "start": 188.913,
+          "end": 188.993
+        },
+        {
+          "word": "loop,",
+          "start": 189.033,
+          "end": 189.253
+        },
+        {
+          "word": "but",
+          "start": 189.313,
+          "end": 189.453
+        },
+        {
+          "word": "human",
+          "start": 189.513,
+          "end": 189.773
+        },
+        {
+          "word": "largely",
+          "start": 189.853,
+          "end": 190.194
+        },
+        {
+          "word": "in",
+          "start": 190.234,
+          "end": 190.274
+        },
+        {
+          "word": "the",
+          "start": 190.294,
+          "end": 190.374
+        },
+        {
+          "word": "loop.",
+          "start": 190.394,
+          "end": 191.074
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 191.434,
+      "end": 202.398,
+      "text": "In the case of information safety, obviously bias, false information, and appreciating the rights of artists and creators, that whole area deserves a lot of attention.",
+      "words": [
+        {
+          "word": "In",
+          "start": 191.434,
+          "end": 191.514
+        },
+        {
+          "word": "the",
+          "start": 191.534,
+          "end": 191.594
+        },
+        {
+          "word": "case",
+          "start": 191.634,
+          "end": 191.834
+        },
+        {
+          "word": "of",
+          "start": 191.874,
+          "end": 191.934
+        },
+        {
+          "word": "information",
+          "start": 191.994,
+          "end": 192.574
+        },
+        {
+          "word": "safety,",
+          "start": 192.614,
+          "end": 193.115
+        },
+        {
+          "word": "obviously",
+          "start": 193.375,
+          "end": 193.775
+        },
+        {
+          "word": "bias,",
+          "start": 193.855,
+          "end": 194.315
+        },
+        {
+          "word": "false",
+          "start": 194.515,
+          "end": 194.735
+        },
+        {
+          "word": "information,",
+          "start": 194.775,
+          "end": 195.275
+        },
+        {
+          "word": "and",
+          "start": 195.335,
+          "end": 195.436
+        },
+        {
+          "word": "appreciating",
+          "start": 195.676,
+          "end": 196.316
+        },
+        {
+          "word": "the",
+          "start": 196.616,
+          "end": 196.716
+        },
+        {
+          "word": "rights",
+          "start": 196.776,
+          "end": 197.016
+        },
+        {
+          "word": "of",
+          "start": 197.136,
+          "end": 197.236
+        },
+        {
+          "word": "artists",
+          "start": 197.536,
+          "end": 198.057
+        },
+        {
+          "word": "and",
+          "start": 198.177,
+          "end": 198.257
+        },
+        {
+          "word": "creators,",
+          "start": 198.297,
+          "end": 199.617
+        },
+        {
+          "word": "that",
+          "start": 199.697,
+          "end": 199.857
+        },
+        {
+          "word": "whole",
+          "start": 199.917,
+          "end": 200.137
+        },
+        {
+          "word": "area",
+          "start": 200.297,
+          "end": 200.738
+        },
+        {
+          "word": "deserves",
+          "start": 201.158,
+          "end": 201.558
+        },
+        {
+          "word": "a",
+          "start": 201.598,
+          "end": 201.638
+        },
+        {
+          "word": "lot",
+          "start": 201.678,
+          "end": 201.818
+        },
+        {
+          "word": "of",
+          "start": 201.838,
+          "end": 201.898
+        },
+        {
+          "word": "attention.",
+          "start": 201.938,
+          "end": 202.398
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 202.778,
+      "end": 204.899,
+      "text": "And you've seen some of the work that we've done.",
+      "words": [
+        {
+          "word": "And",
+          "start": 202.778,
+          "end": 202.898
+        },
+        {
+          "word": "you've",
+          "start": 203.559,
+          "end": 203.719
+        },
+        {
+          "word": "seen",
+          "start": 203.739,
+          "end": 203.899
+        },
+        {
+          "word": "some",
+          "start": 203.919,
+          "end": 204.019
+        },
+        {
+          "word": "of",
+          "start": 204.059,
+          "end": 204.099
+        },
+        {
+          "word": "the",
+          "start": 204.119,
+          "end": 204.199
+        },
+        {
+          "word": "work",
+          "start": 204.219,
+          "end": 204.359
+        },
+        {
+          "word": "that",
+          "start": 204.379,
+          "end": 204.479
+        },
+        {
+          "word": "we've",
+          "start": 204.499,
+          "end": 204.659
+        },
+        {
+          "word": "done.",
+          "start": 204.679,
+          "end": 204.899
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 205.399,
+      "end": 214.943,
+      "text": "Instead of scraping the internet, we partnered with Getty and Shutterstock to create commercially fair way of applying artificial intelligence generally to the AI.",
+      "words": [
+        {
+          "word": "Instead",
+          "start": 205.399,
+          "end": 205.639
+        },
+        {
+          "word": "of",
+          "start": 205.659,
+          "end": 205.699
+        },
+        {
+          "word": "scraping",
+          "start": 205.739,
+          "end": 206.1
+        },
+        {
+          "word": "the",
+          "start": 206.14,
+          "end": 206.2
+        },
+        {
+          "word": "internet,",
+          "start": 206.24,
+          "end": 207.54
+        },
+        {
+          "word": "we",
+          "start": 207.88,
+          "end": 208.04
+        },
+        {
+          "word": "partnered",
+          "start": 208.06,
+          "end": 208.42
+        },
+        {
+          "word": "with",
+          "start": 208.48,
+          "end": 208.621
+        },
+        {
+          "word": "Getty",
+          "start": 208.661,
+          "end": 209.061
+        },
+        {
+          "word": "and",
+          "start": 209.401,
+          "end": 209.521
+        },
+        {
+          "word": "Shutterstock",
+          "start": 209.641,
+          "end": 210.221
+        },
+        {
+          "word": "to",
+          "start": 210.281,
+          "end": 210.501
+        },
+        {
+          "word": "create",
+          "start": 211.061,
+          "end": 211.342
+        },
+        {
+          "word": "commercially",
+          "start": 211.402,
+          "end": 212.102
+        },
+        {
+          "word": "fair",
+          "start": 212.282,
+          "end": 212.462
+        },
+        {
+          "word": "way",
+          "start": 212.522,
+          "end": 212.742
+        },
+        {
+          "word": "of",
+          "start": 212.842,
+          "end": 212.902
+        },
+        {
+          "word": "applying",
+          "start": 213.102,
+          "end": 213.422
+        },
+        {
+          "word": "artificial",
+          "start": 213.462,
+          "end": 213.843
+        },
+        {
+          "word": "intelligence",
+          "start": 213.883,
+          "end": 214.303
+        },
+        {
+          "word": "generally",
+          "start": 214.323,
+          "end": 214.563
+        },
+        {
+          "word": "to",
+          "start": 214.583,
+          "end": 214.643
+        },
+        {
+          "word": "the",
+          "start": 214.683,
+          "end": 214.783
+        },
+        {
+          "word": "AI.",
+          "start": 214.883,
+          "end": 214.943
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 215.825,
+      "end": 229.818,
+      "text": "In the area of large language models and the future of increasingly greater agency, AI, clearly the answer is for as long as it's sensible, and I think it's going to be sensible for a long time, is human in the loop.",
+      "words": [
+        {
+          "word": "In",
+          "start": 215.825,
+          "end": 215.905
+        },
+        {
+          "word": "the",
+          "start": 215.925,
+          "end": 216.025
+        },
+        {
+          "word": "area",
+          "start": 216.165,
+          "end": 216.505
+        },
+        {
+          "word": "of",
+          "start": 216.725,
+          "end": 216.806
+        },
+        {
+          "word": "large",
+          "start": 217.146,
+          "end": 217.386
+        },
+        {
+          "word": "language",
+          "start": 217.426,
+          "end": 217.706
+        },
+        {
+          "word": "models",
+          "start": 217.746,
+          "end": 218.067
+        },
+        {
+          "word": "and",
+          "start": 218.127,
+          "end": 218.507
+        },
+        {
+          "word": "the",
+          "start": 218.547,
+          "end": 218.647
+        },
+        {
+          "word": "future",
+          "start": 218.727,
+          "end": 219.148
+        },
+        {
+          "word": "of",
+          "start": 219.248,
+          "end": 219.308
+        },
+        {
+          "word": "increasingly",
+          "start": 219.508,
+          "end": 220.549
+        },
+        {
+          "word": "greater",
+          "start": 220.99,
+          "end": 221.37
+        },
+        {
+          "word": "agency,",
+          "start": 221.53,
+          "end": 222.111
+        },
+        {
+          "word": "AI,",
+          "start": 222.491,
+          "end": 222.871
+        },
+        {
+          "word": "clearly",
+          "start": 223.572,
+          "end": 224.033
+        },
+        {
+          "word": "the",
+          "start": 224.093,
+          "end": 224.193
+        },
+        {
+          "word": "answer",
+          "start": 224.273,
+          "end": 224.653
+        },
+        {
+          "word": "is",
+          "start": 224.994,
+          "end": 225.094
+        },
+        {
+          "word": "for",
+          "start": 225.154,
+          "end": 225.294
+        },
+        {
+          "word": "as",
+          "start": 225.334,
+          "end": 225.414
+        },
+        {
+          "word": "long",
+          "start": 225.434,
+          "end": 225.674
+        },
+        {
+          "word": "as",
+          "start": 225.774,
+          "end": 225.854
+        },
+        {
+          "word": "it's",
+          "start": 225.874,
+          "end": 226.295
+        },
+        {
+          "word": "sensible,",
+          "start": 226.355,
+          "end": 226.775
+        },
+        {
+          "word": "and",
+          "start": 226.875,
+          "end": 226.955
+        },
+        {
+          "word": "I",
+          "start": 226.975,
+          "end": 227.036
+        },
+        {
+          "word": "think",
+          "start": 227.056,
+          "end": 227.196
+        },
+        {
+          "word": "it's",
+          "start": 227.236,
+          "end": 227.336
+        },
+        {
+          "word": "going",
+          "start": 227.356,
+          "end": 227.476
+        },
+        {
+          "word": "to",
+          "start": 227.496,
+          "end": 227.536
+        },
+        {
+          "word": "be",
+          "start": 227.556,
+          "end": 227.636
+        },
+        {
+          "word": "sensible",
+          "start": 227.676,
+          "end": 228.016
+        },
+        {
+          "word": "for",
+          "start": 228.057,
+          "end": 228.177
+        },
+        {
+          "word": "a",
+          "start": 228.217,
+          "end": 228.237
+        },
+        {
+          "word": "long",
+          "start": 228.277,
+          "end": 228.457
+        },
+        {
+          "word": "time,",
+          "start": 228.477,
+          "end": 228.777
+        },
+        {
+          "word": "is",
+          "start": 228.897,
+          "end": 228.997
+        },
+        {
+          "word": "human",
+          "start": 229.138,
+          "end": 229.398
+        },
+        {
+          "word": "in",
+          "start": 229.418,
+          "end": 229.478
+        },
+        {
+          "word": "the",
+          "start": 229.498,
+          "end": 229.578
+        },
+        {
+          "word": "loop.",
+          "start": 229.598,
+          "end": 229.818
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 230.179,
+      "end": 235.103,
+      "text": "The ability for an AI to self-learn and improve and change",
+      "words": [
+        {
+          "word": "The",
+          "start": 230.179,
+          "end": 230.319
+        },
+        {
+          "word": "ability",
+          "start": 230.379,
+          "end": 230.799
+        },
+        {
+          "word": "for",
+          "start": 230.879,
+          "end": 231.12
+        },
+        {
+          "word": "an",
+          "start": 231.14,
+          "end": 231.18
+        },
+        {
+          "word": "AI",
+          "start": 231.94,
+          "end": 232.261
+        },
+        {
+          "word": "to",
+          "start": 232.341,
+          "end": 232.581
+        },
+        {
+          "word": "self-learn",
+          "start": 233.202,
+          "end": 233.902
+        },
+        {
+          "word": "and",
+          "start": 233.982,
+          "end": 234.062
+        },
+        {
+          "word": "improve",
+          "start": 234.082,
+          "end": 234.523
+        },
+        {
+          "word": "and",
+          "start": 234.643,
+          "end": 234.723
+        },
+        {
+          "word": "change",
+          "start": 234.763,
+          "end": 235.103
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 236.105,
+      "end": 240.791,
+      "text": "out in the wild in a digital form should be avoided.",
+      "words": [
+        {
+          "word": "out",
+          "start": 236.105,
+          "end": 236.185
+        },
+        {
+          "word": "in",
+          "start": 236.205,
+          "end": 236.265
+        },
+        {
+          "word": "the",
+          "start": 236.285,
+          "end": 236.365
+        },
+        {
+          "word": "wild",
+          "start": 236.405,
+          "end": 236.766
+        },
+        {
+          "word": "in",
+          "start": 237.987,
+          "end": 238.067
+        },
+        {
+          "word": "a",
+          "start": 238.087,
+          "end": 238.107
+        },
+        {
+          "word": "digital",
+          "start": 238.268,
+          "end": 238.608
+        },
+        {
+          "word": "form",
+          "start": 238.668,
+          "end": 239.029
+        },
+        {
+          "word": "should",
+          "start": 239.49,
+          "end": 239.67
+        },
+        {
+          "word": "be",
+          "start": 239.69,
+          "end": 239.77
+        },
+        {
+          "word": "avoided.",
+          "start": 239.81,
+          "end": 240.791
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 241.152,
+      "end": 243.035,
+      "text": "And we should collect data.",
+      "words": [
+        {
+          "word": "And",
+          "start": 241.152,
+          "end": 241.553
+        },
+        {
+          "word": "we",
+          "start": 242.053,
+          "end": 242.153
+        },
+        {
+          "word": "should",
+          "start": 242.173,
+          "end": 242.354
+        },
+        {
+          "word": "collect",
+          "start": 242.434,
+          "end": 242.694
+        },
+        {
+          "word": "data.",
+          "start": 242.714,
+          "end": 243.035
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 243.075,
+      "end": 243.976,
+      "text": "We should carry the data.",
+      "words": [
+        {
+          "word": "We",
+          "start": 243.075,
+          "end": 243.135
+        },
+        {
+          "word": "should",
+          "start": 243.155,
+          "end": 243.315
+        },
+        {
+          "word": "carry",
+          "start": 243.335,
+          "end": 243.596
+        },
+        {
+          "word": "the",
+          "start": 243.616,
+          "end": 243.696
+        },
+        {
+          "word": "data.",
+          "start": 243.716,
+          "end": 243.976
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 243.996,
+      "end": 244.877,
+      "text": "We should train a model.",
+      "words": [
+        {
+          "word": "We",
+          "start": 243.996,
+          "end": 244.116
+        },
+        {
+          "word": "should",
+          "start": 244.136,
+          "end": 244.257
+        },
+        {
+          "word": "train",
+          "start": 244.297,
+          "end": 244.497
+        },
+        {
+          "word": "a",
+          "start": 244.537,
+          "end": 244.557
+        },
+        {
+          "word": "model.",
+          "start": 244.597,
+          "end": 244.877
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 244.958,
+      "end": 249.003,
+      "text": "We should test the model, validate the model before we release it out in the wild again.",
+      "words": [
+        {
+          "word": "We",
+          "start": 244.958,
+          "end": 245.038
+        },
+        {
+          "word": "should",
+          "start": 245.058,
+          "end": 245.238
+        },
+        {
+          "word": "test",
+          "start": 245.939,
+          "end": 246.139
+        },
+        {
+          "word": "the",
+          "start": 246.179,
+          "end": 246.239
+        },
+        {
+          "word": "model,",
+          "start": 246.279,
+          "end": 246.56
+        },
+        {
+          "word": "validate",
+          "start": 246.6,
+          "end": 247.001
+        },
+        {
+          "word": "the",
+          "start": 247.021,
+          "end": 247.101
+        },
+        {
+          "word": "model",
+          "start": 247.121,
+          "end": 247.341
+        },
+        {
+          "word": "before",
+          "start": 247.381,
+          "end": 247.601
+        },
+        {
+          "word": "we",
+          "start": 247.621,
+          "end": 247.722
+        },
+        {
+          "word": "release",
+          "start": 247.762,
+          "end": 248.062
+        },
+        {
+          "word": "it",
+          "start": 248.082,
+          "end": 248.122
+        },
+        {
+          "word": "out",
+          "start": 248.142,
+          "end": 248.202
+        },
+        {
+          "word": "in",
+          "start": 248.242,
+          "end": 248.322
+        },
+        {
+          "word": "the",
+          "start": 248.343,
+          "end": 248.423
+        },
+        {
+          "word": "wild",
+          "start": 248.463,
+          "end": 248.723
+        },
+        {
+          "word": "again.",
+          "start": 248.743,
+          "end": 249.003
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 249.044,
+      "end": 250.065,
+      "text": "So human is in the loop.",
+      "words": [
+        {
+          "word": "So",
+          "start": 249.044,
+          "end": 249.204
+        },
+        {
+          "word": "human",
+          "start": 249.264,
+          "end": 249.544
+        },
+        {
+          "word": "is",
+          "start": 249.584,
+          "end": 249.664
+        },
+        {
+          "word": "in",
+          "start": 249.705,
+          "end": 249.765
+        },
+        {
+          "word": "the",
+          "start": 249.785,
+          "end": 249.845
+        },
+        {
+          "word": "loop.",
+          "start": 249.905,
+          "end": 250.065
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 251.127,
+      "end": 265.506,
+      "text": "There are a lot of different industries that have already demonstrated how to build systems that are safe and good for humanity and obviously the way autopilot works for a plane and two-pilot system and then air traffic control.",
+      "words": [
+        {
+          "word": "There",
+          "start": 251.127,
+          "end": 251.227
+        },
+        {
+          "word": "are",
+          "start": 251.247,
+          "end": 251.327
+        },
+        {
+          "word": "a",
+          "start": 251.347,
+          "end": 251.367
+        },
+        {
+          "word": "lot",
+          "start": 251.427,
+          "end": 251.587
+        },
+        {
+          "word": "of",
+          "start": 251.607,
+          "end": 251.647
+        },
+        {
+          "word": "different",
+          "start": 251.667,
+          "end": 251.948
+        },
+        {
+          "word": "industries",
+          "start": 252.468,
+          "end": 252.909
+        },
+        {
+          "word": "that",
+          "start": 252.949,
+          "end": 253.049
+        },
+        {
+          "word": "have",
+          "start": 253.069,
+          "end": 253.169
+        },
+        {
+          "word": "already",
+          "start": 253.229,
+          "end": 253.57
+        },
+        {
+          "word": "demonstrated",
+          "start": 253.77,
+          "end": 254.431
+        },
+        {
+          "word": "how",
+          "start": 254.912,
+          "end": 255.152
+        },
+        {
+          "word": "to",
+          "start": 255.172,
+          "end": 255.232
+        },
+        {
+          "word": "build",
+          "start": 255.272,
+          "end": 255.472
+        },
+        {
+          "word": "systems",
+          "start": 255.512,
+          "end": 255.833
+        },
+        {
+          "word": "that",
+          "start": 255.853,
+          "end": 255.973
+        },
+        {
+          "word": "are",
+          "start": 255.993,
+          "end": 256.113
+        },
+        {
+          "word": "safe",
+          "start": 256.153,
+          "end": 256.514
+        },
+        {
+          "word": "and",
+          "start": 256.594,
+          "end": 256.694
+        },
+        {
+          "word": "good",
+          "start": 256.854,
+          "end": 256.994
+        },
+        {
+          "word": "for",
+          "start": 257.014,
+          "end": 257.134
+        },
+        {
+          "word": "humanity",
+          "start": 257.175,
+          "end": 257.655
+        },
+        {
+          "word": "and",
+          "start": 257.715,
+          "end": 257.815
+        },
+        {
+          "word": "obviously",
+          "start": 258.416,
+          "end": 258.817
+        },
+        {
+          "word": "the",
+          "start": 258.877,
+          "end": 258.977
+        },
+        {
+          "word": "way",
+          "start": 259.017,
+          "end": 259.317
+        },
+        {
+          "word": "autopilot",
+          "start": 259.958,
+          "end": 260.499
+        },
+        {
+          "word": "works",
+          "start": 260.539,
+          "end": 260.759
+        },
+        {
+          "word": "for",
+          "start": 260.819,
+          "end": 261.04
+        },
+        {
+          "word": "a",
+          "start": 261.06,
+          "end": 261.08
+        },
+        {
+          "word": "plane",
+          "start": 261.48,
+          "end": 262.121
+        },
+        {
+          "word": "and",
+          "start": 262.682,
+          "end": 262.822
+        },
+        {
+          "word": "two-pilot",
+          "start": 263.062,
+          "end": 263.603
+        },
+        {
+          "word": "system",
+          "start": 263.643,
+          "end": 264.164
+        },
+        {
+          "word": "and",
+          "start": 264.284,
+          "end": 264.404
+        },
+        {
+          "word": "then",
+          "start": 264.424,
+          "end": 264.524
+        },
+        {
+          "word": "air",
+          "start": 264.644,
+          "end": 264.785
+        },
+        {
+          "word": "traffic",
+          "start": 264.805,
+          "end": 265.125
+        },
+        {
+          "word": "control.",
+          "start": 265.145,
+          "end": 265.506
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 267.223,
+      "end": 276.795,
+      "text": "redundancy and diversity, and all of the basic philosophies of designing safe systems apply as well in self-driving cars and so on and so forth.",
+      "words": [
+        {
+          "word": "redundancy",
+          "start": 267.223,
+          "end": 267.744
+        },
+        {
+          "word": "and",
+          "start": 267.784,
+          "end": 267.844
+        },
+        {
+          "word": "diversity,",
+          "start": 267.864,
+          "end": 268.485
+        },
+        {
+          "word": "and",
+          "start": 269.045,
+          "end": 269.126
+        },
+        {
+          "word": "all",
+          "start": 269.186,
+          "end": 269.326
+        },
+        {
+          "word": "of",
+          "start": 269.366,
+          "end": 269.406
+        },
+        {
+          "word": "the",
+          "start": 269.446,
+          "end": 269.506
+        },
+        {
+          "word": "basic",
+          "start": 269.526,
+          "end": 269.766
+        },
+        {
+          "word": "philosophies",
+          "start": 269.786,
+          "end": 270.447
+        },
+        {
+          "word": "of",
+          "start": 270.487,
+          "end": 270.547
+        },
+        {
+          "word": "designing",
+          "start": 270.607,
+          "end": 271.028
+        },
+        {
+          "word": "safe",
+          "start": 271.108,
+          "end": 271.328
+        },
+        {
+          "word": "systems",
+          "start": 271.388,
+          "end": 272.229
+        },
+        {
+          "word": "apply",
+          "start": 272.33,
+          "end": 272.81
+        },
+        {
+          "word": "as",
+          "start": 272.83,
+          "end": 273.832
+        },
+        {
+          "word": "well",
+          "start": 273.892,
+          "end": 274.152
+        },
+        {
+          "word": "in",
+          "start": 274.272,
+          "end": 274.392
+        },
+        {
+          "word": "self-driving",
+          "start": 274.572,
+          "end": 275.053
+        },
+        {
+          "word": "cars",
+          "start": 275.093,
+          "end": 275.454
+        },
+        {
+          "word": "and",
+          "start": 275.534,
+          "end": 275.654
+        },
+        {
+          "word": "so",
+          "start": 275.834,
+          "end": 275.914
+        },
+        {
+          "word": "on",
+          "start": 275.994,
+          "end": 276.034
+        },
+        {
+          "word": "and",
+          "start": 276.054,
+          "end": 276.154
+        },
+        {
+          "word": "so",
+          "start": 276.194,
+          "end": 276.315
+        },
+        {
+          "word": "forth.",
+          "start": 276.355,
+          "end": 276.795
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 277.476,
+      "end": 282.763,
+      "text": "And so I think there's a lot of models of creating safe AI, and I think we need to apply them.",
+      "words": [
+        {
+          "word": "And",
+          "start": 277.476,
+          "end": 277.556
+        },
+        {
+          "word": "so",
+          "start": 277.576,
+          "end": 277.716
+        },
+        {
+          "word": "I",
+          "start": 277.977,
+          "end": 278.037
+        },
+        {
+          "word": "think",
+          "start": 278.057,
+          "end": 278.177
+        },
+        {
+          "word": "there's",
+          "start": 278.197,
+          "end": 278.377
+        },
+        {
+          "word": "a",
+          "start": 278.397,
+          "end": 278.417
+        },
+        {
+          "word": "lot",
+          "start": 278.457,
+          "end": 278.618
+        },
+        {
+          "word": "of",
+          "start": 278.638,
+          "end": 278.698
+        },
+        {
+          "word": "models",
+          "start": 278.798,
+          "end": 279.258
+        },
+        {
+          "word": "of",
+          "start": 279.358,
+          "end": 279.399
+        },
+        {
+          "word": "creating",
+          "start": 279.819,
+          "end": 280.18
+        },
+        {
+          "word": "safe",
+          "start": 280.3,
+          "end": 280.56
+        },
+        {
+          "word": "AI,",
+          "start": 280.62,
+          "end": 281.001
+        },
+        {
+          "word": "and",
+          "start": 281.381,
+          "end": 281.481
+        },
+        {
+          "word": "I",
+          "start": 281.721,
+          "end": 281.762
+        },
+        {
+          "word": "think",
+          "start": 281.782,
+          "end": 281.922
+        },
+        {
+          "word": "we",
+          "start": 281.942,
+          "end": 282.002
+        },
+        {
+          "word": "need",
+          "start": 282.042,
+          "end": 282.162
+        },
+        {
+          "word": "to",
+          "start": 282.202,
+          "end": 282.282
+        },
+        {
+          "word": "apply",
+          "start": 282.322,
+          "end": 282.583
+        },
+        {
+          "word": "them.",
+          "start": 282.623,
+          "end": 282.763
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 283.72,
+      "end": 293.046,
+      "text": "With respect to automation, my feeling is that, and we'll see, but it is more likely that AI is going to create more jobs in the near term.",
+      "words": [
+        {
+          "word": "With",
+          "start": 283.72,
+          "end": 283.86
+        },
+        {
+          "word": "respect",
+          "start": 283.9,
+          "end": 284.18
+        },
+        {
+          "word": "to",
+          "start": 284.2,
+          "end": 284.28
+        },
+        {
+          "word": "automation,",
+          "start": 284.34,
+          "end": 284.921
+        },
+        {
+          "word": "my",
+          "start": 285.501,
+          "end": 285.621
+        },
+        {
+          "word": "feeling",
+          "start": 285.661,
+          "end": 285.941
+        },
+        {
+          "word": "is",
+          "start": 286.001,
+          "end": 286.061
+        },
+        {
+          "word": "that,",
+          "start": 286.101,
+          "end": 286.802
+        },
+        {
+          "word": "and",
+          "start": 286.902,
+          "end": 287.002
+        },
+        {
+          "word": "we'll",
+          "start": 287.042,
+          "end": 287.222
+        },
+        {
+          "word": "see,",
+          "start": 287.242,
+          "end": 287.422
+        },
+        {
+          "word": "but",
+          "start": 287.442,
+          "end": 287.562
+        },
+        {
+          "word": "it",
+          "start": 287.923,
+          "end": 287.983
+        },
+        {
+          "word": "is",
+          "start": 288.023,
+          "end": 288.103
+        },
+        {
+          "word": "more",
+          "start": 288.163,
+          "end": 288.343
+        },
+        {
+          "word": "likely",
+          "start": 288.423,
+          "end": 288.843
+        },
+        {
+          "word": "that",
+          "start": 289.624,
+          "end": 289.784
+        },
+        {
+          "word": "AI",
+          "start": 289.884,
+          "end": 290.084
+        },
+        {
+          "word": "is",
+          "start": 290.104,
+          "end": 290.164
+        },
+        {
+          "word": "going",
+          "start": 290.184,
+          "end": 290.324
+        },
+        {
+          "word": "to",
+          "start": 290.344,
+          "end": 290.384
+        },
+        {
+          "word": "create",
+          "start": 290.464,
+          "end": 290.784
+        },
+        {
+          "word": "more",
+          "start": 290.824,
+          "end": 290.985
+        },
+        {
+          "word": "jobs",
+          "start": 291.025,
+          "end": 292.265
+        },
+        {
+          "word": "in",
+          "start": 292.345,
+          "end": 292.425
+        },
+        {
+          "word": "the",
+          "start": 292.445,
+          "end": 292.505
+        },
+        {
+          "word": "near",
+          "start": 292.546,
+          "end": 292.726
+        },
+        {
+          "word": "term.",
+          "start": 292.766,
+          "end": 293.046
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 293.166,
+      "end": 294.967,
+      "text": "The question is, what's the definition of near term?",
+      "words": [
+        {
+          "word": "The",
+          "start": 293.166,
+          "end": 293.246
+        },
+        {
+          "word": "question",
+          "start": 293.286,
+          "end": 293.526
+        },
+        {
+          "word": "is,",
+          "start": 293.566,
+          "end": 293.626
+        },
+        {
+          "word": "what's",
+          "start": 293.666,
+          "end": 293.846
+        },
+        {
+          "word": "the",
+          "start": 293.886,
+          "end": 293.966
+        },
+        {
+          "word": "definition",
+          "start": 294.006,
+          "end": 294.467
+        },
+        {
+          "word": "of",
+          "start": 294.507,
+          "end": 294.567
+        },
+        {
+          "word": "near",
+          "start": 294.587,
+          "end": 294.767
+        },
+        {
+          "word": "term?",
+          "start": 294.787,
+          "end": 294.967
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 294.987,
+      "end": 300.651,
+      "text": "And the reason for that is the first thing that happens with productivity is prosperity.",
+      "words": [
+        {
+          "word": "And",
+          "start": 294.987,
+          "end": 295.067
+        },
+        {
+          "word": "the",
+          "start": 295.087,
+          "end": 295.147
+        },
+        {
+          "word": "reason",
+          "start": 295.167,
+          "end": 295.367
+        },
+        {
+          "word": "for",
+          "start": 295.387,
+          "end": 295.467
+        },
+        {
+          "word": "that",
+          "start": 295.487,
+          "end": 295.828
+        },
+        {
+          "word": "is",
+          "start": 296.588,
+          "end": 296.708
+        },
+        {
+          "word": "the",
+          "start": 297.709,
+          "end": 297.789
+        },
+        {
+          "word": "first",
+          "start": 297.809,
+          "end": 297.949
+        },
+        {
+          "word": "thing",
+          "start": 297.969,
+          "end": 298.089
+        },
+        {
+          "word": "that",
+          "start": 298.109,
+          "end": 298.489
+        },
+        {
+          "word": "happens",
+          "start": 298.549,
+          "end": 298.889
+        },
+        {
+          "word": "with",
+          "start": 298.97,
+          "end": 299.13
+        },
+        {
+          "word": "productivity",
+          "start": 299.21,
+          "end": 299.89
+        },
+        {
+          "word": "is",
+          "start": 299.99,
+          "end": 300.07
+        },
+        {
+          "word": "prosperity.",
+          "start": 300.11,
+          "end": 300.651
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 301.571,
+      "end": 307.536,
+      "text": "and prosperity when the companies get more successful, they hire more people because they want to expand into more areas.",
+      "words": [
+        {
+          "word": "and",
+          "start": 301.571,
+          "end": 301.711
+        },
+        {
+          "word": "prosperity",
+          "start": 301.791,
+          "end": 302.352
+        },
+        {
+          "word": "when",
+          "start": 302.392,
+          "end": 302.532
+        },
+        {
+          "word": "the",
+          "start": 302.552,
+          "end": 302.612
+        },
+        {
+          "word": "companies",
+          "start": 302.672,
+          "end": 302.992
+        },
+        {
+          "word": "get",
+          "start": 303.032,
+          "end": 303.593
+        },
+        {
+          "word": "more",
+          "start": 303.653,
+          "end": 303.893
+        },
+        {
+          "word": "successful,",
+          "start": 304.033,
+          "end": 304.534
+        },
+        {
+          "word": "they",
+          "start": 304.834,
+          "end": 304.974
+        },
+        {
+          "word": "hire",
+          "start": 304.994,
+          "end": 305.174
+        },
+        {
+          "word": "more",
+          "start": 305.214,
+          "end": 305.334
+        },
+        {
+          "word": "people",
+          "start": 305.354,
+          "end": 305.594
+        },
+        {
+          "word": "because",
+          "start": 305.634,
+          "end": 305.815
+        },
+        {
+          "word": "they",
+          "start": 305.835,
+          "end": 305.935
+        },
+        {
+          "word": "want",
+          "start": 305.955,
+          "end": 306.055
+        },
+        {
+          "word": "to",
+          "start": 306.075,
+          "end": 306.115
+        },
+        {
+          "word": "expand",
+          "start": 306.135,
+          "end": 306.495
+        },
+        {
+          "word": "into",
+          "start": 306.535,
+          "end": 306.695
+        },
+        {
+          "word": "more",
+          "start": 306.735,
+          "end": 306.935
+        },
+        {
+          "word": "areas.",
+          "start": 307.176,
+          "end": 307.536
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 308.217,
+      "end": 315.182,
+      "text": "And so the question is, if you think about a company and say, okay, if we improve the productivity, then they need fewer people.",
+      "words": [
+        {
+          "word": "And",
+          "start": 308.217,
+          "end": 308.297
+        },
+        {
+          "word": "so",
+          "start": 308.317,
+          "end": 308.417
+        },
+        {
+          "word": "the",
+          "start": 308.437,
+          "end": 308.517
+        },
+        {
+          "word": "question",
+          "start": 308.557,
+          "end": 308.857
+        },
+        {
+          "word": "is,",
+          "start": 308.917,
+          "end": 308.997
+        },
+        {
+          "word": "if",
+          "start": 309.598,
+          "end": 309.658
+        },
+        {
+          "word": "you",
+          "start": 309.698,
+          "end": 309.838
+        },
+        {
+          "word": "think",
+          "start": 309.858,
+          "end": 310.018
+        },
+        {
+          "word": "about",
+          "start": 310.058,
+          "end": 310.218
+        },
+        {
+          "word": "a",
+          "start": 310.238,
+          "end": 310.278
+        },
+        {
+          "word": "company",
+          "start": 310.338,
+          "end": 310.698
+        },
+        {
+          "word": "and",
+          "start": 310.739,
+          "end": 310.839
+        },
+        {
+          "word": "say,",
+          "start": 310.879,
+          "end": 311.139
+        },
+        {
+          "word": "okay,",
+          "start": 311.339,
+          "end": 311.639
+        },
+        {
+          "word": "if",
+          "start": 311.839,
+          "end": 311.899
+        },
+        {
+          "word": "we",
+          "start": 311.939,
+          "end": 312.1
+        },
+        {
+          "word": "improve",
+          "start": 312.16,
+          "end": 312.46
+        },
+        {
+          "word": "the",
+          "start": 312.48,
+          "end": 312.54
+        },
+        {
+          "word": "productivity,",
+          "start": 312.6,
+          "end": 313.621
+        },
+        {
+          "word": "then",
+          "start": 313.781,
+          "end": 314.101
+        },
+        {
+          "word": "they",
+          "start": 314.321,
+          "end": 314.442
+        },
+        {
+          "word": "need",
+          "start": 314.482,
+          "end": 314.642
+        },
+        {
+          "word": "fewer",
+          "start": 314.682,
+          "end": 314.882
+        },
+        {
+          "word": "people.",
+          "start": 314.922,
+          "end": 315.182
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 316.443,
+      "end": 321.047,
+      "text": "Well, that's because the company has no more ideas, but that's not true for most companies.",
+      "words": [
+        {
+          "word": "Well,",
+          "start": 316.443,
+          "end": 316.583
+        },
+        {
+          "word": "that's",
+          "start": 316.603,
+          "end": 316.763
+        },
+        {
+          "word": "because",
+          "start": 316.823,
+          "end": 317.124
+        },
+        {
+          "word": "the",
+          "start": 317.164,
+          "end": 317.244
+        },
+        {
+          "word": "company",
+          "start": 317.324,
+          "end": 317.664
+        },
+        {
+          "word": "has",
+          "start": 317.704,
+          "end": 317.844
+        },
+        {
+          "word": "no",
+          "start": 317.884,
+          "end": 318.004
+        },
+        {
+          "word": "more",
+          "start": 318.024,
+          "end": 318.164
+        },
+        {
+          "word": "ideas,",
+          "start": 318.225,
+          "end": 318.605
+        },
+        {
+          "word": "but",
+          "start": 318.685,
+          "end": 318.785
+        },
+        {
+          "word": "that's",
+          "start": 318.805,
+          "end": 318.965
+        },
+        {
+          "word": "not",
+          "start": 319.005,
+          "end": 319.145
+        },
+        {
+          "word": "true",
+          "start": 319.245,
+          "end": 319.426
+        },
+        {
+          "word": "for",
+          "start": 319.446,
+          "end": 319.566
+        },
+        {
+          "word": "most",
+          "start": 319.586,
+          "end": 319.746
+        },
+        {
+          "word": "companies.",
+          "start": 319.766,
+          "end": 321.047
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 321.227,
+      "end": 328.132,
+      "text": "If you become more productive and the company become more profitable, usually they hire more people to expand into new areas.",
+      "words": [
+        {
+          "word": "If",
+          "start": 321.227,
+          "end": 321.287
+        },
+        {
+          "word": "you",
+          "start": 321.327,
+          "end": 321.487
+        },
+        {
+          "word": "become",
+          "start": 321.647,
+          "end": 321.968
+        },
+        {
+          "word": "more",
+          "start": 322.068,
+          "end": 322.248
+        },
+        {
+          "word": "productive",
+          "start": 322.308,
+          "end": 322.868
+        },
+        {
+          "word": "and",
+          "start": 323.048,
+          "end": 323.128
+        },
+        {
+          "word": "the",
+          "start": 323.148,
+          "end": 323.229
+        },
+        {
+          "word": "company",
+          "start": 323.269,
+          "end": 323.549
+        },
+        {
+          "word": "become",
+          "start": 323.569,
+          "end": 323.809
+        },
+        {
+          "word": "more",
+          "start": 323.849,
+          "end": 323.989
+        },
+        {
+          "word": "profitable,",
+          "start": 324.049,
+          "end": 324.63
+        },
+        {
+          "word": "usually",
+          "start": 324.93,
+          "end": 325.29
+        },
+        {
+          "word": "they",
+          "start": 325.891,
+          "end": 326.051
+        },
+        {
+          "word": "hire",
+          "start": 326.071,
+          "end": 326.271
+        },
+        {
+          "word": "more",
+          "start": 326.311,
+          "end": 326.451
+        },
+        {
+          "word": "people",
+          "start": 326.511,
+          "end": 326.811
+        },
+        {
+          "word": "to",
+          "start": 326.851,
+          "end": 326.952
+        },
+        {
+          "word": "expand",
+          "start": 327.012,
+          "end": 327.332
+        },
+        {
+          "word": "into",
+          "start": 327.372,
+          "end": 327.532
+        },
+        {
+          "word": "new",
+          "start": 327.572,
+          "end": 327.692
+        },
+        {
+          "word": "areas.",
+          "start": 327.792,
+          "end": 328.132
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 328.913,
+      "end": 353.212,
+      "text": "And so long as we believe that there are more areas to expand into, that there are more ideas in drugs, this drug discovery, there are more ideas in transportation, there are more ideas in retail, there are more ideas in entertainment, that there's more ideas in technology, so long as we believe that there are more ideas, the prosperity of the industry, which comes from improved productivity, results in hiring more people, more ideas.",
+      "words": [
+        {
+          "word": "And",
+          "start": 328.913,
+          "end": 329.013
+        },
+        {
+          "word": "so",
+          "start": 329.053,
+          "end": 329.193
+        },
+        {
+          "word": "long",
+          "start": 329.233,
+          "end": 329.474
+        },
+        {
+          "word": "as",
+          "start": 329.534,
+          "end": 329.614
+        },
+        {
+          "word": "we",
+          "start": 329.674,
+          "end": 329.794
+        },
+        {
+          "word": "believe",
+          "start": 329.854,
+          "end": 330.214
+        },
+        {
+          "word": "that",
+          "start": 330.254,
+          "end": 330.354
+        },
+        {
+          "word": "there",
+          "start": 330.374,
+          "end": 330.474
+        },
+        {
+          "word": "are",
+          "start": 330.494,
+          "end": 330.554
+        },
+        {
+          "word": "more",
+          "start": 330.574,
+          "end": 330.755
+        },
+        {
+          "word": "areas",
+          "start": 330.955,
+          "end": 331.335
+        },
+        {
+          "word": "to",
+          "start": 331.375,
+          "end": 331.475
+        },
+        {
+          "word": "expand",
+          "start": 331.535,
+          "end": 331.915
+        },
+        {
+          "word": "into,",
+          "start": 331.995,
+          "end": 332.296
+        },
+        {
+          "word": "that",
+          "start": 332.356,
+          "end": 332.476
+        },
+        {
+          "word": "there",
+          "start": 333.276,
+          "end": 333.417
+        },
+        {
+          "word": "are",
+          "start": 333.897,
+          "end": 334.077
+        },
+        {
+          "word": "more",
+          "start": 334.157,
+          "end": 334.397
+        },
+        {
+          "word": "ideas",
+          "start": 334.537,
+          "end": 334.878
+        },
+        {
+          "word": "in",
+          "start": 334.938,
+          "end": 334.998
+        },
+        {
+          "word": "drugs,",
+          "start": 335.038,
+          "end": 335.398
+        },
+        {
+          "word": "this",
+          "start": 335.638,
+          "end": 335.798
+        },
+        {
+          "word": "drug",
+          "start": 335.838,
+          "end": 336.079
+        },
+        {
+          "word": "discovery,",
+          "start": 336.099,
+          "end": 336.619
+        },
+        {
+          "word": "there",
+          "start": 336.639,
+          "end": 336.739
+        },
+        {
+          "word": "are",
+          "start": 336.759,
+          "end": 336.819
+        },
+        {
+          "word": "more",
+          "start": 336.859,
+          "end": 336.999
+        },
+        {
+          "word": "ideas",
+          "start": 337.059,
+          "end": 337.319
+        },
+        {
+          "word": "in",
+          "start": 337.38,
+          "end": 337.46
+        },
+        {
+          "word": "transportation,",
+          "start": 337.48,
+          "end": 338.12
+        },
+        {
+          "word": "there",
+          "start": 338.14,
+          "end": 338.24
+        },
+        {
+          "word": "are",
+          "start": 338.26,
+          "end": 338.32
+        },
+        {
+          "word": "more",
+          "start": 338.34,
+          "end": 338.46
+        },
+        {
+          "word": "ideas",
+          "start": 338.52,
+          "end": 338.761
+        },
+        {
+          "word": "in",
+          "start": 338.821,
+          "end": 338.921
+        },
+        {
+          "word": "retail,",
+          "start": 338.961,
+          "end": 339.341
+        },
+        {
+          "word": "there",
+          "start": 339.361,
+          "end": 339.461
+        },
+        {
+          "word": "are",
+          "start": 339.481,
+          "end": 339.541
+        },
+        {
+          "word": "more",
+          "start": 339.561,
+          "end": 339.741
+        },
+        {
+          "word": "ideas",
+          "start": 339.821,
+          "end": 340.162
+        },
+        {
+          "word": "in",
+          "start": 340.222,
+          "end": 340.302
+        },
+        {
+          "word": "entertainment,",
+          "start": 340.442,
+          "end": 341.002
+        },
+        {
+          "word": "that",
+          "start": 341.042,
+          "end": 341.162
+        },
+        {
+          "word": "there's",
+          "start": 341.182,
+          "end": 341.383
+        },
+        {
+          "word": "more",
+          "start": 341.423,
+          "end": 341.623
+        },
+        {
+          "word": "ideas",
+          "start": 341.683,
+          "end": 342.063
+        },
+        {
+          "word": "in",
+          "start": 342.744,
+          "end": 342.844
+        },
+        {
+          "word": "technology,",
+          "start": 342.864,
+          "end": 343.484
+        },
+        {
+          "word": "so",
+          "start": 343.985,
+          "end": 344.125
+        },
+        {
+          "word": "long",
+          "start": 344.165,
+          "end": 344.345
+        },
+        {
+          "word": "as",
+          "start": 344.385,
+          "end": 344.465
+        },
+        {
+          "word": "we",
+          "start": 344.505,
+          "end": 344.605
+        },
+        {
+          "word": "believe",
+          "start": 344.645,
+          "end": 344.865
+        },
+        {
+          "word": "that",
+          "start": 344.885,
+          "end": 344.965
+        },
+        {
+          "word": "there",
+          "start": 344.985,
+          "end": 345.085
+        },
+        {
+          "word": "are",
+          "start": 345.105,
+          "end": 345.165
+        },
+        {
+          "word": "more",
+          "start": 345.185,
+          "end": 345.366
+        },
+        {
+          "word": "ideas,",
+          "start": 345.466,
+          "end": 345.886
+        },
+        {
+          "word": "the",
+          "start": 346.326,
+          "end": 346.426
+        },
+        {
+          "word": "prosperity",
+          "start": 346.466,
+          "end": 347.247
+        },
+        {
+          "word": "of",
+          "start": 347.267,
+          "end": 347.327
+        },
+        {
+          "word": "the",
+          "start": 347.367,
+          "end": 347.447
+        },
+        {
+          "word": "industry,",
+          "start": 347.567,
+          "end": 348.128
+        },
+        {
+          "word": "which",
+          "start": 348.548,
+          "end": 348.688
+        },
+        {
+          "word": "comes",
+          "start": 348.748,
+          "end": 348.968
+        },
+        {
+          "word": "from",
+          "start": 349.028,
+          "end": 349.208
+        },
+        {
+          "word": "improved",
+          "start": 349.329,
+          "end": 349.709
+        },
+        {
+          "word": "productivity,",
+          "start": 349.749,
+          "end": 350.409
+        },
+        {
+          "word": "results",
+          "start": 350.77,
+          "end": 351.17
+        },
+        {
+          "word": "in",
+          "start": 351.23,
+          "end": 351.33
+        },
+        {
+          "word": "hiring",
+          "start": 351.37,
+          "end": 351.67
+        },
+        {
+          "word": "more",
+          "start": 351.69,
+          "end": 351.85
+        },
+        {
+          "word": "people,",
+          "start": 351.911,
+          "end": 352.231
+        },
+        {
+          "word": "more",
+          "start": 352.631,
+          "end": 352.771
+        },
+        {
+          "word": "ideas.",
+          "start": 352.871,
+          "end": 353.212
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 353.952,
+      "end": 361.595,
+      "text": "Now, you go back in history, we can fairly say that today's industry is larger than the world's industries a thousand years ago.",
+      "words": [
+        {
+          "word": "Now,",
+          "start": 353.952,
+          "end": 354.132
+        },
+        {
+          "word": "you",
+          "start": 354.332,
+          "end": 354.432
+        },
+        {
+          "word": "go",
+          "start": 354.452,
+          "end": 354.572
+        },
+        {
+          "word": "back",
+          "start": 354.592,
+          "end": 354.772
+        },
+        {
+          "word": "in",
+          "start": 354.832,
+          "end": 354.912
+        },
+        {
+          "word": "history,",
+          "start": 354.952,
+          "end": 355.333
+        },
+        {
+          "word": "we",
+          "start": 355.993,
+          "end": 356.073
+        },
+        {
+          "word": "can",
+          "start": 356.113,
+          "end": 356.253
+        },
+        {
+          "word": "fairly",
+          "start": 356.333,
+          "end": 356.633
+        },
+        {
+          "word": "say",
+          "start": 356.713,
+          "end": 356.873
+        },
+        {
+          "word": "that",
+          "start": 356.913,
+          "end": 357.053
+        },
+        {
+          "word": "today's",
+          "start": 357.093,
+          "end": 357.493
+        },
+        {
+          "word": "industry",
+          "start": 357.613,
+          "end": 357.993
+        },
+        {
+          "word": "is",
+          "start": 358.033,
+          "end": 358.093
+        },
+        {
+          "word": "larger",
+          "start": 358.153,
+          "end": 358.494
+        },
+        {
+          "word": "than",
+          "start": 358.534,
+          "end": 358.654
+        },
+        {
+          "word": "the",
+          "start": 358.674,
+          "end": 358.754
+        },
+        {
+          "word": "world's",
+          "start": 360.054,
+          "end": 360.354
+        },
+        {
+          "word": "industries",
+          "start": 360.374,
+          "end": 360.754
+        },
+        {
+          "word": "a",
+          "start": 360.794,
+          "end": 360.834
+        },
+        {
+          "word": "thousand",
+          "start": 360.874,
+          "end": 361.175
+        },
+        {
+          "word": "years",
+          "start": 361.195,
+          "end": 361.375
+        },
+        {
+          "word": "ago.",
+          "start": 361.415,
+          "end": 361.595
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 362.135,
+      "end": 364.996,
+      "text": "And the reason for that is because obviously humans have a lot of ideas.",
+      "words": [
+        {
+          "word": "And",
+          "start": 362.135,
+          "end": 362.215
+        },
+        {
+          "word": "the",
+          "start": 362.235,
+          "end": 362.295
+        },
+        {
+          "word": "reason",
+          "start": 362.315,
+          "end": 362.515
+        },
+        {
+          "word": "for",
+          "start": 362.535,
+          "end": 362.635
+        },
+        {
+          "word": "that",
+          "start": 362.655,
+          "end": 362.775
+        },
+        {
+          "word": "is",
+          "start": 362.815,
+          "end": 362.875
+        },
+        {
+          "word": "because",
+          "start": 362.915,
+          "end": 363.175
+        },
+        {
+          "word": "obviously",
+          "start": 363.275,
+          "end": 363.675
+        },
+        {
+          "word": "humans",
+          "start": 363.835,
+          "end": 364.136
+        },
+        {
+          "word": "have",
+          "start": 364.176,
+          "end": 364.296
+        },
+        {
+          "word": "a",
+          "start": 364.316,
+          "end": 364.336
+        },
+        {
+          "word": "lot",
+          "start": 364.376,
+          "end": 364.516
+        },
+        {
+          "word": "of",
+          "start": 364.536,
+          "end": 364.596
+        },
+        {
+          "word": "ideas.",
+          "start": 364.656,
+          "end": 364.996
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 365.896,
+      "end": 375.179,
+      "text": "And I think that there's plenty of ideas yet for prosperity and plenty of ideas that can be begat from productivity improvements.",
+      "words": [
+        {
+          "word": "And",
+          "start": 365.896,
+          "end": 366.036
+        },
+        {
+          "word": "I",
+          "start": 366.056,
+          "end": 366.076
+        },
+        {
+          "word": "think",
+          "start": 366.416,
+          "end": 366.596
+        },
+        {
+          "word": "that",
+          "start": 366.636,
+          "end": 366.796
+        },
+        {
+          "word": "there's",
+          "start": 367.037,
+          "end": 367.277
+        },
+        {
+          "word": "plenty",
+          "start": 367.697,
+          "end": 368.057
+        },
+        {
+          "word": "of",
+          "start": 368.097,
+          "end": 368.177
+        },
+        {
+          "word": "ideas",
+          "start": 368.257,
+          "end": 368.637
+        },
+        {
+          "word": "yet",
+          "start": 368.697,
+          "end": 368.957
+        },
+        {
+          "word": "for",
+          "start": 369.637,
+          "end": 369.878
+        },
+        {
+          "word": "prosperity",
+          "start": 369.978,
+          "end": 370.718
+        },
+        {
+          "word": "and",
+          "start": 371.058,
+          "end": 371.178
+        },
+        {
+          "word": "plenty",
+          "start": 371.298,
+          "end": 371.598
+        },
+        {
+          "word": "of",
+          "start": 371.618,
+          "end": 371.698
+        },
+        {
+          "word": "ideas",
+          "start": 371.778,
+          "end": 372.178
+        },
+        {
+          "word": "that",
+          "start": 372.799,
+          "end": 372.979
+        },
+        {
+          "word": "can",
+          "start": 373.019,
+          "end": 373.179
+        },
+        {
+          "word": "be",
+          "start": 373.279,
+          "end": 373.399
+        },
+        {
+          "word": "begat",
+          "start": 373.519,
+          "end": 373.879
+        },
+        {
+          "word": "from",
+          "start": 373.919,
+          "end": 374.079
+        },
+        {
+          "word": "productivity",
+          "start": 374.179,
+          "end": 374.719
+        },
+        {
+          "word": "improvements.",
+          "start": 374.739,
+          "end": 375.179
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 375.259,
+      "end": 377.92,
+      "text": "But my sense is that it's likely to generate jobs.",
+      "words": [
+        {
+          "word": "But",
+          "start": 375.259,
+          "end": 375.6
+        },
+        {
+          "word": "my",
+          "start": 375.62,
+          "end": 375.76
+        },
+        {
+          "word": "sense",
+          "start": 375.88,
+          "end": 376.18
+        },
+        {
+          "word": "is",
+          "start": 376.2,
+          "end": 376.26
+        },
+        {
+          "word": "that",
+          "start": 376.3,
+          "end": 376.44
+        },
+        {
+          "word": "it's",
+          "start": 376.48,
+          "end": 376.58
+        },
+        {
+          "word": "likely",
+          "start": 376.66,
+          "end": 376.98
+        },
+        {
+          "word": "to",
+          "start": 377.04,
+          "end": 377.1
+        },
+        {
+          "word": "generate",
+          "start": 377.14,
+          "end": 377.5
+        },
+        {
+          "word": "jobs.",
+          "start": 377.54,
+          "end": 377.92
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 378.581,
+      "end": 379.241,
+      "text": "Now, obviously,",
+      "words": [
+        {
+          "word": "Now,",
+          "start": 378.581,
+          "end": 378.721
+        },
+        {
+          "word": "obviously,",
+          "start": 378.801,
+          "end": 379.241
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 380.487,
+      "end": 385.249,
+      "text": "Net generation of jobs doesn't guarantee that any one human doesn't get fired.",
+      "words": [
+        {
+          "word": "Net",
+          "start": 380.487,
+          "end": 380.667
+        },
+        {
+          "word": "generation",
+          "start": 380.847,
+          "end": 381.287
+        },
+        {
+          "word": "of",
+          "start": 381.327,
+          "end": 381.367
+        },
+        {
+          "word": "jobs",
+          "start": 381.427,
+          "end": 381.788
+        },
+        {
+          "word": "doesn't",
+          "start": 382.008,
+          "end": 382.288
+        },
+        {
+          "word": "guarantee",
+          "start": 382.728,
+          "end": 383.248
+        },
+        {
+          "word": "that",
+          "start": 383.308,
+          "end": 383.448
+        },
+        {
+          "word": "any",
+          "start": 383.608,
+          "end": 383.768
+        },
+        {
+          "word": "one",
+          "start": 383.948,
+          "end": 384.068
+        },
+        {
+          "word": "human",
+          "start": 384.168,
+          "end": 384.448
+        },
+        {
+          "word": "doesn't",
+          "start": 384.488,
+          "end": 384.708
+        },
+        {
+          "word": "get",
+          "start": 384.728,
+          "end": 384.848
+        },
+        {
+          "word": "fired.",
+          "start": 384.908,
+          "end": 385.249
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 385.549,
+      "end": 385.809,
+      "text": "Okay.",
+      "words": [
+        {
+          "word": "Okay.",
+          "start": 385.549,
+          "end": 385.809
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 385.849,
+      "end": 387.289,
+      "text": "I mean, that's obviously true.",
+      "words": [
+        {
+          "word": "I",
+          "start": 385.849,
+          "end": 385.889
+        },
+        {
+          "word": "mean,",
+          "start": 385.909,
+          "end": 386.129
+        },
+        {
+          "word": "that's",
+          "start": 386.149,
+          "end": 386.369
+        },
+        {
+          "word": "obviously",
+          "start": 386.549,
+          "end": 386.969
+        },
+        {
+          "word": "true.",
+          "start": 387.029,
+          "end": 387.289
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 387.509,
+      "end": 400.493,
+      "text": "And it's more likely that someone will lose a job to someone else, some other human that uses an AI, you know, and not likely to an AI but to some other human that uses an AI.",
+      "words": [
+        {
+          "word": "And",
+          "start": 387.509,
+          "end": 387.609
+        },
+        {
+          "word": "it's",
+          "start": 388.37,
+          "end": 388.49
+        },
+        {
+          "word": "more",
+          "start": 388.53,
+          "end": 388.71
+        },
+        {
+          "word": "likely",
+          "start": 388.77,
+          "end": 389.15
+        },
+        {
+          "word": "that",
+          "start": 389.23,
+          "end": 389.45
+        },
+        {
+          "word": "someone",
+          "start": 389.81,
+          "end": 390.41
+        },
+        {
+          "word": "will",
+          "start": 391.45,
+          "end": 391.631
+        },
+        {
+          "word": "lose",
+          "start": 391.691,
+          "end": 391.911
+        },
+        {
+          "word": "a",
+          "start": 391.951,
+          "end": 391.991
+        },
+        {
+          "word": "job",
+          "start": 392.011,
+          "end": 392.331
+        },
+        {
+          "word": "to",
+          "start": 392.431,
+          "end": 392.551
+        },
+        {
+          "word": "someone",
+          "start": 392.631,
+          "end": 392.971
+        },
+        {
+          "word": "else,",
+          "start": 393.091,
+          "end": 393.351
+        },
+        {
+          "word": "some",
+          "start": 394.291,
+          "end": 394.431
+        },
+        {
+          "word": "other",
+          "start": 394.491,
+          "end": 394.651
+        },
+        {
+          "word": "human",
+          "start": 394.691,
+          "end": 394.992
+        },
+        {
+          "word": "that",
+          "start": 395.132,
+          "end": 395.252
+        },
+        {
+          "word": "uses",
+          "start": 395.332,
+          "end": 395.552
+        },
+        {
+          "word": "an",
+          "start": 395.612,
+          "end": 395.652
+        },
+        {
+          "word": "AI,",
+          "start": 395.712,
+          "end": 396.052
+        },
+        {
+          "word": "you",
+          "start": 396.472,
+          "end": 396.552
+        },
+        {
+          "word": "know,",
+          "start": 396.592,
+          "end": 396.752
+        },
+        {
+          "word": "and",
+          "start": 396.852,
+          "end": 396.952
+        },
+        {
+          "word": "not",
+          "start": 397.052,
+          "end": 397.232
+        },
+        {
+          "word": "likely",
+          "start": 397.732,
+          "end": 398.032
+        },
+        {
+          "word": "to",
+          "start": 398.072,
+          "end": 398.172
+        },
+        {
+          "word": "an",
+          "start": 398.233,
+          "end": 398.293
+        },
+        {
+          "word": "AI",
+          "start": 398.333,
+          "end": 398.593
+        },
+        {
+          "word": "but",
+          "start": 398.633,
+          "end": 398.753
+        },
+        {
+          "word": "to",
+          "start": 398.813,
+          "end": 398.953
+        },
+        {
+          "word": "some",
+          "start": 399.013,
+          "end": 399.153
+        },
+        {
+          "word": "other",
+          "start": 399.193,
+          "end": 399.333
+        },
+        {
+          "word": "human",
+          "start": 399.373,
+          "end": 399.593
+        },
+        {
+          "word": "that",
+          "start": 399.613,
+          "end": 399.733
+        },
+        {
+          "word": "uses",
+          "start": 399.813,
+          "end": 400.033
+        },
+        {
+          "word": "an",
+          "start": 400.113,
+          "end": 400.153
+        },
+        {
+          "word": "AI.",
+          "start": 400.213,
+          "end": 400.493
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 400.573,
+      "end": 406.315,
+      "text": "And so I think the first thing that everybody should do is learn how to use AI so that they can augment their own productivity.",
+      "words": [
+        {
+          "word": "And",
+          "start": 400.573,
+          "end": 400.653
+        },
+        {
+          "word": "so",
+          "start": 400.693,
+          "end": 400.853
+        },
+        {
+          "word": "I",
+          "start": 400.893,
+          "end": 400.933
+        },
+        {
+          "word": "think",
+          "start": 400.973,
+          "end": 401.133
+        },
+        {
+          "word": "the",
+          "start": 401.494,
+          "end": 401.614
+        },
+        {
+          "word": "first",
+          "start": 401.654,
+          "end": 401.834
+        },
+        {
+          "word": "thing",
+          "start": 401.854,
+          "end": 401.994
+        },
+        {
+          "word": "that",
+          "start": 402.014,
+          "end": 402.134
+        },
+        {
+          "word": "everybody",
+          "start": 402.434,
+          "end": 402.754
+        },
+        {
+          "word": "should",
+          "start": 402.774,
+          "end": 402.934
+        },
+        {
+          "word": "do",
+          "start": 402.974,
+          "end": 403.114
+        },
+        {
+          "word": "is",
+          "start": 403.214,
+          "end": 403.314
+        },
+        {
+          "word": "learn",
+          "start": 403.394,
+          "end": 403.634
+        },
+        {
+          "word": "how",
+          "start": 403.654,
+          "end": 403.734
+        },
+        {
+          "word": "to",
+          "start": 403.774,
+          "end": 403.834
+        },
+        {
+          "word": "use",
+          "start": 403.914,
+          "end": 404.014
+        },
+        {
+          "word": "AI",
+          "start": 404.074,
+          "end": 404.374
+        },
+        {
+          "word": "so",
+          "start": 404.454,
+          "end": 404.554
+        },
+        {
+          "word": "that",
+          "start": 404.594,
+          "end": 404.674
+        },
+        {
+          "word": "they",
+          "start": 404.694,
+          "end": 404.795
+        },
+        {
+          "word": "can",
+          "start": 404.835,
+          "end": 404.935
+        },
+        {
+          "word": "augment",
+          "start": 405.055,
+          "end": 405.335
+        },
+        {
+          "word": "their",
+          "start": 405.355,
+          "end": 405.495
+        },
+        {
+          "word": "own",
+          "start": 405.515,
+          "end": 405.615
+        },
+        {
+          "word": "productivity.",
+          "start": 405.655,
+          "end": 406.315
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 407.048,
+      "end": 412.532,
+      "text": "and every company should augment their own productivity to be more productive so that they can have more prosperity, hire more people.",
+      "words": [
+        {
+          "word": "and",
+          "start": 407.048,
+          "end": 407.128
+        },
+        {
+          "word": "every",
+          "start": 407.168,
+          "end": 407.328
+        },
+        {
+          "word": "company",
+          "start": 407.388,
+          "end": 407.709
+        },
+        {
+          "word": "should",
+          "start": 407.749,
+          "end": 407.909
+        },
+        {
+          "word": "augment",
+          "start": 408.009,
+          "end": 408.289
+        },
+        {
+          "word": "their",
+          "start": 408.309,
+          "end": 408.449
+        },
+        {
+          "word": "own",
+          "start": 408.489,
+          "end": 408.589
+        },
+        {
+          "word": "productivity",
+          "start": 408.629,
+          "end": 409.27
+        },
+        {
+          "word": "to",
+          "start": 409.33,
+          "end": 409.41
+        },
+        {
+          "word": "be",
+          "start": 409.61,
+          "end": 409.75
+        },
+        {
+          "word": "more",
+          "start": 409.81,
+          "end": 409.95
+        },
+        {
+          "word": "productive",
+          "start": 410.01,
+          "end": 410.471
+        },
+        {
+          "word": "so",
+          "start": 410.511,
+          "end": 410.591
+        },
+        {
+          "word": "that",
+          "start": 410.631,
+          "end": 410.731
+        },
+        {
+          "word": "they",
+          "start": 410.751,
+          "end": 410.871
+        },
+        {
+          "word": "can",
+          "start": 410.891,
+          "end": 410.971
+        },
+        {
+          "word": "have",
+          "start": 411.011,
+          "end": 411.131
+        },
+        {
+          "word": "more",
+          "start": 411.171,
+          "end": 411.311
+        },
+        {
+          "word": "prosperity,",
+          "start": 411.371,
+          "end": 411.912
+        },
+        {
+          "word": "hire",
+          "start": 411.952,
+          "end": 412.092
+        },
+        {
+          "word": "more",
+          "start": 412.112,
+          "end": 412.232
+        },
+        {
+          "word": "people.",
+          "start": 412.272,
+          "end": 412.532
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 413.453,
+      "end": 415.254,
+      "text": "And so I think jobs will change.",
+      "words": [
+        {
+          "word": "And",
+          "start": 413.453,
+          "end": 413.533
+        },
+        {
+          "word": "so",
+          "start": 413.573,
+          "end": 413.753
+        },
+        {
+          "word": "I",
+          "start": 413.933,
+          "end": 413.973
+        },
+        {
+          "word": "think",
+          "start": 414.013,
+          "end": 414.173
+        },
+        {
+          "word": "jobs",
+          "start": 414.233,
+          "end": 414.534
+        },
+        {
+          "word": "will",
+          "start": 414.574,
+          "end": 414.754
+        },
+        {
+          "word": "change.",
+          "start": 414.834,
+          "end": 415.254
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 415.815,
+      "end": 420.358,
+      "text": "My guess is that we'll actually have higher employment, we'll create more jobs.",
+      "words": [
+        {
+          "word": "My",
+          "start": 415.815,
+          "end": 415.935
+        },
+        {
+          "word": "guess",
+          "start": 415.995,
+          "end": 416.215
+        },
+        {
+          "word": "is",
+          "start": 416.275,
+          "end": 416.355
+        },
+        {
+          "word": "that",
+          "start": 416.375,
+          "end": 416.535
+        },
+        {
+          "word": "we'll",
+          "start": 416.735,
+          "end": 416.895
+        },
+        {
+          "word": "actually",
+          "start": 416.915,
+          "end": 417.176
+        },
+        {
+          "word": "have",
+          "start": 417.236,
+          "end": 417.376
+        },
+        {
+          "word": "higher",
+          "start": 417.496,
+          "end": 417.776
+        },
+        {
+          "word": "employment,",
+          "start": 417.836,
+          "end": 418.376
+        },
+        {
+          "word": "we'll",
+          "start": 419.337,
+          "end": 419.477
+        },
+        {
+          "word": "create",
+          "start": 419.497,
+          "end": 419.777
+        },
+        {
+          "word": "more",
+          "start": 419.817,
+          "end": 419.958
+        },
+        {
+          "word": "jobs.",
+          "start": 419.998,
+          "end": 420.358
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 421.399,
+      "end": 423.5,
+      "text": "I think industries will be more productive.",
+      "words": [
+        {
+          "word": "I",
+          "start": 421.399,
+          "end": 421.439
+        },
+        {
+          "word": "think",
+          "start": 421.479,
+          "end": 421.619
+        },
+        {
+          "word": "industries",
+          "start": 421.679,
+          "end": 422.079
+        },
+        {
+          "word": "will",
+          "start": 422.099,
+          "end": 422.239
+        },
+        {
+          "word": "be",
+          "start": 422.259,
+          "end": 422.559
+        },
+        {
+          "word": "more",
+          "start": 422.8,
+          "end": 422.94
+        },
+        {
+          "word": "productive.",
+          "start": 422.98,
+          "end": 423.5
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 424.781,
+      "end": 436.57,
+      "text": "And many of the industries that are currently suffering from lack of labor, workforce is likely to use AI to get themselves off the feet and get back to growth and prosperity.",
+      "words": [
+        {
+          "word": "And",
+          "start": 424.781,
+          "end": 424.941
+        },
+        {
+          "word": "many",
+          "start": 425.081,
+          "end": 425.302
+        },
+        {
+          "word": "of",
+          "start": 425.322,
+          "end": 425.362
+        },
+        {
+          "word": "the",
+          "start": 425.402,
+          "end": 425.522
+        },
+        {
+          "word": "industries",
+          "start": 425.542,
+          "end": 425.902
+        },
+        {
+          "word": "that",
+          "start": 425.942,
+          "end": 426.042
+        },
+        {
+          "word": "are",
+          "start": 426.082,
+          "end": 426.162
+        },
+        {
+          "word": "currently",
+          "start": 426.222,
+          "end": 426.562
+        },
+        {
+          "word": "suffering",
+          "start": 426.622,
+          "end": 426.963
+        },
+        {
+          "word": "from",
+          "start": 427.003,
+          "end": 427.143
+        },
+        {
+          "word": "lack",
+          "start": 428.044,
+          "end": 428.264
+        },
+        {
+          "word": "of",
+          "start": 428.304,
+          "end": 428.364
+        },
+        {
+          "word": "labor,",
+          "start": 428.824,
+          "end": 429.845
+        },
+        {
+          "word": "workforce",
+          "start": 429.905,
+          "end": 430.445
+        },
+        {
+          "word": "is",
+          "start": 430.505,
+          "end": 430.585
+        },
+        {
+          "word": "likely",
+          "start": 430.645,
+          "end": 430.966
+        },
+        {
+          "word": "to",
+          "start": 431.026,
+          "end": 431.246
+        },
+        {
+          "word": "use",
+          "start": 432.067,
+          "end": 432.187
+        },
+        {
+          "word": "AI",
+          "start": 432.267,
+          "end": 432.647
+        },
+        {
+          "word": "to",
+          "start": 432.727,
+          "end": 432.907
+        },
+        {
+          "word": "get",
+          "start": 433.007,
+          "end": 433.127
+        },
+        {
+          "word": "themselves",
+          "start": 433.167,
+          "end": 433.528
+        },
+        {
+          "word": "off",
+          "start": 433.588,
+          "end": 433.708
+        },
+        {
+          "word": "the",
+          "start": 433.748,
+          "end": 433.848
+        },
+        {
+          "word": "feet",
+          "start": 433.868,
+          "end": 434.348
+        },
+        {
+          "word": "and",
+          "start": 434.568,
+          "end": 434.688
+        },
+        {
+          "word": "get",
+          "start": 435.169,
+          "end": 435.309
+        },
+        {
+          "word": "back",
+          "start": 435.369,
+          "end": 435.549
+        },
+        {
+          "word": "to",
+          "start": 435.589,
+          "end": 435.669
+        },
+        {
+          "word": "growth",
+          "start": 435.709,
+          "end": 435.929
+        },
+        {
+          "word": "and",
+          "start": 435.969,
+          "end": 436.049
+        },
+        {
+          "word": "prosperity.",
+          "start": 436.069,
+          "end": 436.57
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 437.832,
+      "end": 445.017,
+      "text": "So I see it a little bit differently, but I do think that jobs will be affected and I'd encourage everybody just to learn AI.",
+      "words": [
+        {
+          "word": "So",
+          "start": 437.832,
+          "end": 437.992
+        },
+        {
+          "word": "I",
+          "start": 438.232,
+          "end": 438.292
+        },
+        {
+          "word": "see",
+          "start": 438.412,
+          "end": 438.593
+        },
+        {
+          "word": "it",
+          "start": 438.633,
+          "end": 438.713
+        },
+        {
+          "word": "a",
+          "start": 438.753,
+          "end": 438.793
+        },
+        {
+          "word": "little",
+          "start": 438.833,
+          "end": 439.033
+        },
+        {
+          "word": "bit",
+          "start": 439.053,
+          "end": 439.153
+        },
+        {
+          "word": "differently,",
+          "start": 439.193,
+          "end": 439.633
+        },
+        {
+          "word": "but",
+          "start": 440.054,
+          "end": 440.174
+        },
+        {
+          "word": "I",
+          "start": 440.194,
+          "end": 440.234
+        },
+        {
+          "word": "do",
+          "start": 440.294,
+          "end": 440.414
+        },
+        {
+          "word": "think",
+          "start": 440.454,
+          "end": 440.614
+        },
+        {
+          "word": "that",
+          "start": 440.674,
+          "end": 440.854
+        },
+        {
+          "word": "jobs",
+          "start": 441.054,
+          "end": 441.334
+        },
+        {
+          "word": "will",
+          "start": 441.374,
+          "end": 441.515
+        },
+        {
+          "word": "be",
+          "start": 441.555,
+          "end": 441.635
+        },
+        {
+          "word": "affected",
+          "start": 441.695,
+          "end": 442.155
+        },
+        {
+          "word": "and",
+          "start": 442.175,
+          "end": 443.056
+        },
+        {
+          "word": "I'd",
+          "start": 443.356,
+          "end": 443.456
+        },
+        {
+          "word": "encourage",
+          "start": 443.496,
+          "end": 443.856
+        },
+        {
+          "word": "everybody",
+          "start": 443.896,
+          "end": 444.216
+        },
+        {
+          "word": "just",
+          "start": 444.256,
+          "end": 444.396
+        },
+        {
+          "word": "to",
+          "start": 444.437,
+          "end": 444.497
+        },
+        {
+          "word": "learn",
+          "start": 444.537,
+          "end": 444.697
+        },
+        {
+          "word": "AI.",
+          "start": 444.757,
+          "end": 445.017
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 445.79,
+      "end": 446.831,
+      "text": "This is appropriate.",
+      "words": [
+        {
+          "word": "This",
+          "start": 445.79,
+          "end": 445.95
+        },
+        {
+          "word": "is",
+          "start": 446.03,
+          "end": 446.13
+        },
+        {
+          "word": "appropriate.",
+          "start": 446.25,
+          "end": 446.831
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 446.851,
+      "end": 449.713,
+      "text": "There's a version of something we talk about a lot on acquired.",
+      "words": [
+        {
+          "word": "There's",
+          "start": 446.851,
+          "end": 446.991
+        },
+        {
+          "word": "a",
+          "start": 447.011,
+          "end": 447.031
+        },
+        {
+          "word": "version",
+          "start": 447.051,
+          "end": 447.431
+        },
+        {
+          "word": "of",
+          "start": 447.692,
+          "end": 447.772
+        },
+        {
+          "word": "something",
+          "start": 448.352,
+          "end": 448.572
+        },
+        {
+          "word": "we",
+          "start": 448.592,
+          "end": 448.672
+        },
+        {
+          "word": "talk",
+          "start": 448.712,
+          "end": 448.853
+        },
+        {
+          "word": "about",
+          "start": 448.873,
+          "end": 449.013
+        },
+        {
+          "word": "a",
+          "start": 449.053,
+          "end": 449.073
+        },
+        {
+          "word": "lot",
+          "start": 449.113,
+          "end": 449.253
+        },
+        {
+          "word": "on",
+          "start": 449.293,
+          "end": 449.353
+        },
+        {
+          "word": "acquired.",
+          "start": 449.373,
+          "end": 449.713
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 449.733,
+      "end": 456.118,
+      "text": "We call it the Meritz corollary to Moore's law after Mike Meritz from Sequoia.",
+      "words": [
+        {
+          "word": "We",
+          "start": 449.733,
+          "end": 449.813
+        },
+        {
+          "word": "call",
+          "start": 449.833,
+          "end": 450.013
+        },
+        {
+          "word": "it",
+          "start": 450.054,
+          "end": 450.094
+        },
+        {
+          "word": "the",
+          "start": 450.134,
+          "end": 450.334
+        },
+        {
+          "word": "Meritz",
+          "start": 450.634,
+          "end": 450.974
+        },
+        {
+          "word": "corollary",
+          "start": 451.014,
+          "end": 451.615
+        },
+        {
+          "word": "to",
+          "start": 451.675,
+          "end": 451.875
+        },
+        {
+          "word": "Moore's",
+          "start": 451.975,
+          "end": 452.235
+        },
+        {
+          "word": "law",
+          "start": 452.275,
+          "end": 452.536
+        },
+        {
+          "word": "after",
+          "start": 453.076,
+          "end": 453.276
+        },
+        {
+          "word": "Mike",
+          "start": 453.296,
+          "end": 453.436
+        },
+        {
+          "word": "Meritz",
+          "start": 453.456,
+          "end": 453.717
+        },
+        {
+          "word": "from",
+          "start": 453.757,
+          "end": 453.957
+        },
+        {
+          "word": "Sequoia.",
+          "start": 455.278,
+          "end": 456.118
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 456.719,
+      "end": 459.141,
+      "text": "Sequoia was the first investor in our company.",
+      "words": [
+        {
+          "word": "Sequoia",
+          "start": 456.719,
+          "end": 457.139
+        },
+        {
+          "word": "was",
+          "start": 457.159,
+          "end": 457.319
+        },
+        {
+          "word": "the",
+          "start": 457.339,
+          "end": 457.92
+        },
+        {
+          "word": "first",
+          "start": 457.98,
+          "end": 458.18
+        },
+        {
+          "word": "investor",
+          "start": 458.22,
+          "end": 458.58
+        },
+        {
+          "word": "in",
+          "start": 458.601,
+          "end": 458.661
+        },
+        {
+          "word": "our",
+          "start": 458.701,
+          "end": 458.781
+        },
+        {
+          "word": "company.",
+          "start": 458.821,
+          "end": 459.141
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 459.181,
+      "end": 459.761,
+      "text": "Yeah, of course.",
+      "words": [
+        {
+          "word": "Yeah,",
+          "start": 459.181,
+          "end": 459.361
+        },
+        {
+          "word": "of",
+          "start": 459.381,
+          "end": 459.441
+        },
+        {
+          "word": "course.",
+          "start": 459.481,
+          "end": 459.761
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 459.781,
+      "end": 460.142,
+      "text": "Yeah.",
+      "words": [
+        {
+          "word": "Yeah.",
+          "start": 459.781,
+          "end": 460.142
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 460.482,
+      "end": 469.129,
+      "text": "The great story behind it is that when Mike was taking over for Don Valentine with Doug, he was sitting and looking at Sequoia's returns and he was looking at fund three or four.",
+      "words": [
+        {
+          "word": "The",
+          "start": 460.482,
+          "end": 460.562
+        },
+        {
+          "word": "great",
+          "start": 460.602,
+          "end": 460.762
+        },
+        {
+          "word": "story",
+          "start": 460.802,
+          "end": 461.042
+        },
+        {
+          "word": "behind",
+          "start": 461.103,
+          "end": 461.363
+        },
+        {
+          "word": "it",
+          "start": 461.423,
+          "end": 461.503
+        },
+        {
+          "word": "is",
+          "start": 461.603,
+          "end": 461.683
+        },
+        {
+          "word": "that",
+          "start": 461.743,
+          "end": 461.983
+        },
+        {
+          "word": "when",
+          "start": 462.284,
+          "end": 462.424
+        },
+        {
+          "word": "Mike",
+          "start": 462.484,
+          "end": 462.684
+        },
+        {
+          "word": "was",
+          "start": 462.724,
+          "end": 462.884
+        },
+        {
+          "word": "taking",
+          "start": 463.264,
+          "end": 463.505
+        },
+        {
+          "word": "over",
+          "start": 463.565,
+          "end": 463.705
+        },
+        {
+          "word": "for",
+          "start": 463.765,
+          "end": 463.865
+        },
+        {
+          "word": "Don",
+          "start": 463.905,
+          "end": 464.065
+        },
+        {
+          "word": "Valentine",
+          "start": 464.105,
+          "end": 464.585
+        },
+        {
+          "word": "with",
+          "start": 465.086,
+          "end": 465.226
+        },
+        {
+          "word": "Doug,",
+          "start": 465.246,
+          "end": 465.446
+        },
+        {
+          "word": "he",
+          "start": 465.466,
+          "end": 465.546
+        },
+        {
+          "word": "was",
+          "start": 465.566,
+          "end": 465.646
+        },
+        {
+          "word": "sitting",
+          "start": 465.686,
+          "end": 465.906
+        },
+        {
+          "word": "and",
+          "start": 465.926,
+          "end": 465.987
+        },
+        {
+          "word": "looking",
+          "start": 466.007,
+          "end": 466.207
+        },
+        {
+          "word": "at",
+          "start": 466.227,
+          "end": 466.287
+        },
+        {
+          "word": "Sequoia's",
+          "start": 466.327,
+          "end": 466.647
+        },
+        {
+          "word": "returns",
+          "start": 466.667,
+          "end": 467.067
+        },
+        {
+          "word": "and",
+          "start": 467.087,
+          "end": 467.147
+        },
+        {
+          "word": "he",
+          "start": 467.168,
+          "end": 467.208
+        },
+        {
+          "word": "was",
+          "start": 467.248,
+          "end": 467.328
+        },
+        {
+          "word": "looking",
+          "start": 467.788,
+          "end": 468.028
+        },
+        {
+          "word": "at",
+          "start": 468.068,
+          "end": 468.128
+        },
+        {
+          "word": "fund",
+          "start": 468.348,
+          "end": 468.569
+        },
+        {
+          "word": "three",
+          "start": 468.629,
+          "end": 468.809
+        },
+        {
+          "word": "or",
+          "start": 468.829,
+          "end": 468.889
+        },
+        {
+          "word": "four.",
+          "start": 468.929,
+          "end": 469.129
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 469.149,
+      "end": 470.75,
+      "text": "I think it was four maybe that had Cisco in it.",
+      "words": [
+        {
+          "word": "I",
+          "start": 469.149,
+          "end": 469.169
+        },
+        {
+          "word": "think",
+          "start": 469.209,
+          "end": 469.309
+        },
+        {
+          "word": "it",
+          "start": 469.329,
+          "end": 469.369
+        },
+        {
+          "word": "was",
+          "start": 469.389,
+          "end": 469.449
+        },
+        {
+          "word": "four",
+          "start": 469.469,
+          "end": 469.67
+        },
+        {
+          "word": "maybe",
+          "start": 469.71,
+          "end": 469.91
+        },
+        {
+          "word": "that",
+          "start": 469.93,
+          "end": 470.03
+        },
+        {
+          "word": "had",
+          "start": 470.05,
+          "end": 470.19
+        },
+        {
+          "word": "Cisco",
+          "start": 470.23,
+          "end": 470.55
+        },
+        {
+          "word": "in",
+          "start": 470.59,
+          "end": 470.65
+        },
+        {
+          "word": "it.",
+          "start": 470.69,
+          "end": 470.75
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 471.666,
+      "end": 473.148,
+      "text": "How are we ever going to top that?",
+      "words": [
+        {
+          "word": "How",
+          "start": 471.666,
+          "end": 471.806
+        },
+        {
+          "word": "are",
+          "start": 471.866,
+          "end": 471.966
+        },
+        {
+          "word": "we",
+          "start": 472.006,
+          "end": 472.107
+        },
+        {
+          "word": "ever",
+          "start": 472.187,
+          "end": 472.347
+        },
+        {
+          "word": "going",
+          "start": 472.387,
+          "end": 472.487
+        },
+        {
+          "word": "to",
+          "start": 472.507,
+          "end": 472.587
+        },
+        {
+          "word": "top",
+          "start": 472.627,
+          "end": 472.907
+        },
+        {
+          "word": "that?",
+          "start": 472.948,
+          "end": 473.148
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 474.609,
+      "end": 475.47,
+      "text": "Don's going to have us beat.",
+      "words": [
+        {
+          "word": "Don's",
+          "start": 474.609,
+          "end": 474.83
+        },
+        {
+          "word": "going",
+          "start": 474.85,
+          "end": 474.95
+        },
+        {
+          "word": "to",
+          "start": 474.97,
+          "end": 475.01
+        },
+        {
+          "word": "have",
+          "start": 475.03,
+          "end": 475.13
+        },
+        {
+          "word": "us",
+          "start": 475.19,
+          "end": 475.25
+        },
+        {
+          "word": "beat.",
+          "start": 475.31,
+          "end": 475.47
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 475.49,
+      "end": 476.331,
+      "text": "We're never going to beat that.",
+      "words": [
+        {
+          "word": "We're",
+          "start": 475.49,
+          "end": 475.61
+        },
+        {
+          "word": "never",
+          "start": 475.63,
+          "end": 475.771
+        },
+        {
+          "word": "going",
+          "start": 475.811,
+          "end": 475.911
+        },
+        {
+          "word": "to",
+          "start": 475.931,
+          "end": 475.991
+        },
+        {
+          "word": "beat",
+          "start": 476.011,
+          "end": 476.151
+        },
+        {
+          "word": "that.",
+          "start": 476.191,
+          "end": 476.331
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 476.752,
+      "end": 488.144,
+      "text": "They thought about it and he realized that, well, as compute gets cheaper and it can access more areas of the economy because it gets cheaper and can get adopted more widely,",
+      "words": [
+        {
+          "word": "They",
+          "start": 476.752,
+          "end": 476.852
+        },
+        {
+          "word": "thought",
+          "start": 476.872,
+          "end": 477.032
+        },
+        {
+          "word": "about",
+          "start": 477.052,
+          "end": 477.192
+        },
+        {
+          "word": "it",
+          "start": 477.212,
+          "end": 477.252
+        },
+        {
+          "word": "and",
+          "start": 477.272,
+          "end": 477.332
+        },
+        {
+          "word": "he",
+          "start": 477.352,
+          "end": 477.392
+        },
+        {
+          "word": "realized",
+          "start": 477.432,
+          "end": 477.733
+        },
+        {
+          "word": "that,",
+          "start": 477.773,
+          "end": 477.933
+        },
+        {
+          "word": "well,",
+          "start": 478.374,
+          "end": 478.594
+        },
+        {
+          "word": "as",
+          "start": 479.355,
+          "end": 479.435
+        },
+        {
+          "word": "compute",
+          "start": 479.495,
+          "end": 479.935
+        },
+        {
+          "word": "gets",
+          "start": 479.955,
+          "end": 480.175
+        },
+        {
+          "word": "cheaper",
+          "start": 480.236,
+          "end": 480.596
+        },
+        {
+          "word": "and",
+          "start": 480.616,
+          "end": 481.517
+        },
+        {
+          "word": "it",
+          "start": 481.557,
+          "end": 481.597
+        },
+        {
+          "word": "can",
+          "start": 481.617,
+          "end": 481.757
+        },
+        {
+          "word": "access",
+          "start": 481.877,
+          "end": 482.278
+        },
+        {
+          "word": "more",
+          "start": 482.858,
+          "end": 483.139
+        },
+        {
+          "word": "areas",
+          "start": 483.88,
+          "end": 484.28
+        },
+        {
+          "word": "of",
+          "start": 484.44,
+          "end": 484.52
+        },
+        {
+          "word": "the",
+          "start": 484.801,
+          "end": 484.901
+        },
+        {
+          "word": "economy",
+          "start": 484.941,
+          "end": 485.401
+        },
+        {
+          "word": "because",
+          "start": 485.461,
+          "end": 485.762
+        },
+        {
+          "word": "it",
+          "start": 485.802,
+          "end": 485.842
+        },
+        {
+          "word": "gets",
+          "start": 485.882,
+          "end": 486.042
+        },
+        {
+          "word": "cheaper",
+          "start": 486.082,
+          "end": 486.362
+        },
+        {
+          "word": "and",
+          "start": 486.402,
+          "end": 486.482
+        },
+        {
+          "word": "can",
+          "start": 486.502,
+          "end": 486.743
+        },
+        {
+          "word": "get",
+          "start": 486.903,
+          "end": 487.023
+        },
+        {
+          "word": "adopted",
+          "start": 487.063,
+          "end": 487.444
+        },
+        {
+          "word": "more",
+          "start": 487.504,
+          "end": 487.684
+        },
+        {
+          "word": "widely,",
+          "start": 487.724,
+          "end": 488.144
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 488.945,
+      "end": 491.788,
+      "text": "Well, then the markets that we can address should get bigger.",
+      "words": [
+        {
+          "word": "Well,",
+          "start": 488.945,
+          "end": 489.125
+        },
+        {
+          "word": "then",
+          "start": 489.165,
+          "end": 489.366
+        },
+        {
+          "word": "the",
+          "start": 489.386,
+          "end": 489.766
+        },
+        {
+          "word": "markets",
+          "start": 489.786,
+          "end": 490.107
+        },
+        {
+          "word": "that",
+          "start": 490.127,
+          "end": 490.247
+        },
+        {
+          "word": "we",
+          "start": 490.267,
+          "end": 490.327
+        },
+        {
+          "word": "can",
+          "start": 490.347,
+          "end": 490.447
+        },
+        {
+          "word": "address",
+          "start": 490.467,
+          "end": 490.807
+        },
+        {
+          "word": "should",
+          "start": 491.208,
+          "end": 491.408
+        },
+        {
+          "word": "get",
+          "start": 491.428,
+          "end": 491.528
+        },
+        {
+          "word": "bigger.",
+          "start": 491.568,
+          "end": 491.788
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 492.129,
+      "end": 492.329,
+      "text": "Yeah.",
+      "words": [
+        {
+          "word": "Yeah.",
+          "start": 492.129,
+          "end": 492.329
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 492.689,
+      "end": 495.473,
+      "text": "And AI, your argument is basically, AI will do the same thing.",
+      "words": [
+        {
+          "word": "And",
+          "start": 492.689,
+          "end": 492.77
+        },
+        {
+          "word": "AI,",
+          "start": 492.87,
+          "end": 493.15
+        },
+        {
+          "word": "your",
+          "start": 493.17,
+          "end": 493.29
+        },
+        {
+          "word": "argument",
+          "start": 493.33,
+          "end": 493.57
+        },
+        {
+          "word": "is",
+          "start": 493.611,
+          "end": 493.671
+        },
+        {
+          "word": "basically,",
+          "start": 493.691,
+          "end": 494.612
+        },
+        {
+          "word": "AI",
+          "start": 494.632,
+          "end": 494.772
+        },
+        {
+          "word": "will",
+          "start": 494.792,
+          "end": 494.912
+        },
+        {
+          "word": "do",
+          "start": 494.932,
+          "end": 495.032
+        },
+        {
+          "word": "the",
+          "start": 495.052,
+          "end": 495.132
+        },
+        {
+          "word": "same",
+          "start": 495.152,
+          "end": 495.292
+        },
+        {
+          "word": "thing.",
+          "start": 495.312,
+          "end": 495.473
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 495.673,
+      "end": 496.434,
+      "text": "Exactly.",
+      "words": [
+        {
+          "word": "Exactly.",
+          "start": 495.673,
+          "end": 496.434
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 496.454,
+      "end": 496.754,
+      "text": "I just",
+      "words": [
+        {
+          "word": "I",
+          "start": 496.454,
+          "end": 496.534
+        },
+        {
+          "word": "just",
+          "start": 496.574,
+          "end": 496.754
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 496.794,
+      "end": 503.081,
+      "text": "gave you exactly the same example that, in fact, productivity doesn't result in us doing less.",
+      "words": [
+        {
+          "word": "gave",
+          "start": 496.794,
+          "end": 496.974
+        },
+        {
+          "word": "you",
+          "start": 496.994,
+          "end": 497.114
+        },
+        {
+          "word": "exactly",
+          "start": 497.175,
+          "end": 497.735
+        },
+        {
+          "word": "the",
+          "start": 497.775,
+          "end": 497.855
+        },
+        {
+          "word": "same",
+          "start": 497.895,
+          "end": 498.076
+        },
+        {
+          "word": "example",
+          "start": 498.136,
+          "end": 498.556
+        },
+        {
+          "word": "that,",
+          "start": 499.337,
+          "end": 499.537
+        },
+        {
+          "word": "in",
+          "start": 499.617,
+          "end": 499.697
+        },
+        {
+          "word": "fact,",
+          "start": 499.818,
+          "end": 500.158
+        },
+        {
+          "word": "productivity",
+          "start": 500.819,
+          "end": 501.479
+        },
+        {
+          "word": "doesn't",
+          "start": 501.539,
+          "end": 501.76
+        },
+        {
+          "word": "result",
+          "start": 501.8,
+          "end": 502.16
+        },
+        {
+          "word": "in",
+          "start": 502.26,
+          "end": 502.32
+        },
+        {
+          "word": "us",
+          "start": 502.421,
+          "end": 502.501
+        },
+        {
+          "word": "doing",
+          "start": 502.561,
+          "end": 502.821
+        },
+        {
+          "word": "less.",
+          "start": 502.841,
+          "end": 503.081
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 503.962,
+      "end": 506.425,
+      "text": "Productivity usually results in us doing more.",
+      "words": [
+        {
+          "word": "Productivity",
+          "start": 503.962,
+          "end": 504.583
+        },
+        {
+          "word": "usually",
+          "start": 504.723,
+          "end": 505.023
+        },
+        {
+          "word": "results",
+          "start": 505.084,
+          "end": 505.444
+        },
+        {
+          "word": "in",
+          "start": 505.484,
+          "end": 505.544
+        },
+        {
+          "word": "us",
+          "start": 505.604,
+          "end": 505.684
+        },
+        {
+          "word": "doing",
+          "start": 505.764,
+          "end": 506.025
+        },
+        {
+          "word": "more.",
+          "start": 506.125,
+          "end": 506.425
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 508.387,
+      "end": 509.428,
+      "text": "Everything we do will be easier.",
+      "words": [
+        {
+          "word": "Everything",
+          "start": 508.387,
+          "end": 508.648
+        },
+        {
+          "word": "we",
+          "start": 508.668,
+          "end": 508.768
+        },
+        {
+          "word": "do",
+          "start": 508.788,
+          "end": 508.888
+        },
+        {
+          "word": "will",
+          "start": 508.908,
+          "end": 509.048
+        },
+        {
+          "word": "be",
+          "start": 509.068,
+          "end": 509.128
+        },
+        {
+          "word": "easier.",
+          "start": 509.168,
+          "end": 509.428
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 510.655,
+      "end": 511.875,
+      "text": "but we'll end up doing more.",
+      "words": [
+        {
+          "word": "but",
+          "start": 510.655,
+          "end": 510.755
+        },
+        {
+          "word": "we'll",
+          "start": 510.775,
+          "end": 510.915
+        },
+        {
+          "word": "end",
+          "start": 510.955,
+          "end": 511.055
+        },
+        {
+          "word": "up",
+          "start": 511.095,
+          "end": 511.135
+        },
+        {
+          "word": "doing",
+          "start": 511.175,
+          "end": 511.395
+        },
+        {
+          "word": "more.",
+          "start": 511.415,
+          "end": 511.875
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 512.415,
+      "end": 513.876,
+      "text": "Because we have infinite ambition.",
+      "words": [
+        {
+          "word": "Because",
+          "start": 512.415,
+          "end": 512.635
+        },
+        {
+          "word": "we",
+          "start": 512.775,
+          "end": 512.855
+        },
+        {
+          "word": "have",
+          "start": 512.895,
+          "end": 513.015
+        },
+        {
+          "word": "infinite",
+          "start": 513.095,
+          "end": 513.455
+        },
+        {
+          "word": "ambition.",
+          "start": 513.495,
+          "end": 513.876
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 514.656,
+      "end": 515.916,
+      "text": "The world has infinite ambition.",
+      "words": [
+        {
+          "word": "The",
+          "start": 514.656,
+          "end": 514.756
+        },
+        {
+          "word": "world",
+          "start": 514.776,
+          "end": 514.956
+        },
+        {
+          "word": "has",
+          "start": 514.996,
+          "end": 515.116
+        },
+        {
+          "word": "infinite",
+          "start": 515.136,
+          "end": 515.476
+        },
+        {
+          "word": "ambition.",
+          "start": 515.496,
+          "end": 515.916
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_00",
+      "start": 515.936,
+      "end": 520.117,
+      "text": "And so if a company is more profitable, they tend to hire more people to do more.",
+      "words": [
+        {
+          "word": "And",
+          "start": 515.936,
+          "end": 515.996
+        },
+        {
+          "word": "so",
+          "start": 516.056,
+          "end": 516.216
+        },
+        {
+          "word": "if",
+          "start": 517.116,
+          "end": 517.216
+        },
+        {
+          "word": "a",
+          "start": 517.276,
+          "end": 517.316
+        },
+        {
+          "word": "company",
+          "start": 517.376,
+          "end": 517.716
+        },
+        {
+          "word": "is",
+          "start": 517.796,
+          "end": 517.856
+        },
+        {
+          "word": "more",
+          "start": 517.916,
+          "end": 518.136
+        },
+        {
+          "word": "profitable,",
+          "start": 518.236,
+          "end": 518.756
+        },
+        {
+          "word": "they",
+          "start": 518.796,
+          "end": 518.936
+        },
+        {
+          "word": "tend",
+          "start": 518.956,
+          "end": 519.076
+        },
+        {
+          "word": "to",
+          "start": 519.096,
+          "end": 519.176
+        },
+        {
+          "word": "hire",
+          "start": 519.196,
+          "end": 519.316
+        },
+        {
+          "word": "more",
+          "start": 519.336,
+          "end": 519.457
+        },
+        {
+          "word": "people",
+          "start": 519.477,
+          "end": 519.697
+        },
+        {
+          "word": "to",
+          "start": 519.717,
+          "end": 519.777
+        },
+        {
+          "word": "do",
+          "start": 519.817,
+          "end": 519.917
+        },
+        {
+          "word": "more.",
+          "start": 519.937,
+          "end": 520.117
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 521.297,
+      "end": 521.677,
+      "text": "That's true.",
+      "words": [
+        {
+          "word": "That's",
+          "start": 521.297,
+          "end": 521.457
+        },
+        {
+          "word": "true.",
+          "start": 521.497,
+          "end": 521.677
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 521.717,
+      "end": 522.917,
+      "text": "Technology is a lever.",
+      "words": [
+        {
+          "word": "Technology",
+          "start": 521.717,
+          "end": 522.297
+        },
+        {
+          "word": "is",
+          "start": 522.357,
+          "end": 522.437
+        },
+        {
+          "word": "a",
+          "start": 522.477,
+          "end": 522.517
+        },
+        {
+          "word": "lever.",
+          "start": 522.577,
+          "end": 522.917
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 523.197,
+      "end": 529.178,
+      "text": "And the place where the idea kind of falls down is that we would be satisfied.",
+      "words": [
+        {
+          "word": "And",
+          "start": 523.197,
+          "end": 523.337
+        },
+        {
+          "word": "the",
+          "start": 523.537,
+          "end": 523.817
+        },
+        {
+          "word": "place",
+          "start": 524.517,
+          "end": 524.777
+        },
+        {
+          "word": "where",
+          "start": 524.797,
+          "end": 524.997
+        },
+        {
+          "word": "the",
+          "start": 525.057,
+          "end": 525.157
+        },
+        {
+          "word": "idea",
+          "start": 525.217,
+          "end": 525.558
+        },
+        {
+          "word": "kind",
+          "start": 525.578,
+          "end": 526.018
+        },
+        {
+          "word": "of",
+          "start": 526.038,
+          "end": 526.098
+        },
+        {
+          "word": "falls",
+          "start": 526.118,
+          "end": 526.338
+        },
+        {
+          "word": "down",
+          "start": 526.378,
+          "end": 526.598
+        },
+        {
+          "word": "is",
+          "start": 526.638,
+          "end": 527.078
+        },
+        {
+          "word": "that",
+          "start": 528.078,
+          "end": 528.198
+        },
+        {
+          "word": "we",
+          "start": 528.238,
+          "end": 528.318
+        },
+        {
+          "word": "would",
+          "start": 528.338,
+          "end": 528.478
+        },
+        {
+          "word": "be",
+          "start": 528.498,
+          "end": 528.558
+        },
+        {
+          "word": "satisfied.",
+          "start": 528.598,
+          "end": 529.178
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 530.438,
+      "end": 531.819,
+      "text": "Humans have never ending ambition.",
+      "words": [
+        {
+          "word": "Humans",
+          "start": 530.438,
+          "end": 530.718
+        },
+        {
+          "word": "have",
+          "start": 530.738,
+          "end": 530.858
+        },
+        {
+          "word": "never",
+          "start": 530.898,
+          "end": 531.098
+        },
+        {
+          "word": "ending",
+          "start": 531.179,
+          "end": 531.419
+        },
+        {
+          "word": "ambition.",
+          "start": 531.459,
+          "end": 531.819
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 531.999,
+      "end": 532.179,
+      "text": "No.",
+      "words": [
+        {
+          "word": "No.",
+          "start": 531.999,
+          "end": 532.179
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 532.419,
+      "end": 537.54,
+      "text": "Humans will always expand and consume more energy and attempt to pursue more ideas.",
+      "words": [
+        {
+          "word": "Humans",
+          "start": 532.419,
+          "end": 532.699
+        },
+        {
+          "word": "will",
+          "start": 532.739,
+          "end": 532.879
+        },
+        {
+          "word": "always",
+          "start": 532.939,
+          "end": 533.319
+        },
+        {
+          "word": "expand",
+          "start": 533.619,
+          "end": 534.159
+        },
+        {
+          "word": "and",
+          "start": 534.219,
+          "end": 534.299
+        },
+        {
+          "word": "consume",
+          "start": 534.339,
+          "end": 534.639
+        },
+        {
+          "word": "more",
+          "start": 534.659,
+          "end": 534.779
+        },
+        {
+          "word": "energy",
+          "start": 534.819,
+          "end": 535.259
+        },
+        {
+          "word": "and",
+          "start": 535.359,
+          "end": 535.459
+        },
+        {
+          "word": "attempt",
+          "start": 536.159,
+          "end": 536.459
+        },
+        {
+          "word": "to",
+          "start": 536.479,
+          "end": 536.579
+        },
+        {
+          "word": "pursue",
+          "start": 536.619,
+          "end": 536.899
+        },
+        {
+          "word": "more",
+          "start": 536.919,
+          "end": 537.12
+        },
+        {
+          "word": "ideas.",
+          "start": 537.18,
+          "end": 537.54
+        }
+      ]
+    },
+    {
+      "speaker": "SPEAKER_01",
+      "start": 537.56,
+      "end": 539.88,
+      "text": "That has always been true of every version of our species.",
+      "words": [
+        {
+          "word": "That",
+          "start": 537.56,
+          "end": 537.64
+        },
+        {
+          "word": "has",
+          "start": 537.66,
+          "end": 537.74
+        },
+        {
+          "word": "always",
+          "start": 537.82,
+          "end": 538.08
+        },
+        {
+          "word": "been",
+          "start": 538.1,
+          "end": 538.26
+        },
+        {
+          "word": "true",
+          "start": 538.28,
+          "end": 538.5
+        },
+        {
+          "word": "of",
+          "start": 538.58,
+          "end": 538.66
+        },
+        {
+          "word": "every",
+          "start": 538.8,
+          "end": 538.96
+        },
+        {
+          "word": "version",
+          "start": 539.02,
+          "end": 539.26
+        },
+        {
+          "word": "of",
+          "start": 539.3,
+          "end": 539.34
+        },
+        {
+          "word": "our",
+          "start": 539.4,
+          "end": 539.48
+        },
+        {
+          "word": "species.",
+          "start": 539.52,
+          "end": 539.88
+        }
+      ]
+    }
+  ]
+}
