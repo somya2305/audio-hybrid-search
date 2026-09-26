@@ -26,3 +26,6 @@ data/audio/*.wav
 data/audio/*.opus
 data/audio/*.mp3
 !data/audio/.gitkeep
+
+# Pipeline output (temporary)
+output/*.json
