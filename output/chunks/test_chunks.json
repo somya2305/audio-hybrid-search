@@ -12,6 +12,7 @@
       "duration": 10.24,
       "word_count": 31,
       "text": "Welcome to the podcast. Hi, Peter. Hi, Peter. Hello, John and Jonas. Thank you for being the first guest on our podcast. So far, the most important guest we've had.",
+      "embed_text": "Welcome to the podcast. Hi, Peter. Hi, Peter. Hello, John and Jonas. Thank you for being the first guest on our podcast. So far, the most important guest we've had. That's an amazing honor. Thank you so much for having me.",
       "words": [
         {
           "word": "Welcome",
@@ -175,6 +176,7 @@
       "duration": 2.9,
       "word_count": 12,
       "text": "That's an amazing honor. Thank you so much for having me.",
+      "embed_text": "Welcome to the podcast. Hi, Peter. Hi, Peter. Hello, John and Jonas. Thank you for being the first guest on our podcast. So far, the most important guest we've had. That's an amazing honor. Thank you so much for having me. Well, we're here to talk about Bitcoin. We are. And Bitcoin Core Development. And we have Peter Waller as our guest.",
       "words": [
         {
           "word": "That's",
@@ -243,6 +245,7 @@
       "duration": 7.23,
       "word_count": 22,
       "text": "Well, we're here to talk about Bitcoin. We are. And Bitcoin Core Development. And we have Peter Waller as our guest.",
+      "embed_text": "That's an amazing honor. Thank you so much for having me. Well, we're here to talk about Bitcoin. We are. And Bitcoin Core Development. And we have Peter Waller as our guest.",
       "words": [
         {
           "word": "Well,",

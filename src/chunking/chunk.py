@@ -17,6 +17,15 @@ OUTPUT_DIR = ROOT_DIR / "output" / "chunks"
 # Long turns are split at segment (sentence) boundaries once they pass this.
 MAX_TURN_WORDS = 80
 
+# Each chunk is embedded together with this many neighbouring turns on each
+# side, so a reply ("Yes, that's why we moved") carries what it's replying to.
+CONTEXT_TURNS = 1
+
+# Turns shorter than this ("Oh, really?") embed only their own text. With
+# neighbour context they would borrow the neighbours' meaning and crowd
+# semantic results; they stay keyword-searchable either way.
+SHORT_TURN_WORDS = 8
+
 
 def word_count(text):
     return len(re.findall(r"\b\w+\b", text))
@@ -51,8 +60,21 @@ def group_turns(segments):
     return turns
 
 
-def create_chunk(turn, index, conversation_id):
+def turn_text(turn):
+    return " ".join(segment["text"].strip() for segment in turn["segments"])
+
+
+def create_chunk(turns, index, conversation_id):
+    turn = turns[index]
     segments = turn["segments"]
+    text = turn_text(turn)
+
+    if turn["word_count"] < SHORT_TURN_WORDS:
+        embed_text = text
+    else:
+        context = turns[max(0, index - CONTEXT_TURNS):index + CONTEXT_TURNS + 1]
+        embed_text = " ".join(turn_text(t) for t in context)
+
     start = segments[0]["start"]
     end = segments[-1]["end"]
 
@@ -65,7 +87,8 @@ def create_chunk(turn, index, conversation_id):
         "end": round(end, 2),
         "duration": round(end - start, 2),
         "word_count": turn["word_count"],
-        "text": " ".join(segment["text"].strip() for segment in segments),
+        "text": text,
+        "embed_text": embed_text,
         "words": [word for segment in segments for word in segment.get("words", [])],
     }
 
@@ -74,8 +97,8 @@ def create_chunks(transcript):
     """Turn a diarized transcript dict into a list of speaker-turn chunks."""
     turns = group_turns(transcript.get("segments", []))
     return [
-        create_chunk(turn, index, transcript["file"])
-        for index, turn in enumerate(turns)
+        create_chunk(turns, index, transcript["file"])
+        for index in range(len(turns))
     ]
 
 
