@@ -1,0 +1,28 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Environment / secrets
+.env
+
+# SSH keys
+sshEx*
+id_rsa*
+*.pem
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
+
+# Archives
+*.zip
+
+# Audio data (keep the directory)
+data/audio/*.wav
+data/audio/*.opus
+data/audio/*.mp3
+!data/audio/.gitkeep
