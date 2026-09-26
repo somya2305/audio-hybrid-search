@@ -1,7 +1,9 @@
 """Group a diarized transcript into speaker-turn chunks.
 
 Usage:
-    python -m src.chunking.chunk <transcription.json>
+    python -m src.chunking.chunk [transcription.json]
+
+With no path, every *_transcription.json in output/transcription/ is chunked.
 """
 
 import argparse
@@ -11,6 +13,7 @@ import sys
 from pathlib import Path
 
 ROOT_DIR = Path(__file__).resolve().parents[2]
+TRANSCRIPTION_DIR = ROOT_DIR / "output" / "transcription"
 OUTPUT_DIR = ROOT_DIR / "output" / "chunks"
 
 # A chunk is one speaker turn: consecutive segments by the same speaker.
@@ -102,21 +105,9 @@ def create_chunks(transcript):
     ]
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Chunk a diarized transcript into speaker turns.")
-    parser.add_argument("transcription", help="Path to a <stem>_transcription.json file")
-    args = parser.parse_args()
-
-    input_path = Path(args.transcription)
-    if not input_path.is_file():
-        sys.exit(f"Transcription file not found: {input_path}")
-
-    with open(input_path, encoding="utf-8") as f:
-        transcript = json.load(f)
-
-    chunks = create_chunks(transcript)
-
-    stem = input_path.stem.removesuffix("_transcription")
+def save_chunks(transcript, chunks, input_path):
+    """Write chunks to output/chunks/<stem>_chunks.json and return that path."""
+    stem = Path(input_path).stem.removesuffix("_transcription")
     output_path = OUTPUT_DIR / f"{stem}_chunks.json"
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
@@ -124,18 +115,62 @@ def main():
             {"conversation_id": transcript["file"], "num_chunks": len(chunks), "chunks": chunks},
             f, indent=2, ensure_ascii=False,
         )
+    return output_path
 
-    print(f"Conversation : {transcript['file']}")
-    print(f"Segments     : {len(transcript.get('segments', []))}")
-    print(f"Chunks       : {len(chunks)}")
-    for chunk in chunks:
+
+def chunk_file(input_path, verbose=True):
+    """Chunk one transcription JSON, write <stem>_chunks.json and return the chunks."""
+    input_path = Path(input_path)
+    with open(input_path, encoding="utf-8") as f:
+        transcript = json.load(f)
+
+    chunks = create_chunks(transcript)
+    output_path = save_chunks(transcript, chunks, input_path)
+
+    if verbose:
+        print(f"Conversation : {transcript['file']}")
+        print(f"Segments     : {len(transcript.get('segments', []))}")
+        print(f"Chunks       : {len(chunks)}")
+        for chunk in chunks:
+            print(
+                f"{chunk['chunk_id']} | "
+                f"{chunk['start']}s - {chunk['end']}s | "
+                f"{chunk['word_count']} words | "
+                f"speaker={chunk['speaker']}"
+            )
+        print(f"Wrote {output_path}")
+    else:
         print(
-            f"{chunk['chunk_id']} | "
-            f"{chunk['start']}s - {chunk['end']}s | "
-            f"{chunk['word_count']} words | "
-            f"speaker={chunk['speaker']}"
+            f"{transcript['file']:<22} {len(transcript.get('segments', [])):>4} segments -> "
+            f"{len(chunks):>4} chunks  ({output_path.relative_to(ROOT_DIR)})"
         )
-    print(f"Wrote {output_path}")
+
+    return chunks
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Chunk diarized transcripts into speaker turns.")
+    parser.add_argument(
+        "transcription", nargs="?",
+        help="Path to a <stem>_transcription.json file "
+             "(default: every *_transcription.json in output/transcription/)",
+    )
+    args = parser.parse_args()
+
+    if args.transcription:
+        input_path = Path(args.transcription)
+        if not input_path.is_file():
+            sys.exit(f"Transcription file not found: {input_path}")
+        chunk_file(input_path)
+        return
+
+    input_paths = sorted(TRANSCRIPTION_DIR.glob("*_transcription.json"))
+    if not input_paths:
+        sys.exit(f"No *_transcription.json files found in {TRANSCRIPTION_DIR}")
+
+    print(f"Chunking {len(input_paths)} transcript(s) from {TRANSCRIPTION_DIR.relative_to(ROOT_DIR)}/")
+    for input_path in input_paths:
+        chunk_file(input_path, verbose=False)
 
 
 if __name__ == "__main__":
