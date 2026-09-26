@@ -261,7 +261,8 @@ def main():
 
     evaluation = {"config": run_config(), **evaluate(queries)}
     print_report(evaluation)
-    print(f"\nPer-query details saved to {save_results(evaluation, out).relative_to(ROOT_DIR)}")
+    saved = save_results(evaluation, out)
+    print(f"\nPer-query details saved to {saved.relative_to(ROOT_DIR) if saved.is_relative_to(ROOT_DIR) else saved}")
 
 
 if __name__ == "__main__":

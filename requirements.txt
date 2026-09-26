@@ -1,8 +1,9 @@
-whisperx
-torch
-sentence-transformers
-psycopg[binary]
-pgvector
-numpy
-python-dotenv
-pytest
+# Tested with Python 3.13 on macOS (Apple Silicon, CPU).
+whisperx==3.8.6
+torch==2.8.0
+sentence-transformers==5.7.0
+psycopg[binary]==3.3.6
+pgvector==0.5.0
+numpy==2.5.3
+python-dotenv==1.2.3
+pytest==9.1.1

@@ -24,7 +24,7 @@
       "clip_start": "00:16:01",
       "duration_s": 515,
       "show": "Diary of a CEO",
-      "speakers": ["Stevan Bartlett", "Vanessa Van Edwards (guest)"],
+      "speakers": ["Steven Bartlett (host)", "Vanessa Van Edwards (guest)"],
       "topic": "charisma / communication"
     },
     {
@@ -33,7 +33,7 @@
       "clip_start": "00:21:50",
       "duration_s": 509,
       "show": "Huberman Lab",
-      "speakers": ["Andrew Huberman", "Dr. Chris Thompson (guest)"],
+      "speakers": ["Andrew Huberman (host)", "Dr. Chris Thompson (guest)"],
       "topic": "gut microbiome / fasting"
     },
     {
@@ -42,7 +42,7 @@
       "clip_start": "00:28:56",
       "duration_s": 550,
       "show": "The Drive (Peter Attia)",
-      "speakers": ["Ralph DeFronzo", "Peter Attia"],
+      "speakers": ["Peter Attia (host)", "Ralph DeFronzo (guest)"],
       "topic": "insulin resistance / T2D"
     },
     {
@@ -50,8 +50,8 @@
       "source": "https://www.youtube.com/watch?v=CXmOaQ9GCyk",
       "clip_start": "00:22:36",
       "duration_s": 540,
-      "show": "Film/culture interview",
-      "speakers": ["Terry", "Diane Keaton"],
+      "show": "Fresh Air (NPR), 1997 interview",
+      "speakers": ["Terry Gross (host)", "Diane Keaton (guest)"],
       "topic": "film / directing"
     },
     {
@@ -59,8 +59,8 @@
       "source": "https://www.youtube.com/watch?v=y6NfxiemvHg",
       "clip_start": "00:57:55",
       "duration_s": 540,
-      "show": "NVIDIA CEO Jensen Huang",
-      "speakers": ["TODO host", "Jensen Huang (guest)"],
+      "show": "Acquired",
+      "speakers": ["Ben Gilbert (host)", "Jensen Huang (guest)"],
       "topic": "luck & skill / job displacement"
     }
   ]

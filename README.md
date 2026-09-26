@@ -2,6 +2,8 @@
 
 Submission for the G2 AI Hiring Hackathon, Problem Statement 1 ("Effective retrieval from audio transcripts"). Seven two-speaker podcast clips (8–10 minutes each) are transcribed and diarized with WhisperX, split into speaker-turn chunks, embedded locally with `BAAI/bge-small-en-v1.5`, and stored in Postgres + pgvector. A query runs semantic search (pgvector cosine distance) and keyword search (Postgres full-text search) and merges them with Reciprocal Rank Fusion. Each result shows the file, timestamp, speaker and the turn with matched words highlighted. Retrieval quality is measured as recall@k and MRR against 25 labeled queries.
 
+The full write-up (design, rationale, results, limitations, use of a coding agent) is in [SOLUTION.md](SOLUTION.md).
+
 ## Layout
 
 ```
@@ -25,17 +27,21 @@ tests/                 unit tests for the evaluation maths
 
 ## Setup
 
-Requires Python 3.11+, Docker and ffmpeg.
+Requirements: Python 3.12 or 3.13 (tested on 3.13), Docker, and ffmpeg (`brew install ffmpeg`; needed only to transcribe audio).
 
 ```bash
 python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env          # set HF_TOKEN only if you will transcribe audio
-docker compose up -d          # Postgres + pgvector, schema from db/schema.sql
-python -m src.database.connection   # check the connection and schema
+pip install -r requirements.txt       # a few minutes: torch + WhisperX
+cp .env.example .env                  # defaults work; HF_TOKEN only needed to transcribe
+docker compose up -d                  # Postgres + pgvector; schema from db/schema.sql
+python -m src.database.connection     # should list both tables, 0 rows
 ```
 
-`HF_TOKEN` is needed only for diarization: accept the terms of `pyannote/speaker-diarization-community-1` on Hugging Face and create a read token.
+If port 5432 is already in use, set another `DB_PORT` in `.env` before `docker compose up -d`.
+
+**Hugging Face token (only to transcribe/diarize audio).** Indexing, search and evaluation work without it, because the transcripts are included. To transcribe:
+1. Accept the terms of [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) while logged in to Hugging Face.
+2. Create a read token at <https://huggingface.co/settings/tokens> and set `HF_TOKEN=` in `.env`.
 
 ## Run
 
