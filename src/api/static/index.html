@@ -180,6 +180,8 @@ function play(file, t) {
   if (audio.dataset.file !== file) {
     audio.dataset.file = file; audio.src = src;
     audio.addEventListener("loadedmetadata", seek, { once: true }); audio.load();
+    audio.onerror = () => { audio.dataset.file = "";
+      $("#now-playing").innerHTML = `<span class="error">Audio for ${esc(file)} is not available: add the WAV files to data/audio/ (see README).</span>`; };
   } else seek();
 }
 document.addEventListener("click", e => {

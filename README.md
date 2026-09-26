@@ -22,6 +22,8 @@ If port 5432 is already in use, set another `DB_PORT` in `.env` before `docker c
 1. Accept the terms of [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) while logged in to Hugging Face.
 2. Create a read token at <https://huggingface.co/settings/tokens> and set `HF_TOKEN=` in `.env`.
 
+**Audio files.** The seven clips (`data/audio/*.wav`, 116 MB) are in the Git repository but **not in the submission zip**, to keep it under 50 MB. Indexing, search, evaluation and all tests work without them, because the transcripts are included. Only audio playback in the UI and re-transcription need them: copy the WAVs from the repository into `data/audio/`, or rebuild them with `python scripts/build_dataset.py` (needs `pip install yt-dlp` and ffmpeg).
+
 ## Quick start: backend + UI
 
 After the setup above:
