@@ -4,6 +4,58 @@ Submission for the G2 AI Hiring Hackathon, Problem Statement 1 ("Effective retri
 
 The full write-up (design, rationale, results, limitations, use of a coding agent) is in [SOLUTION.md](SOLUTION.md).
 
+## Results
+
+Evaluated on 25 labeled queries across all seven clips (22 with a labeled answer, 3 with none). Full analysis in [SOLUTION.md](SOLUTION.md#7-results) and [docs/evaluation.md](docs/evaluation.md).
+
+| Success criterion | Target | Result | Status |
+|---|---|---|---|
+| Hybrid recall@5 | ≥ 0.80 | **0.811** | ✅ PASS |
+| Hybrid recall@10 | ≥ 0.90 | **0.917** | ✅ PASS |
+| Speaker accuracy | ≥ 0.80 | 1.000 | ✅ PASS |
+| Hybrid recall@5 ≥ each retriever alone | holds | 0.811 vs 0.500 (keyword) / 0.659 (semantic) | ✅ PASS |
+
+**Final results by method:**
+
+| Method | R@1 | R@3 | R@5 | R@10 | MRR |
+|---|---|---|---|---|---|
+| Keyword (Postgres full-text) | 0.424 | 0.500 | 0.500 | 0.523 | 0.505 |
+| Semantic (pgvector) | 0.174 | 0.523 | 0.659 | 0.917 | 0.508 |
+| **Hybrid (weighted RRF)** | 0.356 | **0.742** | **0.811** | **0.917** | **0.619** |
+
+**Improvement over the baseline** (BGE query instruction + keyword weight 0.5 in fusion):
+
+| Hybrid | R@1 | R@3 | R@5 | R@10 | MRR |
+|---|---|---|---|---|---|
+| Baseline | 0.402 | 0.659 | 0.727 | 0.826 | 0.611 |
+| Final | 0.356 | 0.742 | 0.811 | 0.917 | 0.619 |
+
+**Hybrid recall@5 by query type:** keyword 1.00 · phrase 1.00 · semantic 0.50 → **0.68** · speaker 0.67. Exact names and phrases are found at rank 1–3; paraphrased questions are the weak spot.
+
+![Evaluation tab: success criteria and recall@k by method and query type, with the baseline overlaid](docs/images/ui_evaluation.png)
+
+## Quick start: backend + UI
+
+With Python 3.12/3.13 and Docker installed:
+
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+docker compose up -d                  # 1. database (schema created automatically)
+python -m src.index_chunks            # 2. index the included transcripts (~12 s)
+uvicorn src.api.app:app --reload      # 3. backend + UI
+```
+
+When the server is up you should see:
+
+```
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+```
+
+Then open **http://localhost:8000** for the UI and **http://localhost:8000/docs** for the API. `http://localhost:8000/health` should report `"status": "ok"` and `"total_chunks": 240`. Details, the full endpoint list and the command-line scripts are below.
+
 ## Layout
 
 ```
@@ -72,7 +124,6 @@ Needs the database running (`docker compose up -d`) and the index from step 1. T
 
 ![Labeled query: the known answer is found at rank 3 by semantic and hybrid search](docs/images/ui_query.png)
 
-![Evaluation: success criteria and recall charts, compared with the baseline](docs/images/ui_evaluation.png)
 
 **Endpoints** (try them at `/docs`):
 
@@ -86,6 +137,8 @@ Needs the database running (`docker compose up -d`) and the index from step 1. T
 | `GET /results`, `GET /results/{run}` | Saved evaluation runs (`baseline`, `exp1_…`) |
 | `GET /audio/{file}` | The audio clip, with seeking |
 | `GET /health`, `GET /meta` | Database status and what is indexed; constants the UI uses |
+
+![API docs at /docs: every endpoint can be tried in the browser](docs/images/api_docs.png)
 
 ### 3. Command line
 
