@@ -35,6 +35,7 @@ CREATE TABLE IF NOT EXISTS conversations (
 -- =========================================================
 -- chunk_id   : "<file>_0001", the ID used by the chunk JSON and eval labels
 -- text       : the turn's own words (displayed + keyword-indexed)
+-- word_count : words in text; very short turns are left out of semantic search
 -- embed_text : the turn plus its neighbouring turns (what is embedded)
 -- words      : [{"word", "start", "end"}, ...] for exact match timestamps
 -- embedding  : VECTOR(384) matches BAAI/bge-small-en-v1.5
@@ -58,6 +59,8 @@ CREATE TABLE IF NOT EXISTS transcript_chunks (
     end_time REAL NOT NULL,
 
     text TEXT NOT NULL,
+
+    word_count INTEGER NOT NULL DEFAULT 0,
 
     embed_text TEXT,
 

@@ -56,9 +56,9 @@ def replace_chunks(conn, conversation_id, chunks):
             """
             INSERT INTO transcript_chunks (
                 chunk_id, conversation_id, chunk_index, speaker,
-                start_time, end_time, text, embed_text, words, embedding
+                start_time, end_time, text, word_count, embed_text, words, embedding
             )
-            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)
             """,
             [
                 (
@@ -70,6 +70,7 @@ def replace_chunks(conn, conversation_id, chunks):
                     chunk["start"],
                     chunk["end"],
                     chunk["text"],
+                    chunk.get("word_count", len(chunk["text"].split())),
                     chunk.get("embed_text"),
                     Jsonb(chunk.get("words", [])),
                     None

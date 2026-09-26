@@ -19,6 +19,11 @@ TOP_K = 20
 # Results returned after fusion.
 TOP_K_FINAL = 5
 
+# Turns shorter than this ("Look.", "What?") are left out of semantic search:
+# with almost no content their embeddings sit near the centre of the space and
+# score moderately against any query. They stay keyword-searchable.
+MIN_SEMANTIC_WORDS = 4
+
 # RRF damping constant (60 is the value from the original RRF paper): it keeps
 # a single first-place rank from outweighing agreement between both lists.
 RRF_K = 60
@@ -62,34 +67,56 @@ def semantic_search(query, top_k=TOP_K, conversation_id=None):
                1 - (c.embedding <=> %(embedding)s) AS score
         FROM transcript_chunks c
         WHERE {CONVERSATION_FILTER}
+          AND c.word_count >= %(min_words)s
         ORDER BY c.embedding <=> %(embedding)s
         LIMIT %(top_k)s
         """,
         {
             "embedding": Vector(embed_query(query)),
+            "min_words": MIN_SEMANTIC_WORDS,
             "cid": conversation_id,
             "top_k": top_k,
         },
     )
 
 
-def keyword_search(query, top_k=TOP_K, conversation_id=None):
-    """Rank chunks matching the query's words (stemmed, stopwords dropped) by ts_rank.
+def _tsquery_sql(query):
+    """SQL for the query's tsquery (words stemmed, stopwords dropped).
 
-    plainto_tsquery ANDs the terms, so a chunk must contain every query word.
+    Quoted input ("resistant starch") is an exact phrase via websearch syntax.
+    Otherwise the words are OR-ed, so a chunk needn't contain every word;
+    ts_rank still ranks chunks matching more of them higher.
     """
+    if '"' in query:
+        return "websearch_to_tsquery('english', %(query)s)"
+    return "replace(plainto_tsquery('english', %(query)s)::text, '&', '|')::tsquery"
+
+
+# ts_rank length normalization. 0 = none: turns are capped at ~80 words, so
+# long turns have little advantage, while normalization 1 (divide by
+# 1 + log(length)) pushed one-word turns like "Look." to the top.
+TS_RANK_NORMALIZATION = 0
+
+
+def keyword_search(query, top_k=TOP_K, conversation_id=None):
+    """Rank chunks matching any query word (or a quoted phrase) by ts_rank."""
     return _run(
         f"""
         SELECT {RESULT_COLUMNS},
-               ts_rank(c.text_search, q.query) AS score
+               ts_rank(c.text_search, q.query, %(norm)s) AS score
         FROM transcript_chunks c,
-             plainto_tsquery('english', %(query)s) AS q(query)
+             (SELECT {_tsquery_sql(query)}) AS q(query)
         WHERE c.text_search @@ q.query
           AND {CONVERSATION_FILTER}
         ORDER BY score DESC, c.id
         LIMIT %(top_k)s
         """,
-        {"query": query, "cid": conversation_id, "top_k": top_k},
+        {
+            "query": query,
+            "norm": TS_RANK_NORMALIZATION,
+            "cid": conversation_id,
+            "top_k": top_k,
+        },
     )
 
 
